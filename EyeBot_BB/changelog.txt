@@ -1,0 +1,56 @@
+===Change Log===
+
+---7.5
+-Added a new function LCDRefresh2. It is the same as LCDRefresh except it does not refresh the menu buttons
+-Added a new function LCDRefresh3. It is the same as LCDRefresh except it does not refresh the menu buttons or the listmenu
+-Added a new function LCDSetPrintfColour which will print a formatted text to the LCD with the specified colour
+-Added a new function LCDSetStringColour which will print a string to the LCD with the specified colour
+-Removed the flickering of the menu buttons across most of the RoBIOS software
+-Bug found: if LCDRefresh not called regularly then the software freezes
+	-To get around this LCDRefresh or LCDRefresh2 or LCDRefresh3 needs to be called
+-Fixed a bug where the Hardware Test and Info pages freeze and only accept IR input
+-Changed the settings page under info so that instead of saying Statup program it says program name
+-Set the RoBIOS software to enable IR input by default
+-Modified LCDListScrollUp and LCDListScrollDown so that it only scrolls when it is enabled, i.e: when the scroll function is needed
+-Added the ability to select a listmenu item with the IR remote to some of the menus
+-Changed the symbol for the listmenu selected item from '@' to "> " the colour has also been set to black
+-Added a new source file "robios_common.c". This is where any common functions across all RoBIOS source files will be stored
+-Fixed the bug where the hardware list would load up properly. The list should load up correctly with the number of devices in the HDT file showing
+-Added units to parameters that require them
+
+---7.4 (13/07/14)
+-Fixed a bug where the RoBIOS window goes white at startup, reason was the window went out of focus. Main page now checks this and will refresh
+-Started on the camera functions
+
+---7.31 (09/07/14)
+-Previous version did not have the adjustable window size enabled, that has been rectified in this version
+
+---7.3 (08/07/14)
+-Interface window size will now adjust according to the screen size
+-Added a new function to the listmenu functions ("listmenuChangeItemText") that allows you to change the text of an existing item in an existing listmenu structure
+-On the settings page changed it so that to enable the IR functions the user only needs to click on the menu item not select the item then click edit
+-Added a new IRTV function, "IRTVGetControllerCode()", that returns the controller code (e.g.: 786)
+-Added a new IRTV function, "IRTVSetControllerCode()", that sets the controller code (e.g.: 786)
+-Can now use the left and right arrows on the IR remote to scroll through listmenus
+-Listmenus menus now adjust to the size of the screen
+-New file added for the RoBIOS software called (robios_params.txt". This file is where all the parameters shown on the settings page are saved. The RoBIOS software will read the file when it first starts up and will process the file accordingly.
+-Added a readme file (readme.txt). More information will be added to it at various stages.
+-If a program is specified in robios_params.txt then the RoBIOS software will run that program at startup instead of the main program. Note: it must be enabled as well
+
+---7.2 (21/06/14)
+-Fixed a bug where on the Demo page menu buttons one or more of the buttons would not have any text showing
+-Fixed a bug where the user cannot select any item in a listmenu because it always jumps back to the first item
+-Fixed a bug where once a hardware device was selected none of the onscreen buttons would work
+-Added the option to control the RoBIOS software with the IR input. This can be toggled on or off in the settings page located on the info page
+	-Note: the IRTV controller will need to be set to code 786 as there is no option yet to change the code
+-Removed the function IRTVRead() as the function waits for IR input (IRTVGet() waits as well but is safer to use because if IRTVRelease() is called a segmentation fault won't happen if it is wating for IR input)
+
+---7.1 (N/A)
+-Removed keyboard navigation of RoBIOS
+-Started work on getting the interface window size to automatically adjust to current screen resolution
+-Change source file names to have the prefix "robios_" instead of "m6main" at the front of the file name
+-Added a new page on the INFO page called Settings. This page is where the RoBIOS software settings can be changed and where the user can reboot or shutdown the system.
+
+---7.0 (N/A)
+-Added IRTV functions
+-Added keyboard navigation of RoBIOS

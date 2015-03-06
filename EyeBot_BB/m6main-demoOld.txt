@@ -1,0 +1,68 @@
+void setupDemoMenu2(listmenu_t *listtemp)
+{
+	int numbDemos = 0;
+	DIR *dir;
+	struct dirent *ent;
+	fbinfo_t fb;
+	LCDGetFBInfo(&fb);
+	//Set up the list
+	strcpy_n(listtemp->title,"Demos: ",LCD_LIST_STRLENGTH);
+	listtemp->fgcol = LCD_WHITE;
+	listtemp->bgcol = LCD_BLUE;
+	listtemp->start = 0;
+	listtemp->left = 0;
+	listtemp->width = fb.cursor.xmax;
+	listtemp->no_empty = 0;
+	/*
+	 * populate the demo list menu
+	 * first open the directory where the demos are located
+	 */
+	if ((dir = opendir("/usr/Eyebot/Demos")) != NULL)
+	{
+		//Next while there are still demo programs to read add them to the item list
+		while ((ent = readdir(dir)) != NULL)
+		{
+			//Exclude two entries that are invalid
+			if (strcmp("..",ent->d_name)==0||strcmp(".",ent->d_name)==0)
+			{
+				continue;
+			}
+			/*
+			 * allocate memory
+			 * If this is the first item then initialise the memory
+			 * If a new a item is to be added then reallocate memory and expand it
+			 */
+			if (numbDemos == 0)
+			{
+				listtemp->pitems = calloc(1,sizeof(menuitem_t));
+				if (!listtemp->pitems)
+				{
+					printf("m6main-demo: unable to allocate memory.\n");
+					exit(1);
+				}
+			}
+			else
+			{
+				listtemp->pitems = realloc(listtemp->pitems,(numbDemos+1)*sizeof(menuitem_t));
+			}
+			//populate the menu item fields, such as the label
+			strcpy_n(listtemp->pitems[numbDemos].label,ent->d_name,LCD_LIST_STRLENGTH);
+			listtemp->pitems[numbDemos].fgcol = LCD_RED;
+			listtemp->pitems[numbDemos].bgcol = LCD_AQUA;
+			listtemp->pitems[numbDemos].plink = (void*) NULL;
+			numbDemos++;
+		}
+	}
+	listtemp->size = numbDemos;
+	if (numbDemos > 6)
+	{
+		listtemp->scroll = 1;
+	}
+	else
+	{
+		listtemp->scroll = 0;
+	}
+	
+	LCDList(listtemp);
+}
+/* ------------------------------------------------------------------------- */

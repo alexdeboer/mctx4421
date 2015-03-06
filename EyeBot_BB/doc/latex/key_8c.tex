@@ -1,0 +1,348 @@
+\hypertarget{key_8c}{\section{\-Eye\-Bot\-\_\-\-B\-B/src/key.c \-File \-Reference}
+\label{key_8c}\index{\-Eye\-Bot\-\_\-\-B\-B/src/key.\-c@{\-Eye\-Bot\-\_\-\-B\-B/src/key.\-c}}
+}
+
+
+\-Defines functions for the key input.  
+
+
+{\ttfamily \#include \char`\"{}key.\-h\char`\"{}}\*
+\-Include dependency graph for key.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{key_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{key_8c_a42ddae70f9565d99d7c7149eaea9e61d}{\-K\-E\-Y\-Init} (void)
+\begin{DoxyCompactList}\small\item\em \-Open the evdev device file for reading touch events. \-Load the key configuration file (if found), else use the hardcoded default value. \end{DoxyCompactList}\item 
+keymode\-\_\-t \hyperlink{key_8c_a3efbbf59c8736d583d92453caa09bc27}{\-K\-E\-Y\-Set\-T\-M} (keymode\-\_\-t mode)
+\begin{DoxyCompactList}\small\item\em \-Set mode for key touch map. \end{DoxyCompactList}\item 
+keymode\-\_\-t \hyperlink{key_8c_a587b30da5c4da3064dc497b6d95dc45e}{\-K\-E\-Y\-Get\-T\-M} (\hyperlink{structtouch__map__t}{touch\-\_\-map\-\_\-t} $\ast$$\ast$ptouch\-\_\-map)
+\begin{DoxyCompactList}\small\item\em \-Get current mode and touch map (region map). \end{DoxyCompactList}\item 
+int \hyperlink{key_8c_aee060ad9aa9cba6597499f01e4511e2b}{\-K\-E\-Y\-Set\-Region} (int index, \hyperlink{structm6key__box__t}{m6key\-\_\-box\-\_\-t} $\ast$region)
+\begin{DoxyCompactList}\small\item\em \-Manually set region data into current touch map. \-Only used in \-K\-E\-Y\-T\-M\-\_\-\-R\-E\-G\-I\-O\-N\-S mode. \-If region is 0x0, resets the touch map (mode becomes \-K\-E\-Y\-T\-M\-\_\-\-U\-N\-K\-N\-O\-W\-N). \end{DoxyCompactList}\item 
+int \hyperlink{key_8c_a73b2a0477ef3d17d844e9cb78fbba550}{\-K\-E\-Y\-Get\-Region} (int index, \hyperlink{structm6key__box__t}{m6key\-\_\-box\-\_\-t} $\ast$region)
+\begin{DoxyCompactList}\small\item\em \-Copy specific region data out from the current touch map. \-Only used in \-K\-E\-Y\-T\-M\-\_\-\-R\-E\-G\-I\-O\-N\-S mode. \end{DoxyCompactList}\item 
+int \hyperlink{key_8c_a63b65b0841ba4357d874525690333da3}{\-K\-E\-Y\-No\-Touch} (\hyperlink{structtouch__event__t}{touch\-\_\-event\-\_\-t} $\ast$rawtouch)
+\begin{DoxyCompactList}\small\item\em \-Validate there's no touch on screen surface. \end{DoxyCompactList}\item 
+int \hyperlink{key_8c_ab08683a9afcdb0c8be4b38983943a535}{\-K\-E\-Y\-Get\-R\-A\-W} (\hyperlink{structtouch__event__t}{touch\-\_\-event\-\_\-t} $\ast$rawtouch)
+\begin{DoxyCompactList}\small\item\em \-Gets raw touch info -\/ a non-\/blocking function. \-Mainly used for calibration and testing. \end{DoxyCompactList}\item 
+keycode\-\_\-t \hyperlink{key_8c_a7013f64bee3c968f7686b1d006c6e384}{\-K\-E\-Y\-Decode} (\hyperlink{structtouch__event__t}{touch\-\_\-event\-\_\-t} $\ast$rawtouch)
+\begin{DoxyCompactList}\small\item\em \-Decode raw touch info into a keycode based on the current touch map. \-Mainly used for testing. \end{DoxyCompactList}\item 
+int \hyperlink{key_8c_aac57a08b5069a40c9c4166b05e7a09b1}{\-K\-E\-Y\-Release} (void)
+\begin{DoxyCompactList}\small\item\em \-Close the evdev device file and stop checking any key touch event. \end{DoxyCompactList}\item 
+int \hyperlink{key_8c_a492eae5a91d8ee6e9083720ad93e89e6}{inside} (int x, int y, \hyperlink{structm6key__box__t}{m6key\-\_\-box\-\_\-t} rect)
+\begin{DoxyCompactList}\small\item\em \-Check if a point is inside a rectangle. \end{DoxyCompactList}\item 
+int \hyperlink{key_8c_aacebd60b6e1d340c626360cd6b51112e}{\-K\-E\-Y\-Idle} (int idle)
+\begin{DoxyCompactList}\small\item\em \-Enable/disable event checking procedure. \end{DoxyCompactList}\item 
+keycode\-\_\-t \hyperlink{key_8c_a4d65bf8772ba07434304b080f0ac915e}{\-K\-E\-Y\-Wait} (keycode\-\_\-t excode)
+\begin{DoxyCompactList}\small\item\em \-Wait for specific keys only. \end{DoxyCompactList}\item 
+keycode\-\_\-t \hyperlink{key_8c_abba96914bfdc7e52d89432716fc4f015}{\-K\-E\-Y\-Get} (void)
+\begin{DoxyCompactList}\small\item\em \-Wait for a touch event and return keycode (including \-K\-E\-Y\-\_\-\-I\-N\-V\-A\-L\-I\-D -\/ undefined keycode). \end{DoxyCompactList}\item 
+\hyperlink{structcoord__pair__t}{coord\-\_\-pair\-\_\-t} \hyperlink{key_8c_a90cb4b131e02f497b52388501775b13b}{\-K\-E\-Y\-Get\-X\-Y} (void)
+\begin{DoxyCompactList}\small\item\em \-Wait for a touch event and return the \-X\-Y-\/coordinate. \end{DoxyCompactList}\item 
+keycode\-\_\-t \hyperlink{key_8c_aa19c058b9c62f7bae67878bc562768dc}{\-K\-E\-Y\-Read} (void)
+\begin{DoxyCompactList}\small\item\em \-Read a keycode and returns. \-Function does not wait, thus includes \-K\-E\-Y\-\_\-\-T\-I\-M\-E\-O\-U\-T. \end{DoxyCompactList}\item 
+\hypertarget{key_8c_ab87a84eda32896684db91e0f17b2e66d}{int {\bfseries activate\-\_\-escape} (int escape)}\label{key_8c_ab87a84eda32896684db91e0f17b2e66d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Defines functions for the key input. \begin{DoxyAuthor}{\-Author}
+\-Remi \-K\-E\-A\-T 
+\end{DoxyAuthor}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{key_8c_a492eae5a91d8ee6e9083720ad93e89e6}{\index{key.\-c@{key.\-c}!inside@{inside}}
+\index{inside@{inside}!key.c@{key.\-c}}
+\subsubsection[{inside}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf inside} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{{\bf m6key\-\_\-box\-\_\-t}}]{rect}
+\end{DoxyParamCaption}
+)}}\label{key_8c_a492eae5a91d8ee6e9083720ad93e89e6}
+
+
+\-Check if a point is inside a rectangle. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & x \-: \-X-\/coordinate of the point \\
+\hline
+{\em int} & y \-: \-Y-\/coordinate of the point \\
+\hline
+{\em \hyperlink{structm6key__box__t}{m6key\-\_\-box\-\_\-t}} & rect \-: rectangle structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: non-\/null if inside 
+\end{DoxyReturn}
+\hypertarget{key_8c_a7013f64bee3c968f7686b1d006c6e384}{\index{key.\-c@{key.\-c}!\-K\-E\-Y\-Decode@{\-K\-E\-Y\-Decode}}
+\index{\-K\-E\-Y\-Decode@{\-K\-E\-Y\-Decode}!key.c@{key.\-c}}
+\subsubsection[{\-K\-E\-Y\-Decode}]{\setlength{\rightskip}{0pt plus 5cm}keycode\-\_\-t {\bf \-K\-E\-Y\-Decode} (
+\begin{DoxyParamCaption}
+\item[{{\bf touch\-\_\-event\-\_\-t} $\ast$}]{rawtouch}
+\end{DoxyParamCaption}
+)}}\label{key_8c_a7013f64bee3c968f7686b1d006c6e384}
+
+
+\-Decode raw touch info into a keycode based on the current touch map. \-Mainly used for testing. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em touch\-\_\-event\-\_\-t$\ast$} & rawtouch \-: pointer to \hyperlink{structtouch__event__t}{touch\-\_\-event\-\_\-t} structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+keycode\-\_\-t key\-Code \-: \-Status of touch data (variable in rawtouch) 
+\end{DoxyReturn}
+\hypertarget{key_8c_abba96914bfdc7e52d89432716fc4f015}{\index{key.\-c@{key.\-c}!\-K\-E\-Y\-Get@{\-K\-E\-Y\-Get}}
+\index{\-K\-E\-Y\-Get@{\-K\-E\-Y\-Get}!key.c@{key.\-c}}
+\subsubsection[{\-K\-E\-Y\-Get}]{\setlength{\rightskip}{0pt plus 5cm}keycode\-\_\-t {\bf \-K\-E\-Y\-Get} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{key_8c_abba96914bfdc7e52d89432716fc4f015}
+
+
+\-Wait for a touch event and return keycode (including \-K\-E\-Y\-\_\-\-I\-N\-V\-A\-L\-I\-D -\/ undefined keycode). 
+
+\begin{DoxyReturn}{\-Returns}
+keycode\-\_\-t ret\-Key \-: \-Keycode value 
+\end{DoxyReturn}
+\hypertarget{key_8c_ab08683a9afcdb0c8be4b38983943a535}{\index{key.\-c@{key.\-c}!\-K\-E\-Y\-Get\-R\-A\-W@{\-K\-E\-Y\-Get\-R\-A\-W}}
+\index{\-K\-E\-Y\-Get\-R\-A\-W@{\-K\-E\-Y\-Get\-R\-A\-W}!key.c@{key.\-c}}
+\subsubsection[{\-K\-E\-Y\-Get\-R\-A\-W}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-K\-E\-Y\-Get\-R\-A\-W} (
+\begin{DoxyParamCaption}
+\item[{{\bf touch\-\_\-event\-\_\-t} $\ast$}]{rawtouch}
+\end{DoxyParamCaption}
+)}}\label{key_8c_ab08683a9afcdb0c8be4b38983943a535}
+
+
+\-Gets raw touch info -\/ a non-\/blocking function. \-Mainly used for calibration and testing. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em touch\-\_\-event\-\_\-t$\ast$} & rawtouch \-: pointer to \hyperlink{structtouch__event__t}{touch\-\_\-event\-\_\-t} structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-:\par
+ 0 if sync signal received!\par
+ \-Negative value if otherwise 
+\end{DoxyReturn}
+\hypertarget{key_8c_a73b2a0477ef3d17d844e9cb78fbba550}{\index{key.\-c@{key.\-c}!\-K\-E\-Y\-Get\-Region@{\-K\-E\-Y\-Get\-Region}}
+\index{\-K\-E\-Y\-Get\-Region@{\-K\-E\-Y\-Get\-Region}!key.c@{key.\-c}}
+\subsubsection[{\-K\-E\-Y\-Get\-Region}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-K\-E\-Y\-Get\-Region} (
+\begin{DoxyParamCaption}
+\item[{int}]{index, }
+\item[{{\bf m6key\-\_\-box\-\_\-t} $\ast$}]{region}
+\end{DoxyParamCaption}
+)}}\label{key_8c_a73b2a0477ef3d17d844e9cb78fbba550}
+
+
+\-Copy specific region data out from the current touch map. \-Only used in \-K\-E\-Y\-T\-M\-\_\-\-R\-E\-G\-I\-O\-N\-S mode. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & index \-: \-Index for region \\
+\hline
+{\em m6key\-\_\-box\-\_\-t$\ast$} & region \-: \-Pointer to a storage for region data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: 0 on success\par
+ \-Negative value on failure 
+\end{DoxyReturn}
+\hypertarget{key_8c_a587b30da5c4da3064dc497b6d95dc45e}{\index{key.\-c@{key.\-c}!\-K\-E\-Y\-Get\-T\-M@{\-K\-E\-Y\-Get\-T\-M}}
+\index{\-K\-E\-Y\-Get\-T\-M@{\-K\-E\-Y\-Get\-T\-M}!key.c@{key.\-c}}
+\subsubsection[{\-K\-E\-Y\-Get\-T\-M}]{\setlength{\rightskip}{0pt plus 5cm}keymode\-\_\-t {\bf \-K\-E\-Y\-Get\-T\-M} (
+\begin{DoxyParamCaption}
+\item[{{\bf touch\-\_\-map\-\_\-t} $\ast$$\ast$}]{ptouch\-\_\-map}
+\end{DoxyParamCaption}
+)}}\label{key_8c_a587b30da5c4da3064dc497b6d95dc45e}
+
+
+\-Get current mode and touch map (region map). 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em touch\-\_\-map\-\_\-t$\ast$$\ast$} & ptouch\-\_\-map \-: \-Pointer to a \hyperlink{structtouch__map__t}{touch\-\_\-map\-\_\-t} structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+keymode\-\_\-t ret\-Mod \-: \-Current touch map mode 
+\end{DoxyReturn}
+\hypertarget{key_8c_a90cb4b131e02f497b52388501775b13b}{\index{key.\-c@{key.\-c}!\-K\-E\-Y\-Get\-X\-Y@{\-K\-E\-Y\-Get\-X\-Y}}
+\index{\-K\-E\-Y\-Get\-X\-Y@{\-K\-E\-Y\-Get\-X\-Y}!key.c@{key.\-c}}
+\subsubsection[{\-K\-E\-Y\-Get\-X\-Y}]{\setlength{\rightskip}{0pt plus 5cm}{\bf coord\-\_\-pair\-\_\-t} {\bf \-K\-E\-Y\-Get\-X\-Y} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{key_8c_a90cb4b131e02f497b52388501775b13b}
+
+
+\-Wait for a touch event and return the \-X\-Y-\/coordinate. 
+
+\begin{DoxyReturn}{\-Returns}
+\hyperlink{structcoord__pair__t}{coord\-\_\-pair\-\_\-t} ret\-Coord \-: \-Coordinate pair 
+\end{DoxyReturn}
+\hypertarget{key_8c_aacebd60b6e1d340c626360cd6b51112e}{\index{key.\-c@{key.\-c}!\-K\-E\-Y\-Idle@{\-K\-E\-Y\-Idle}}
+\index{\-K\-E\-Y\-Idle@{\-K\-E\-Y\-Idle}!key.c@{key.\-c}}
+\subsubsection[{\-K\-E\-Y\-Idle}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-K\-E\-Y\-Idle} (
+\begin{DoxyParamCaption}
+\item[{int}]{idle}
+\end{DoxyParamCaption}
+)}}\label{key_8c_aacebd60b6e1d340c626360cd6b51112e}
+
+
+\-Enable/disable event checking procedure. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & idle \-: user request\\
+\hline
+\end{DoxyParams}
+\-Valid values for idle\-:
+\begin{DoxyItemize}
+\item \-K\-E\-Y\-\_\-\-G\-O\-I\-D\-L\-E -\/ deactivate event checking
+\item \-K\-E\-Y\-\_\-\-N\-O\-I\-D\-L\-E -\/ activate event checking
+\item \-K\-E\-Y\-\_\-\-S\-T\-A\-T\-E -\/ request current status
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{\-Returns}
+int status \-: \-Idle status of event checking procedure 
+\end{DoxyReturn}
+\hypertarget{key_8c_a42ddae70f9565d99d7c7149eaea9e61d}{\index{key.\-c@{key.\-c}!\-K\-E\-Y\-Init@{\-K\-E\-Y\-Init}}
+\index{\-K\-E\-Y\-Init@{\-K\-E\-Y\-Init}!key.c@{key.\-c}}
+\subsubsection[{\-K\-E\-Y\-Init}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-K\-E\-Y\-Init} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{key_8c_a42ddae70f9565d99d7c7149eaea9e61d}
+
+
+\-Open the evdev device file for reading touch events. \-Load the key configuration file (if found), else use the hardcoded default value. 
+
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: 0 on success\par
+ \-Negative value on failure 
+\end{DoxyReturn}
+\hypertarget{key_8c_a63b65b0841ba4357d874525690333da3}{\index{key.\-c@{key.\-c}!\-K\-E\-Y\-No\-Touch@{\-K\-E\-Y\-No\-Touch}}
+\index{\-K\-E\-Y\-No\-Touch@{\-K\-E\-Y\-No\-Touch}!key.c@{key.\-c}}
+\subsubsection[{\-K\-E\-Y\-No\-Touch}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-K\-E\-Y\-No\-Touch} (
+\begin{DoxyParamCaption}
+\item[{{\bf touch\-\_\-event\-\_\-t} $\ast$}]{rawtouch}
+\end{DoxyParamCaption}
+)}}\label{key_8c_a63b65b0841ba4357d874525690333da3}
+
+
+\-Validate there's no touch on screen surface. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em touch\-\_\-event\-\_\-t$\ast$} & rawtouch \-: pointer to \hyperlink{structtouch__event__t}{touch\-\_\-event\-\_\-t} structure this is optional! only if raw data needed! else, use 0x0! \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-:\par
+ 0 -\/ being touched\par
+ 1 -\/ not touched 
+\end{DoxyReturn}
+\hypertarget{key_8c_aa19c058b9c62f7bae67878bc562768dc}{\index{key.\-c@{key.\-c}!\-K\-E\-Y\-Read@{\-K\-E\-Y\-Read}}
+\index{\-K\-E\-Y\-Read@{\-K\-E\-Y\-Read}!key.c@{key.\-c}}
+\subsubsection[{\-K\-E\-Y\-Read}]{\setlength{\rightskip}{0pt plus 5cm}keycode\-\_\-t {\bf \-K\-E\-Y\-Read} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{key_8c_aa19c058b9c62f7bae67878bc562768dc}
+
+
+\-Read a keycode and returns. \-Function does not wait, thus includes \-K\-E\-Y\-\_\-\-T\-I\-M\-E\-O\-U\-T. 
+
+\begin{DoxyReturn}{\-Returns}
+keycode\-\_\-t ret\-Key \-: \-Keycode value 
+\end{DoxyReturn}
+\hypertarget{key_8c_aac57a08b5069a40c9c4166b05e7a09b1}{\index{key.\-c@{key.\-c}!\-K\-E\-Y\-Release@{\-K\-E\-Y\-Release}}
+\index{\-K\-E\-Y\-Release@{\-K\-E\-Y\-Release}!key.c@{key.\-c}}
+\subsubsection[{\-K\-E\-Y\-Release}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-K\-E\-Y\-Release} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{key_8c_aac57a08b5069a40c9c4166b05e7a09b1}
+
+
+\-Close the evdev device file and stop checking any key touch event. 
+
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: 0 on success\par
+ \-Negative value on failure 
+\end{DoxyReturn}
+\hypertarget{key_8c_aee060ad9aa9cba6597499f01e4511e2b}{\index{key.\-c@{key.\-c}!\-K\-E\-Y\-Set\-Region@{\-K\-E\-Y\-Set\-Region}}
+\index{\-K\-E\-Y\-Set\-Region@{\-K\-E\-Y\-Set\-Region}!key.c@{key.\-c}}
+\subsubsection[{\-K\-E\-Y\-Set\-Region}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-K\-E\-Y\-Set\-Region} (
+\begin{DoxyParamCaption}
+\item[{int}]{index, }
+\item[{{\bf m6key\-\_\-box\-\_\-t} $\ast$}]{region}
+\end{DoxyParamCaption}
+)}}\label{key_8c_aee060ad9aa9cba6597499f01e4511e2b}
+
+
+\-Manually set region data into current touch map. \-Only used in \-K\-E\-Y\-T\-M\-\_\-\-R\-E\-G\-I\-O\-N\-S mode. \-If region is 0x0, resets the touch map (mode becomes \-K\-E\-Y\-T\-M\-\_\-\-U\-N\-K\-N\-O\-W\-N). 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & index \-: \-Index for region \\
+\hline
+{\em m6key\-\_\-box\-\_\-t$\ast$} & region \-: \-Pointer to a region data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: 0 on success\par
+ \-Negative value on failure 
+\end{DoxyReturn}
+\hypertarget{key_8c_a3efbbf59c8736d583d92453caa09bc27}{\index{key.\-c@{key.\-c}!\-K\-E\-Y\-Set\-T\-M@{\-K\-E\-Y\-Set\-T\-M}}
+\index{\-K\-E\-Y\-Set\-T\-M@{\-K\-E\-Y\-Set\-T\-M}!key.c@{key.\-c}}
+\subsubsection[{\-K\-E\-Y\-Set\-T\-M}]{\setlength{\rightskip}{0pt plus 5cm}keymode\-\_\-t {\bf \-K\-E\-Y\-Set\-T\-M} (
+\begin{DoxyParamCaption}
+\item[{keymode\-\_\-t}]{mode}
+\end{DoxyParamCaption}
+)}}\label{key_8c_a3efbbf59c8736d583d92453caa09bc27}
+
+
+\-Set mode for key touch map. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em keymode\-\_\-t} & mode \-: \-Requested touch map mode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+keymode\-\_\-t ret\-Mod \-: \-Current touch map mode 
+\end{DoxyReturn}
+\hypertarget{key_8c_a4d65bf8772ba07434304b080f0ac915e}{\index{key.\-c@{key.\-c}!\-K\-E\-Y\-Wait@{\-K\-E\-Y\-Wait}}
+\index{\-K\-E\-Y\-Wait@{\-K\-E\-Y\-Wait}!key.c@{key.\-c}}
+\subsubsection[{\-K\-E\-Y\-Wait}]{\setlength{\rightskip}{0pt plus 5cm}keycode\-\_\-t {\bf \-K\-E\-Y\-Wait} (
+\begin{DoxyParamCaption}
+\item[{keycode\-\_\-t}]{excode}
+\end{DoxyParamCaption}
+)}}\label{key_8c_a4d65bf8772ba07434304b080f0ac915e}
+
+
+\-Wait for specific keys only. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em keycode\-\_\-t} & excode \-: \-Expected keycode values (bit \-X\-O\-Red) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+keycode\-\_\-t ret\-Key \-: \-Keycode value 
+\end{DoxyReturn}

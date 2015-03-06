@@ -1,0 +1,112 @@
+\hypertarget{psd__sensors_8c}{\section{\-Eye\-Bot\-\_\-\-B\-B/src/psd\-\_\-sensors.c \-File \-Reference}
+\label{psd__sensors_8c}\index{\-Eye\-Bot\-\_\-\-B\-B/src/psd\-\_\-sensors.\-c@{\-Eye\-Bot\-\_\-\-B\-B/src/psd\-\_\-sensors.\-c}}
+}
+
+
+\-Defines functions to use the \-P\-S\-D sensors.  
+
+
+{\ttfamily \#include \char`\"{}psd\-\_\-sensors.\-h\char`\"{}}\*
+\-Include dependency graph for psd\-\_\-sensors.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{psd__sensors_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\-P\-S\-D\-Handle \hyperlink{psd__sensors_8c_a7d03f2d63cc1b7a14f923dcf0a35e842}{\-P\-S\-D\-Init} (\-Device\-Semantics semantics)
+\begin{DoxyCompactList}\small\item\em \-Initialize single \-P\-S\-D with given semantics. \-Up to 8 \-P\-S\-Ds can be initialized. \end{DoxyCompactList}\item 
+int \hyperlink{psd__sensors_8c_af96aa4f22ebf32e1051beff0394e7544}{\-P\-S\-D\-Get\-Raw} (\-P\-S\-D\-Handle psd)
+\begin{DoxyCompactList}\small\item\em \-Delivers raw-\/data measured by the selected \-P\-S\-D. \end{DoxyCompactList}\item 
+int \hyperlink{psd__sensors_8c_ab24a0a2363e7b224d3ec5ed882817dc0}{\-P\-S\-D\-Get} (\-P\-S\-D\-Handle psd)
+\begin{DoxyCompactList}\small\item\em \-Delivers actual timestamp or distance measured by the selected \-P\-S\-D. \-If the raw reading is out of range for the given sensor, \-P\-S\-D\-\_\-\-O\-U\-T\-\_\-\-O\-F\-\_\-\-R\-A\-N\-G\-E (=9999) is returned. \end{DoxyCompactList}\item 
+int \hyperlink{psd__sensors_8c_aab27bb39a347e17fccc14bafc394e86b}{\-P\-S\-D\-Release} (\-P\-S\-D\-Handle psd)
+\begin{DoxyCompactList}\small\item\em \-Stops measurings and releases a \-P\-S\-D. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Defines functions to use the \-P\-S\-D sensors. \begin{DoxyAuthor}{\-Author}
+\-Remi \-K\-E\-A\-T 
+\end{DoxyAuthor}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{psd__sensors_8c_ab24a0a2363e7b224d3ec5ed882817dc0}{\index{psd\-\_\-sensors.\-c@{psd\-\_\-sensors.\-c}!\-P\-S\-D\-Get@{\-P\-S\-D\-Get}}
+\index{\-P\-S\-D\-Get@{\-P\-S\-D\-Get}!psd_sensors.c@{psd\-\_\-sensors.\-c}}
+\subsubsection[{\-P\-S\-D\-Get}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-P\-S\-D\-Get} (
+\begin{DoxyParamCaption}
+\item[{\-P\-S\-D\-Handle}]{psd}
+\end{DoxyParamCaption}
+)}}\label{psd__sensors_8c_ab24a0a2363e7b224d3ec5ed882817dc0}
+
+
+\-Delivers actual timestamp or distance measured by the selected \-P\-S\-D. \-If the raw reading is out of range for the given sensor, \-P\-S\-D\-\_\-\-O\-U\-T\-\_\-\-O\-F\-\_\-\-R\-A\-N\-G\-E (=9999) is returned. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-P\-S\-D\-Handle} & psd \-: the number of the psd to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: actual distance in mm (converted through internal table) 
+\end{DoxyReturn}
+\hypertarget{psd__sensors_8c_af96aa4f22ebf32e1051beff0394e7544}{\index{psd\-\_\-sensors.\-c@{psd\-\_\-sensors.\-c}!\-P\-S\-D\-Get\-Raw@{\-P\-S\-D\-Get\-Raw}}
+\index{\-P\-S\-D\-Get\-Raw@{\-P\-S\-D\-Get\-Raw}!psd_sensors.c@{psd\-\_\-sensors.\-c}}
+\subsubsection[{\-P\-S\-D\-Get\-Raw}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-P\-S\-D\-Get\-Raw} (
+\begin{DoxyParamCaption}
+\item[{\-P\-S\-D\-Handle}]{psd}
+\end{DoxyParamCaption}
+)}}\label{psd__sensors_8c_af96aa4f22ebf32e1051beff0394e7544}
+
+
+\-Delivers raw-\/data measured by the selected \-P\-S\-D. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-P\-S\-D\-Handle} & psd \-: \-Handle of the psd to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int read\-Val \-: actual raw-\/data (not converted) 
+\end{DoxyReturn}
+\hypertarget{psd__sensors_8c_a7d03f2d63cc1b7a14f923dcf0a35e842}{\index{psd\-\_\-sensors.\-c@{psd\-\_\-sensors.\-c}!\-P\-S\-D\-Init@{\-P\-S\-D\-Init}}
+\index{\-P\-S\-D\-Init@{\-P\-S\-D\-Init}!psd_sensors.c@{psd\-\_\-sensors.\-c}}
+\subsubsection[{\-P\-S\-D\-Init}]{\setlength{\rightskip}{0pt plus 5cm}\-P\-S\-D\-Handle {\bf \-P\-S\-D\-Init} (
+\begin{DoxyParamCaption}
+\item[{\-Device\-Semantics}]{semantics}
+\end{DoxyParamCaption}
+)}}\label{psd__sensors_8c_a7d03f2d63cc1b7a14f923dcf0a35e842}
+
+
+\-Initialize single \-P\-S\-D with given semantics. \-Up to 8 \-P\-S\-Ds can be initialized. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-Device\-Semantics} & semantics \-: unique definition for desired \-P\-S\-D \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-P\-S\-D\-Handle psd\-Handle \-: unique handle for all further operations 
+\end{DoxyReturn}
+\hypertarget{psd__sensors_8c_aab27bb39a347e17fccc14bafc394e86b}{\index{psd\-\_\-sensors.\-c@{psd\-\_\-sensors.\-c}!\-P\-S\-D\-Release@{\-P\-S\-D\-Release}}
+\index{\-P\-S\-D\-Release@{\-P\-S\-D\-Release}!psd_sensors.c@{psd\-\_\-sensors.\-c}}
+\subsubsection[{\-P\-S\-D\-Release}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-P\-S\-D\-Release} (
+\begin{DoxyParamCaption}
+\item[{\-P\-S\-D\-Handle}]{psd}
+\end{DoxyParamCaption}
+)}}\label{psd__sensors_8c_aab27bb39a347e17fccc14bafc394e86b}
+
+
+\-Stops measurings and releases a \-P\-S\-D. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-P\-S\-D\-Handle} & psd \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}

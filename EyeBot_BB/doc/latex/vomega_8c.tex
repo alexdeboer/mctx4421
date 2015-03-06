@@ -1,0 +1,145 @@
+\hypertarget{vomega_8c}{\section{\-Eye\-Bot\-\_\-\-B\-B/src/vomega.c \-File \-Reference}
+\label{vomega_8c}\index{\-Eye\-Bot\-\_\-\-B\-B/src/vomega.\-c@{\-Eye\-Bot\-\_\-\-B\-B/src/vomega.\-c}}
+}
+
+
+\-Defines the \-V\-W functions.  
+
+
+{\ttfamily \#include \char`\"{}vomega.\-h\char`\"{}}\*
+\-Include dependency graph for vomega.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vomega_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\-V\-W\-Handle \hyperlink{vomega_8c_a6433e472842e24ec630204544f69e49b}{\-V\-W\-Init} (\-Device\-Semantics semantics, int \-Timescale)
+\begin{DoxyCompactList}\small\item\em \-Initialize given \-V\-W-\/\-Driver (only 1 can be initialized!). \-The motors and encoders are automatically reserved!! \-The \-Timescale allows to adjust the tradeoff between accuracy (scale=1, update at 100\-Hz) and speed(scale$>$1, update at 100/scale \-Hz). \end{DoxyCompactList}\item 
+int \hyperlink{vomega_8c_a1a874d54969cf411cfa6514a92308074}{\-V\-W\-Drive\-Straight} (\-V\-W\-Handle handle, meter delta, meter\-Per\-Sec v)
+\begin{DoxyCompactList}\small\item\em \-Drives distance \char`\"{}delta\char`\"{} with speed v straight ahead (forward or backward) any subsequent call of \-V\-W\-Drive\-Straight, -\/\-Turn, -\/\-Curve or \-V\-W\-Set\-Speed while this one is still being executed, results in an immediate interruption of this command. \end{DoxyCompactList}\item 
+int \hyperlink{vomega_8c_a9a2da50bd9a490dfd4ee640ccde0129c}{\-V\-W\-Drive\-Turn} (\-V\-W\-Handle handle, radians delta, rad\-Per\-Sec w)
+\begin{DoxyCompactList}\small\item\em \-Turns about \char`\"{}delta\char`\"{} with speed w on the spot (clockwise or counter-\/clockwise) any subsequent call of \-V\-W\-Drive\-Straight, -\/\-Turn, -\/\-Curve or \-V\-W\-Set\-Speed while this one is still being executed, results in an immediate interruption of this command. \end{DoxyCompactList}\item 
+int \hyperlink{vomega_8c_ac84c1c4ea1123cc1d10ec2363c2f05d2}{\-V\-W\-Drive\-Wait} (\-V\-W\-Handle handle)
+\begin{DoxyCompactList}\small\item\em \-Blocks the calling process until the previous \-V\-W\-Drive\-X() command has been completed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Defines the \-V\-W functions. \begin{DoxyAuthor}{\-Author}
+\-Remi \-K\-E\-A\-T 
+\end{DoxyAuthor}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{vomega_8c_a1a874d54969cf411cfa6514a92308074}{\index{vomega.\-c@{vomega.\-c}!\-V\-W\-Drive\-Straight@{\-V\-W\-Drive\-Straight}}
+\index{\-V\-W\-Drive\-Straight@{\-V\-W\-Drive\-Straight}!vomega.c@{vomega.\-c}}
+\subsubsection[{\-V\-W\-Drive\-Straight}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-V\-W\-Drive\-Straight} (
+\begin{DoxyParamCaption}
+\item[{\-V\-W\-Handle}]{handle, }
+\item[{meter}]{delta, }
+\item[{meter\-Per\-Sec}]{v}
+\end{DoxyParamCaption}
+)}}\label{vomega_8c_a1a874d54969cf411cfa6514a92308074}
+
+
+\-Drives distance \char`\"{}delta\char`\"{} with speed v straight ahead (forward or backward) any subsequent call of \-V\-W\-Drive\-Straight, -\/\-Turn, -\/\-Curve or \-V\-W\-Set\-Speed while this one is still being executed, results in an immediate interruption of this command. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-V\-W\-Handle} & handle \-: \-O\-N\-E \-V\-W\-Handle \\
+\hline
+{\em meter} & delta \-: distance to drive in m \\
+\hline
+{\em meter\-Per\-Sec} & v \-: speed to drive with (always positive!)\\
+\hline
+\end{DoxyParams}
+delta \-:
+\begin{DoxyItemize}
+\item pos. -\/$>$ forward
+\item neg. -\/$>$ backward
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-:\par
+ 0 = ok\par
+ -\/1 = error wrong handle 
+\end{DoxyReturn}
+\hypertarget{vomega_8c_a9a2da50bd9a490dfd4ee640ccde0129c}{\index{vomega.\-c@{vomega.\-c}!\-V\-W\-Drive\-Turn@{\-V\-W\-Drive\-Turn}}
+\index{\-V\-W\-Drive\-Turn@{\-V\-W\-Drive\-Turn}!vomega.c@{vomega.\-c}}
+\subsubsection[{\-V\-W\-Drive\-Turn}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-V\-W\-Drive\-Turn} (
+\begin{DoxyParamCaption}
+\item[{\-V\-W\-Handle}]{handle, }
+\item[{radians}]{delta, }
+\item[{rad\-Per\-Sec}]{w}
+\end{DoxyParamCaption}
+)}}\label{vomega_8c_a9a2da50bd9a490dfd4ee640ccde0129c}
+
+
+\-Turns about \char`\"{}delta\char`\"{} with speed w on the spot (clockwise or counter-\/clockwise) any subsequent call of \-V\-W\-Drive\-Straight, -\/\-Turn, -\/\-Curve or \-V\-W\-Set\-Speed while this one is still being executed, results in an immediate interruption of this command. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-V\-W\-Handle} & handle \-: \-O\-N\-E \-V\-W\-Handle \\
+\hline
+{\em radians} & delta \-: degree to turn in radians\\
+\hline
+{\em rad\-Per\-Sec} & w \-: speed to turn with (always positive!)\\
+\hline
+\end{DoxyParams}
+delta \-:
+\begin{DoxyItemize}
+\item pos. -\/$>$ counter-\/clockwise
+\item neg. -\/$>$ clockwise
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-:\par
+ 0 = ok\par
+ -\/1 = error wrong handle 
+\end{DoxyReturn}
+\hypertarget{vomega_8c_ac84c1c4ea1123cc1d10ec2363c2f05d2}{\index{vomega.\-c@{vomega.\-c}!\-V\-W\-Drive\-Wait@{\-V\-W\-Drive\-Wait}}
+\index{\-V\-W\-Drive\-Wait@{\-V\-W\-Drive\-Wait}!vomega.c@{vomega.\-c}}
+\subsubsection[{\-V\-W\-Drive\-Wait}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-V\-W\-Drive\-Wait} (
+\begin{DoxyParamCaption}
+\item[{\-V\-W\-Handle}]{handle}
+\end{DoxyParamCaption}
+)}}\label{vomega_8c_ac84c1c4ea1123cc1d10ec2363c2f05d2}
+
+
+\-Blocks the calling process until the previous \-V\-W\-Drive\-X() command has been completed. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-V\-W\-Handle} & handle \-: \-O\-N\-E \-V\-W\-Handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-:\par
+ -\/1 = error wrong handle\par
+ 0 = previous \-V\-W\-Drive\-X command has been completed 
+\end{DoxyReturn}
+\hypertarget{vomega_8c_a6433e472842e24ec630204544f69e49b}{\index{vomega.\-c@{vomega.\-c}!\-V\-W\-Init@{\-V\-W\-Init}}
+\index{\-V\-W\-Init@{\-V\-W\-Init}!vomega.c@{vomega.\-c}}
+\subsubsection[{\-V\-W\-Init}]{\setlength{\rightskip}{0pt plus 5cm}\-V\-W\-Handle {\bf \-V\-W\-Init} (
+\begin{DoxyParamCaption}
+\item[{\-Device\-Semantics}]{semantics, }
+\item[{int}]{\-Timescale}
+\end{DoxyParamCaption}
+)}}\label{vomega_8c_a6433e472842e24ec630204544f69e49b}
+
+
+\-Initialize given \-V\-W-\/\-Driver (only 1 can be initialized!). \-The motors and encoders are automatically reserved!! \-The \-Timescale allows to adjust the tradeoff between accuracy (scale=1, update at 100\-Hz) and speed(scale$>$1, update at 100/scale \-Hz). 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-Device\-Semantics} & semantics \\
+\hline
+{\em int} & \-Timescale \-: prescale value for 100\-Hz \-I\-R\-Q (1 to ...) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-V\-W\-Handle handle \-: \-V\-W\-Handle or 0 for error 
+\end{DoxyReturn}

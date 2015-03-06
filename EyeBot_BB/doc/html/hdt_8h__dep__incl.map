@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$spi_8h.html" title="Header file for the SPI functions." alt="" coords="801,83,969,112"/>
+<area shape="rect" id="node38" href="$hdt_8c.html" title="Defines functions used by the HDT system." alt="" coords="993,83,1137,112"/>
+<area shape="rect" id="node5" href="$adc_8h.html" title="Header file for the ADC functions." alt="" coords="1217,160,1391,189"/>
+<area shape="rect" id="node11" href="$servos__and__motors_8h.html" title="Header file for the servos and motors functions." alt="" coords="39,160,308,189"/>
+<area shape="rect" id="node16" href="$psd__sensors_8h.html" title="Header file for the PSD sensors functions." alt="" coords="332,160,559,189"/>
+<area shape="rect" id="node21" href="$latches_8h.html" title="Header file for the latches functions." alt="" coords="583,160,777,189"/>
+<area shape="rect" id="node26" href="$irtv_8h.html" title="Header file for the IRTV functions." alt="" coords="801,160,969,189"/>
+<area shape="rect" id="node31" href="$vomega_8h.html" title="Header file for the VW functions." alt="" coords="993,160,1193,189"/>
+<area shape="rect" id="node36" href="$spi_8c.html" title="Defines fonctions for sending and receiving SPI messages." alt="" coords="1415,160,1556,189"/>
+<area shape="rect" id="node7" href="$eyebot_8h.html" title="Header file for the EyeBot functions." alt="" coords="693,237,885,267"/>
+<area shape="rect" id="node9" href="$adc_8c.html" title="Defines the ADC functions." alt="" coords="1275,237,1424,267"/>
+<area shape="rect" id="node14" href="$servos__and__motors_8c.html" title="Defines functions to control servos and motors." alt="" coords="5,237,251,267"/>
+<area shape="rect" id="node19" href="$psd__sensors_8c.html" title="Defines functions to use the PSD sensors." alt="" coords="275,237,477,267"/>
+<area shape="rect" id="node24" href="$latches_8c.html" title="Defines functions to control latches." alt="" coords="501,237,669,267"/>
+<area shape="rect" id="node29" href="$irtv_8c.html" title="Defines IRTV functions." alt="" coords="909,237,1051,267"/>
+<area shape="rect" id="node34" href="$vomega_8c.html" title="Defines the VW functions." alt="" coords="1075,237,1251,267"/>
+</map>

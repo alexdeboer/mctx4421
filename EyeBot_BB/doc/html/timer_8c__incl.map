@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$timer_8h.html" title="Header file for the timer functions." alt="" coords="437,83,499,112"/>
+<area shape="rect" id="node5" href="$lcd_8h.html" title="Header file for the LCD functions." alt="" coords="443,160,493,189"/>
+<area shape="rect" id="node7" href="$globals_8h.html" title="Header file for global variables." alt="" coords="292,237,367,267"/>
+<area shape="rect" id="node27" href="$key_8h.html" title="Header file for the key functions." alt="" coords="484,237,537,267"/>
+<area shape="rect" id="node9" href="$types_8h.html" title="Defines types." alt="" coords="297,315,361,344"/>
+<area shape="rect" id="node21" href="$params_8h.html" title="Defines main parameters." alt="" coords="483,392,560,421"/>
+</map>

@@ -1,0 +1,769 @@
+\hypertarget{hdt_8h}{\section{\-Eye\-Bot\-\_\-\-B\-B/include/hdt.h \-File \-Reference}
+\label{hdt_8h}\index{\-Eye\-Bot\-\_\-\-B\-B/include/hdt.\-h@{\-Eye\-Bot\-\_\-\-B\-B/include/hdt.\-h}}
+}
+
+
+\-Header file for the \-H\-D\-T functions.  
+
+
+{\ttfamily \#include \char`\"{}types.\-h\char`\"{}}\*
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+{\ttfamily \#include $<$string.\-h$>$}\*
+\-Include dependency graph for hdt.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hdt_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hdt_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{hdt_8h_a8849764e6b38d35a1717fa18fcd2d483}{\#define {\bfseries \-H\-D\-T\-\_\-\-I\-D\-X\-\_\-\-T\-A\-B\-L\-E}~0}\label{hdt_8h_a8849764e6b38d35a1717fa18fcd2d483}
+
+\item 
+\hypertarget{hdt_8h_a08807b7e679053743b57496301c4cea7}{\#define {\bfseries \-H\-D\-T\-\_\-\-I\-D\-X\-\_\-\-P\-S\-D}~1}\label{hdt_8h_a08807b7e679053743b57496301c4cea7}
+
+\item 
+\hypertarget{hdt_8h_afd097c1023eff9d31fb989496c807e32}{\#define {\bfseries \-H\-D\-T\-\_\-\-I\-D\-X\-\_\-\-S\-E\-R\-V\-O}~2}\label{hdt_8h_afd097c1023eff9d31fb989496c807e32}
+
+\item 
+\hypertarget{hdt_8h_a5918a72cb5c61699755b020cfefcc56a}{\#define {\bfseries \-H\-D\-T\-\_\-\-I\-D\-X\-\_\-\-M\-O\-T\-O\-R}~3}\label{hdt_8h_a5918a72cb5c61699755b020cfefcc56a}
+
+\item 
+\hypertarget{hdt_8h_a788937159537cd474650ad468b451de1}{\#define {\bfseries \-H\-D\-T\-\_\-\-I\-D\-X\-\_\-\-E\-N\-C\-O\-D\-E\-R}~4}\label{hdt_8h_a788937159537cd474650ad468b451de1}
+
+\item 
+\hypertarget{hdt_8h_ae307f8938fa00bde7513e7653eee573a}{\#define {\bfseries \-H\-D\-T\-\_\-\-I\-D\-X\-\_\-\-D\-R\-I\-V\-E}~5}\label{hdt_8h_ae307f8938fa00bde7513e7653eee573a}
+
+\item 
+\hypertarget{hdt_8h_afe71146ca7e8aed728ab9fbab965a577}{\#define {\bfseries \-H\-D\-T\-\_\-\-I\-D\-X\-\_\-\-C\-O\-M\-P\-A\-S\-S}~6}\label{hdt_8h_afe71146ca7e8aed728ab9fbab965a577}
+
+\item 
+\hypertarget{hdt_8h_a3572fdf4494603a8cb2a190004e99ca7}{\#define {\bfseries \-H\-D\-T\-\_\-\-I\-D\-X\-\_\-\-I\-R\-T\-V}~7}\label{hdt_8h_a3572fdf4494603a8cb2a190004e99ca7}
+
+\item 
+\hypertarget{hdt_8h_af4eb2890f8cda81d1e568cfa2ef254db}{\#define {\bfseries \-H\-D\-T\-\_\-\-I\-D\-X\-\_\-\-C\-A\-M}~8}\label{hdt_8h_af4eb2890f8cda81d1e568cfa2ef254db}
+
+\item 
+\hypertarget{hdt_8h_ab5b93848cdae17affe7bfa991ee37240}{\#define {\bfseries \-H\-D\-T\-\_\-\-I\-D\-X\-\_\-\-A\-D\-C}~9}\label{hdt_8h_ab5b93848cdae17affe7bfa991ee37240}
+
+\item 
+\hypertarget{hdt_8h_a997adf0ca00fb6f9969fb4178fc084f0}{\#define {\bfseries \-H\-D\-T\-\_\-\-I\-D\-X\-\_\-\-C\-O\-M}~10}\label{hdt_8h_a997adf0ca00fb6f9969fb4178fc084f0}
+
+\item 
+\hypertarget{hdt_8h_a74aa4b715c25ba4a2bfadfea9c61a7dc}{\#define {\bfseries \-H\-D\-T\-\_\-\-M\-A\-X\-\_\-\-C\-O\-U\-N\-T}~11}\label{hdt_8h_a74aa4b715c25ba4a2bfadfea9c61a7dc}
+
+\item 
+\hypertarget{hdt_8h_a7ee4f16b44e2c902d0d43dbb629358d3}{\#define {\bfseries \-H\-D\-T\-\_\-\-T\-A\-B\-L\-E}~\char`\"{}\-T\-A\-B\-L\-E\char`\"{}}\label{hdt_8h_a7ee4f16b44e2c902d0d43dbb629358d3}
+
+\item 
+\hypertarget{hdt_8h_aee5501ccb8230be35dc89ad9d1282ddc}{\#define {\bfseries \-H\-D\-T\-\_\-\-P\-S\-D}~\char`\"{}\-P\-S\-D\char`\"{}}\label{hdt_8h_aee5501ccb8230be35dc89ad9d1282ddc}
+
+\item 
+\hypertarget{hdt_8h_a9dc5a4aeb036fa007be5123c9a23d33f}{\#define {\bfseries \-H\-D\-T\-\_\-\-S\-E\-R\-V\-O}~\char`\"{}\-S\-E\-R\-V\-O\char`\"{}}\label{hdt_8h_a9dc5a4aeb036fa007be5123c9a23d33f}
+
+\item 
+\hypertarget{hdt_8h_a2fadb23bd946024484ce78298c549950}{\#define {\bfseries \-H\-D\-T\-\_\-\-M\-O\-T\-O\-R}~\char`\"{}\-M\-O\-T\-O\-R\char`\"{}}\label{hdt_8h_a2fadb23bd946024484ce78298c549950}
+
+\item 
+\hypertarget{hdt_8h_af930567500221321a88997726178e61c}{\#define {\bfseries \-H\-D\-T\-\_\-\-E\-N\-C\-O\-D\-E\-R}~\char`\"{}\-E\-N\-C\-O\-D\-E\-R\char`\"{}}\label{hdt_8h_af930567500221321a88997726178e61c}
+
+\item 
+\hypertarget{hdt_8h_a116955706ba47ff879b1f115806bc458}{\#define {\bfseries \-H\-D\-T\-\_\-\-D\-R\-I\-V\-E}~\char`\"{}\-D\-R\-I\-V\-E\char`\"{}}\label{hdt_8h_a116955706ba47ff879b1f115806bc458}
+
+\item 
+\hypertarget{hdt_8h_a4904a4824fc861654b3be46801e18a51}{\#define {\bfseries \-H\-D\-T\-\_\-\-C\-O\-M\-P\-A\-S\-S}~\char`\"{}\-C\-O\-M\-P\-A\-S\-S\char`\"{}}\label{hdt_8h_a4904a4824fc861654b3be46801e18a51}
+
+\item 
+\hypertarget{hdt_8h_af6623f07c4a047e79c8bf8093b7ee338}{\#define {\bfseries \-H\-D\-T\-\_\-\-I\-R\-T\-V}~\char`\"{}\-I\-R\-T\-V\char`\"{}}\label{hdt_8h_af6623f07c4a047e79c8bf8093b7ee338}
+
+\item 
+\hypertarget{hdt_8h_a5e51b05c5ac28eaba6f103e67e74f5dd}{\#define {\bfseries \-H\-D\-T\-\_\-\-C\-A\-M}~\char`\"{}\-C\-A\-M\char`\"{}}\label{hdt_8h_a5e51b05c5ac28eaba6f103e67e74f5dd}
+
+\item 
+\hypertarget{hdt_8h_ac5e13276de5244e3270c1f5ff5e09cb5}{\#define {\bfseries \-H\-D\-T\-\_\-\-A\-D\-C}~\char`\"{}\-A\-D\-C\char`\"{}}\label{hdt_8h_ac5e13276de5244e3270c1f5ff5e09cb5}
+
+\item 
+\hypertarget{hdt_8h_aa731c67e5c409dcab4a77e52e1bde7b1}{\#define {\bfseries \-H\-D\-T\-\_\-\-C\-O\-M}~\char`\"{}\-S\-E\-R\-I\-A\-L\char`\"{}}\label{hdt_8h_aa731c67e5c409dcab4a77e52e1bde7b1}
+
+\item 
+\hypertarget{hdt_8h_af59585c612767c92ed8b2efd4b032a0b}{\#define {\bfseries \-D\-I\-F\-F\-E\-R\-E\-N\-T\-I\-A\-L\-\_\-\-D\-R\-I\-V\-E}~0}\label{hdt_8h_af59585c612767c92ed8b2efd4b032a0b}
+
+\item 
+\hypertarget{hdt_8h_a22121162a4c94871f4cae9027e2d134b}{\#define {\bfseries \-A\-C\-K\-E\-R\-M\-A\-N\-\_\-\-D\-R\-I\-V\-E}~1}\label{hdt_8h_a22121162a4c94871f4cae9027e2d134b}
+
+\item 
+\hypertarget{hdt_8h_aeaddae082fb30e38f0d9ffa390d4a71e}{\#define {\bfseries \-A\-C\-K\-E\-R\-M\-A\-N\-N\-\_\-\-D\-R\-I\-V\-E}~1}\label{hdt_8h_aeaddae082fb30e38f0d9ffa390d4a71e}
+
+\item 
+\hypertarget{hdt_8h_acd0ec2b2441de33f67f6c4eeb72f8953}{\#define {\bfseries \-S\-Y\-N\-C\-H\-R\-O\-\_\-\-D\-R\-I\-V\-E}~2}\label{hdt_8h_acd0ec2b2441de33f67f6c4eeb72f8953}
+
+\item 
+\hypertarget{hdt_8h_a9c03e038fad1f2b32ee8394982683ae8}{\#define {\bfseries \-T\-R\-I\-C\-Y\-C\-L\-E\-\_\-\-D\-R\-I\-V\-E}~3}\label{hdt_8h_a9c03e038fad1f2b32ee8394982683ae8}
+
+\item 
+\hypertarget{hdt_8h_a22a6e1c038985783b91d28773fd8f3dc}{\#define {\bfseries \-O\-M\-N\-I\-\_\-\-D\-R\-I\-V\-E}~4}\label{hdt_8h_a22a6e1c038985783b91d28773fd8f3dc}
+
+\item 
+\hypertarget{hdt_8h_a8f0e925a3cd63f6c448b4120304cfa45}{\#define {\bfseries \-H\-D\-T\-\_\-\-D\-I\-F\-F\-\_\-\-S\-T\-R}~\char`\"{}\-D\-I\-F\-F\-E\-R\-E\-N\-T\-I\-A\-L\char`\"{}}\label{hdt_8h_a8f0e925a3cd63f6c448b4120304cfa45}
+
+\item 
+\hypertarget{hdt_8h_ad469f8a93afad9396725f3aa1ee17870}{\#define {\bfseries \-H\-D\-T\-\_\-\-A\-C\-K\-M\-\_\-\-S\-T\-R}~\char`\"{}\-A\-C\-K\-E\-R\-M\-A\-N\-N\char`\"{}}\label{hdt_8h_ad469f8a93afad9396725f3aa1ee17870}
+
+\item 
+\hypertarget{hdt_8h_ac091b75e59e94b8602e9f8e1f510022a}{\#define {\bfseries \-H\-D\-T\-\_\-\-O\-M\-N\-I\-\_\-\-S\-T\-R}~\char`\"{}\-O\-M\-N\-I\char`\"{}}\label{hdt_8h_ac091b75e59e94b8602e9f8e1f510022a}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{hdt_8h_ab2b183339a32ec5daccc258317c5ab26}{\-H\-D\-T\-Validate} (char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em checks all \-H\-D\-T entries in given filename. will not check for specific entry (only check entry headers). \end{DoxyCompactList}\item 
+int \hyperlink{hdt_8h_ab699750eaf0f7bf69f253be9c38c0907}{\-H\-D\-T\-List\-Entry} (char $\ast$filename, \hyperlink{struct___h_d_t_entry__t}{\-H\-D\-T\-Entry\-\_\-t} $\ast$deventry, int count)
+\begin{DoxyCompactList}\small\item\em \-Copy all entries to deventry. user need to free the allocated memory by using free(deventry-\/$>$buffer). return value may be less than count. \end{DoxyCompactList}\item 
+int \hyperlink{hdt_8h_aa8929c1ecd052b6e5b83bad81beb5dab}{\-H\-D\-T\-Find\-Entry} (void $\ast$hdtfile, char $\ast$devname, \hyperlink{struct___h_d_t_entry__t}{\-H\-D\-T\-Entry\-\_\-t} $\ast$deventry)
+\begin{DoxyCompactList}\small\item\em finds an entry in the hdt file that matches given name and copies the entry to given structure. the newline character is replaced by null. user need to free the allocated memory by using free(deventry-\/$>$buffer). \end{DoxyCompactList}\item 
+int \hyperlink{hdt_8h_a4c40d9d0e56b59d580e840afd466e2a9}{\-H\-D\-T\-Find\-Table} (void $\ast$hdtfile, char $\ast$tabname, \hyperlink{struct___h_d_t_table__t}{\-H\-D\-T\-Table\-\_\-t} $\ast$tabentry)
+\begin{DoxyCompactList}\small\item\em finds a table in the hdt file that matches given name and copies the table data to given structure. \end{DoxyCompactList}\item 
+\hyperlink{struct___h_d_t_table__t}{\-H\-D\-T\-Table\-\_\-t} $\ast$ \hyperlink{hdt_8h_a7c982e7789941891ff653f002cd66807}{\-H\-D\-T\-Load\-Table} (char $\ast$filename, \hyperlink{struct___h_d_t_device__t}{\-H\-D\-T\-Device\-\_\-t} $\ast$pdevices)
+\begin{DoxyCompactList}\small\item\em load all tables needed by pdevices -\/ if found. the return value is a pointer to the first table. the tables are in a linked list allocated with dynamic memory. use \-H\-D\-T\-Clear\-Table to free up the resources. \end{DoxyCompactList}\item 
+int \hyperlink{hdt_8h_a89e7bf90578bcf29c79317cc4c4e8489}{\-H\-D\-T\-Clear\-Table} (\hyperlink{struct___h_d_t_table__t}{\-H\-D\-T\-Table\-\_\-t} $\ast$ptables)
+\begin{DoxyCompactList}\small\item\em \-Free the allocated resources for the tables created by \-H\-D\-T\-Load\-Table. \end{DoxyCompactList}\item 
+\hyperlink{struct___h_d_t_dev_c_a_m__t}{\-H\-D\-T\-Dev\-C\-A\-M\-\_\-t} $\ast$ \hyperlink{hdt_8h_ae968262dc5bbd277e997d113555b7d0e}{\-H\-D\-T\-Load\-C\-A\-M} (char $\ast$filename, char $\ast$devname)
+\begin{DoxyCompactList}\small\item\em load all $<$device$>$ entry found in the hdt file if devname is null. else, load only the requested device. the return value is a pointer to the first $<$device$>$. the $<$devices$>$ are in a linked list allocated with dynamic memory. use \-H\-D\-T\-Clear$<$device$>$ to free up the resources. \end{DoxyCompactList}\item 
+int \hyperlink{hdt_8h_a1ee33e4fca123ba56a18755b82a838b5}{\-H\-D\-T\-Clear\-C\-A\-M} (\hyperlink{struct___h_d_t_dev_c_a_m__t}{\-H\-D\-T\-Dev\-C\-A\-M\-\_\-t} $\ast$pdevs)
+\begin{DoxyCompactList}\small\item\em \-Free the allocated resources for the $<$device$>$ created by \-H\-D\-T\-Load$<$device$>$. \end{DoxyCompactList}\item 
+\hyperlink{struct___h_d_t_dev_m_o_t_o_r__t}{\-H\-D\-T\-Dev\-M\-O\-T\-O\-R\-\_\-t} $\ast$ \hyperlink{hdt_8h_a6eead3a447a4705ccab9bbe3c1659745}{\-H\-D\-T\-Load\-M\-O\-T\-O\-R} (char $\ast$filename, char $\ast$devname)
+\begin{DoxyCompactList}\small\item\em load all $<$device$>$ entry found in the hdt file if devname is null. else, load only the requested device. the return value is a pointer to the first $<$device$>$. the $<$devices$>$ are in a linked list allocated with dynamic memory. use \-H\-D\-T\-Clear$<$device$>$ to free up the resources. \end{DoxyCompactList}\item 
+int \hyperlink{hdt_8h_a1522ba17fac8fdd8e0a59fba64ee161b}{\-H\-D\-T\-Clear\-M\-O\-T\-O\-R} (\hyperlink{struct___h_d_t_dev_m_o_t_o_r__t}{\-H\-D\-T\-Dev\-M\-O\-T\-O\-R\-\_\-t} $\ast$pdevs)
+\begin{DoxyCompactList}\small\item\em \-Free the allocated resources for the $<$device$>$ created by \-H\-D\-T\-Load$<$device$>$. \end{DoxyCompactList}\item 
+\hyperlink{struct___h_d_t_dev_e_n_c_o_d_e_r__t}{\-H\-D\-T\-Dev\-E\-N\-C\-O\-D\-E\-R\-\_\-t} $\ast$ \hyperlink{hdt_8h_a7236b756050f2f4aaba1c9046fc40924}{\-H\-D\-T\-Load\-E\-N\-C\-O\-D\-E\-R} (char $\ast$filename, char $\ast$devname)
+\begin{DoxyCompactList}\small\item\em load all $<$device$>$ entry found in the hdt file if devname is null. else, load only the requested device. the return value is a pointer to the first $<$device$>$. the $<$devices$>$ are in a linked list allocated with dynamic memory. use \-H\-D\-T\-Clear$<$device$>$ to free up the resources. \end{DoxyCompactList}\item 
+int \hyperlink{hdt_8h_a5283a2ae4cb5993cf46da8a267492ea0}{\-H\-D\-T\-Clear\-E\-N\-C\-O\-D\-E\-R} (\hyperlink{struct___h_d_t_dev_e_n_c_o_d_e_r__t}{\-H\-D\-T\-Dev\-E\-N\-C\-O\-D\-E\-R\-\_\-t} $\ast$pdevs)
+\begin{DoxyCompactList}\small\item\em \-Free the allocated resources for the $<$device$>$ created by \-H\-D\-T\-Load$<$device$>$. \end{DoxyCompactList}\item 
+int \hyperlink{hdt_8h_aa888038a80d1006b209a391ac24a0fa1}{\-H\-D\-T\-Link\-E\-N\-C2\-M\-O\-T} (\hyperlink{struct___h_d_t_dev_e_n_c_o_d_e_r__t}{\-H\-D\-T\-Dev\-E\-N\-C\-O\-D\-E\-R\-\_\-t} $\ast$pencoders, \hyperlink{struct___h_d_t_dev_m_o_t_o_r__t}{\-H\-D\-T\-Dev\-M\-O\-T\-O\-R\-\_\-t} $\ast$pmotors)
+\begin{DoxyCompactList}\small\item\em \-Link the encoders to the motors. \end{DoxyCompactList}\item 
+\hyperlink{struct___h_d_t_dev_p_s_d__t}{\-H\-D\-T\-Dev\-P\-S\-D\-\_\-t} $\ast$ \hyperlink{hdt_8h_aeb76b80cba687423ed8f5498d45198c6}{\-H\-D\-T\-Load\-P\-S\-D} (char $\ast$filename, char $\ast$devname)
+\begin{DoxyCompactList}\small\item\em load all $<$device$>$ entry found in the hdt file if devname is null. else, load only the requested device. the return value is a pointer to the first $<$device$>$. the $<$devices$>$ are in a linked list allocated with dynamic memory. use \-H\-D\-T\-Clear$<$device$>$ to free up the resources. \end{DoxyCompactList}\item 
+int \hyperlink{hdt_8h_a63a091ca369eb98875fa1b48dc27ca73}{\-H\-D\-T\-Clear\-P\-S\-D} (\hyperlink{struct___h_d_t_dev_p_s_d__t}{\-H\-D\-T\-Dev\-P\-S\-D\-\_\-t} $\ast$pdevs)
+\begin{DoxyCompactList}\small\item\em \-Free the allocated resources for the $<$device$>$ created by \-H\-D\-T\-Load$<$device$>$. \end{DoxyCompactList}\item 
+\hyperlink{struct___h_d_t_dev_s_e_r_v_o__t}{\-H\-D\-T\-Dev\-S\-E\-R\-V\-O\-\_\-t} $\ast$ \hyperlink{hdt_8h_a6699dedf81b0c6214d5707b56e9844f4}{\-H\-D\-T\-Load\-S\-E\-R\-V\-O} (char $\ast$filename, char $\ast$devname)
+\begin{DoxyCompactList}\small\item\em load all $<$device$>$ entry found in the hdt file if devname is null. else, load only the requested device. the return value is a pointer to the first $<$device$>$. the $<$devices$>$ are in a linked list allocated with dynamic memory. use \-H\-D\-T\-Clear$<$device$>$ to free up the resources. \end{DoxyCompactList}\item 
+int \hyperlink{hdt_8h_a72e8f9c95b1a1291ac0deb0ca73c0e1c}{\-H\-D\-T\-Clear\-S\-E\-R\-V\-O} (\hyperlink{struct___h_d_t_dev_s_e_r_v_o__t}{\-H\-D\-T\-Dev\-S\-E\-R\-V\-O\-\_\-t} $\ast$pdevs)
+\begin{DoxyCompactList}\small\item\em \-Free the allocated resources for the $<$device$>$ created by \-H\-D\-T\-Load$<$device$>$. \end{DoxyCompactList}\item 
+\hyperlink{struct___h_d_t_dev_d_r_i_v_e__t}{\-H\-D\-T\-Dev\-D\-R\-I\-V\-E\-\_\-t} $\ast$ \hyperlink{hdt_8h_a0abad603fa9917cf881e8c8f41615c23}{\-H\-D\-T\-Load\-D\-R\-I\-V\-E} (char $\ast$filename, char $\ast$devname)
+\begin{DoxyCompactList}\small\item\em load all $<$device$>$ entry found in the hdt file if devname is null. else, load only the requested device. the return value is a pointer to the first $<$device$>$. the $<$devices$>$ are in a linked list allocated with dynamic memory. use \-H\-D\-T\-Clear$<$device$>$ to free up the resources. \end{DoxyCompactList}\item 
+int \hyperlink{hdt_8h_a032c0b606348a0cf90b1bea84cbdf3cc}{\-H\-D\-T\-Clear\-D\-R\-I\-V\-E} (\hyperlink{struct___h_d_t_dev_d_r_i_v_e__t}{\-H\-D\-T\-Dev\-D\-R\-I\-V\-E\-\_\-t} $\ast$pdevs)
+\begin{DoxyCompactList}\small\item\em \-Free the allocated resources for the $<$device$>$ created by \-H\-D\-T\-Load$<$device$>$. \end{DoxyCompactList}\item 
+int \hyperlink{hdt_8h_a832326d1d55fa3f3a4194ed5db89021d}{\-H\-D\-T\-Link\-D\-R\-V2\-E\-N\-C} (\hyperlink{struct___h_d_t_dev_d_r_i_v_e__t}{\-H\-D\-T\-Dev\-D\-R\-I\-V\-E\-\_\-t} $\ast$pdrives, \hyperlink{struct___h_d_t_dev_e_n_c_o_d_e_r__t}{\-H\-D\-T\-Dev\-E\-N\-C\-O\-D\-E\-R\-\_\-t} $\ast$pencoders)
+\begin{DoxyCompactList}\small\item\em \-Link the drives to the encoders. \end{DoxyCompactList}\item 
+\hyperlink{struct___h_d_t_dev_i_r_t_v__t}{\-H\-D\-T\-Dev\-I\-R\-T\-V\-\_\-t} $\ast$ \hyperlink{hdt_8h_a16a9035efdfbcc2bfbee98987c5fc15c}{\-H\-D\-T\-Load\-I\-R\-T\-V} (char $\ast$filename, char $\ast$devname)
+\begin{DoxyCompactList}\small\item\em load all $<$device$>$ entry found in the hdt file if devname is null. else, load only the requested device. the return value is a pointer to the first $<$device$>$. the $<$devices$>$ are in a linked list allocated with dynamic memory. use \-H\-D\-T\-Clear$<$device$>$ to free up the resources. \end{DoxyCompactList}\item 
+int \hyperlink{hdt_8h_a933baf04ad3ec7edfa3661bb2969da55}{\-H\-D\-T\-Clear\-I\-R\-T\-V} (\hyperlink{struct___h_d_t_dev_i_r_t_v__t}{\-H\-D\-T\-Dev\-I\-R\-T\-V\-\_\-t} $\ast$pdevs)
+\begin{DoxyCompactList}\small\item\em \-Free the allocated resources for the $<$device$>$ created by \-H\-D\-T\-Load$<$device$>$. \end{DoxyCompactList}\item 
+\hyperlink{struct___h_d_t_dev_a_d_c__t}{\-H\-D\-T\-Dev\-A\-D\-C\-\_\-t} $\ast$ \hyperlink{hdt_8h_a121cbba0ea188cc4e276666b11b0960c}{\-H\-D\-T\-Load\-A\-D\-C} (char $\ast$filename, char $\ast$devname)
+\begin{DoxyCompactList}\small\item\em load all $<$device$>$ entry found in the hdt file if devname is null. else, load only the requested device. the return value is a pointer to the first $<$device$>$. the $<$devices$>$ are in a linked list allocated with dynamic memory. use \-H\-D\-T\-Clear$<$device$>$ to free up the resources. \end{DoxyCompactList}\item 
+int \hyperlink{hdt_8h_a1b12aaeea5218062c4454a48f98ea006}{\-H\-D\-T\-Clear\-A\-D\-C} (\hyperlink{struct___h_d_t_dev_a_d_c__t}{\-H\-D\-T\-Dev\-A\-D\-C\-\_\-t} $\ast$pdevs)
+\begin{DoxyCompactList}\small\item\em \-Free the allocated resources for the $<$device$>$ created by \-H\-D\-T\-Load$<$device$>$. \end{DoxyCompactList}\item 
+\hyperlink{struct___h_d_t_dev_c_o_m__t}{\-H\-D\-T\-Dev\-C\-O\-M\-\_\-t} $\ast$ \hyperlink{hdt_8h_ac97aa6da22c878986e358a64981c057a}{\-H\-D\-T\-Load\-C\-O\-M} (char $\ast$filename, char $\ast$devname)
+\begin{DoxyCompactList}\small\item\em load all $<$device$>$ entry found in the hdt file if devname is null. else, load only the requested device. the return value is a pointer to the first $<$device$>$. the $<$devices$>$ are in a linked list allocated with dynamic memory. use \-H\-D\-T\-Clear$<$device$>$ to free up the resources. \end{DoxyCompactList}\item 
+int \hyperlink{hdt_8h_aba4fcd75128655ab129e041b7b8f3097}{\-H\-D\-T\-Clear\-C\-O\-M} (\hyperlink{struct___h_d_t_dev_c_o_m__t}{\-H\-D\-T\-Dev\-C\-O\-M\-\_\-t} $\ast$pdevs)
+\begin{DoxyCompactList}\small\item\em \-Free the allocated resources for the $<$device$>$ created by \-H\-D\-T\-Load$<$device$>$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Header file for the \-H\-D\-T functions. \begin{DoxyAuthor}{\-Author}
+\-Remi \-K\-E\-A\-T 
+\end{DoxyAuthor}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{hdt_8h_a1b12aaeea5218062c4454a48f98ea006}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Clear\-A\-D\-C@{\-H\-D\-T\-Clear\-A\-D\-C}}
+\index{\-H\-D\-T\-Clear\-A\-D\-C@{\-H\-D\-T\-Clear\-A\-D\-C}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Clear\-A\-D\-C}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-D\-T\-Clear\-A\-D\-C} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-H\-D\-T\-Dev\-A\-D\-C\-\_\-t} $\ast$}]{pdevs}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_a1b12aaeea5218062c4454a48f98ea006}
+
+
+\-Free the allocated resources for the $<$device$>$ created by \-H\-D\-T\-Load$<$device$>$. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-H\-D\-T\-Dev\-A\-D\-C\-\_\-t$\ast$} & pdevs \-: $<$device$>$ list to be cleared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_a1ee33e4fca123ba56a18755b82a838b5}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Clear\-C\-A\-M@{\-H\-D\-T\-Clear\-C\-A\-M}}
+\index{\-H\-D\-T\-Clear\-C\-A\-M@{\-H\-D\-T\-Clear\-C\-A\-M}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Clear\-C\-A\-M}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-D\-T\-Clear\-C\-A\-M} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-H\-D\-T\-Dev\-C\-A\-M\-\_\-t} $\ast$}]{pdevs}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_a1ee33e4fca123ba56a18755b82a838b5}
+
+
+\-Free the allocated resources for the $<$device$>$ created by \-H\-D\-T\-Load$<$device$>$. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-H\-D\-T\-Dev\-C\-A\-M\-\_\-t$\ast$} & pdevs \-: $<$device$>$ list to be cleared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_aba4fcd75128655ab129e041b7b8f3097}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Clear\-C\-O\-M@{\-H\-D\-T\-Clear\-C\-O\-M}}
+\index{\-H\-D\-T\-Clear\-C\-O\-M@{\-H\-D\-T\-Clear\-C\-O\-M}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Clear\-C\-O\-M}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-D\-T\-Clear\-C\-O\-M} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-H\-D\-T\-Dev\-C\-O\-M\-\_\-t} $\ast$}]{pdevs}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_aba4fcd75128655ab129e041b7b8f3097}
+
+
+\-Free the allocated resources for the $<$device$>$ created by \-H\-D\-T\-Load$<$device$>$. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-H\-D\-T\-Dev\-C\-O\-M\-\_\-t$\ast$} & pdevs \-: $<$device$>$ list to be cleared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_a032c0b606348a0cf90b1bea84cbdf3cc}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Clear\-D\-R\-I\-V\-E@{\-H\-D\-T\-Clear\-D\-R\-I\-V\-E}}
+\index{\-H\-D\-T\-Clear\-D\-R\-I\-V\-E@{\-H\-D\-T\-Clear\-D\-R\-I\-V\-E}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Clear\-D\-R\-I\-V\-E}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-D\-T\-Clear\-D\-R\-I\-V\-E} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-H\-D\-T\-Dev\-D\-R\-I\-V\-E\-\_\-t} $\ast$}]{pdevs}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_a032c0b606348a0cf90b1bea84cbdf3cc}
+
+
+\-Free the allocated resources for the $<$device$>$ created by \-H\-D\-T\-Load$<$device$>$. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-H\-D\-T\-Dev\-D\-R\-I\-V\-E\-\_\-t$\ast$} & pdevs \-: $<$device$>$ list to be cleared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_a5283a2ae4cb5993cf46da8a267492ea0}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Clear\-E\-N\-C\-O\-D\-E\-R@{\-H\-D\-T\-Clear\-E\-N\-C\-O\-D\-E\-R}}
+\index{\-H\-D\-T\-Clear\-E\-N\-C\-O\-D\-E\-R@{\-H\-D\-T\-Clear\-E\-N\-C\-O\-D\-E\-R}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Clear\-E\-N\-C\-O\-D\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-D\-T\-Clear\-E\-N\-C\-O\-D\-E\-R} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-H\-D\-T\-Dev\-E\-N\-C\-O\-D\-E\-R\-\_\-t} $\ast$}]{pdevs}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_a5283a2ae4cb5993cf46da8a267492ea0}
+
+
+\-Free the allocated resources for the $<$device$>$ created by \-H\-D\-T\-Load$<$device$>$. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-H\-D\-T\-Dev\-E\-N\-C\-O\-D\-E\-R\-\_\-t$\ast$} & pdevs \-: $<$device$>$ list to be cleared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_a933baf04ad3ec7edfa3661bb2969da55}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Clear\-I\-R\-T\-V@{\-H\-D\-T\-Clear\-I\-R\-T\-V}}
+\index{\-H\-D\-T\-Clear\-I\-R\-T\-V@{\-H\-D\-T\-Clear\-I\-R\-T\-V}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Clear\-I\-R\-T\-V}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-D\-T\-Clear\-I\-R\-T\-V} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-H\-D\-T\-Dev\-I\-R\-T\-V\-\_\-t} $\ast$}]{pdevs}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_a933baf04ad3ec7edfa3661bb2969da55}
+
+
+\-Free the allocated resources for the $<$device$>$ created by \-H\-D\-T\-Load$<$device$>$. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-H\-D\-T\-Dev\-I\-R\-T\-V\-\_\-t$\ast$} & pdevs \-: $<$device$>$ list to be cleared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_a1522ba17fac8fdd8e0a59fba64ee161b}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Clear\-M\-O\-T\-O\-R@{\-H\-D\-T\-Clear\-M\-O\-T\-O\-R}}
+\index{\-H\-D\-T\-Clear\-M\-O\-T\-O\-R@{\-H\-D\-T\-Clear\-M\-O\-T\-O\-R}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Clear\-M\-O\-T\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-D\-T\-Clear\-M\-O\-T\-O\-R} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-H\-D\-T\-Dev\-M\-O\-T\-O\-R\-\_\-t} $\ast$}]{pdevs}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_a1522ba17fac8fdd8e0a59fba64ee161b}
+
+
+\-Free the allocated resources for the $<$device$>$ created by \-H\-D\-T\-Load$<$device$>$. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-H\-D\-T\-Dev\-M\-O\-T\-O\-R\-\_\-t$\ast$} & pdevs \-: $<$device$>$ list to be cleared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_a63a091ca369eb98875fa1b48dc27ca73}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Clear\-P\-S\-D@{\-H\-D\-T\-Clear\-P\-S\-D}}
+\index{\-H\-D\-T\-Clear\-P\-S\-D@{\-H\-D\-T\-Clear\-P\-S\-D}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Clear\-P\-S\-D}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-D\-T\-Clear\-P\-S\-D} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-H\-D\-T\-Dev\-P\-S\-D\-\_\-t} $\ast$}]{pdevs}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_a63a091ca369eb98875fa1b48dc27ca73}
+
+
+\-Free the allocated resources for the $<$device$>$ created by \-H\-D\-T\-Load$<$device$>$. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-H\-D\-T\-Dev\-P\-S\-D\-\_\-t$\ast$} & pdevs \-: $<$device$>$ list to be cleared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_a72e8f9c95b1a1291ac0deb0ca73c0e1c}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Clear\-S\-E\-R\-V\-O@{\-H\-D\-T\-Clear\-S\-E\-R\-V\-O}}
+\index{\-H\-D\-T\-Clear\-S\-E\-R\-V\-O@{\-H\-D\-T\-Clear\-S\-E\-R\-V\-O}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Clear\-S\-E\-R\-V\-O}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-D\-T\-Clear\-S\-E\-R\-V\-O} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-H\-D\-T\-Dev\-S\-E\-R\-V\-O\-\_\-t} $\ast$}]{pdevs}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_a72e8f9c95b1a1291ac0deb0ca73c0e1c}
+
+
+\-Free the allocated resources for the $<$device$>$ created by \-H\-D\-T\-Load$<$device$>$. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-H\-D\-T\-Dev\-S\-E\-R\-V\-O\-\_\-t$\ast$} & pdevs \-: $<$device$>$ list to be cleared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_a89e7bf90578bcf29c79317cc4c4e8489}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Clear\-Table@{\-H\-D\-T\-Clear\-Table}}
+\index{\-H\-D\-T\-Clear\-Table@{\-H\-D\-T\-Clear\-Table}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Clear\-Table}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-D\-T\-Clear\-Table} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-H\-D\-T\-Table\-\_\-t} $\ast$}]{ptables}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_a89e7bf90578bcf29c79317cc4c4e8489}
+
+
+\-Free the allocated resources for the tables created by \-H\-D\-T\-Load\-Table. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-H\-D\-T\-Table\-\_\-t$\ast$} & ptables \-: tables to be cleared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_aa8929c1ecd052b6e5b83bad81beb5dab}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Find\-Entry@{\-H\-D\-T\-Find\-Entry}}
+\index{\-H\-D\-T\-Find\-Entry@{\-H\-D\-T\-Find\-Entry}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Find\-Entry}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-D\-T\-Find\-Entry} (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{hdtfile, }
+\item[{char $\ast$}]{devname, }
+\item[{{\bf \-H\-D\-T\-Entry\-\_\-t} $\ast$}]{deventry}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_aa8929c1ecd052b6e5b83bad81beb5dab}
+
+
+finds an entry in the hdt file that matches given name and copies the entry to given structure. the newline character is replaced by null. user need to free the allocated memory by using free(deventry-\/$>$buffer). 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em void$\ast$} & hdtfile \-: hdt file fopen with \char`\"{}rt\char`\"{} flag \\
+\hline
+{\em char$\ast$} & devname \-: name of entry to search for \\
+\hline
+{\em \-H\-D\-T\-Entry\-\_\-t$\ast$} & deventry \-: storage structure for the entry \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-:\par
+ -\/1 on failure (no entry found)\par
+ \mbox{[}entry length\mbox{]} on success 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_a4c40d9d0e56b59d580e840afd466e2a9}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Find\-Table@{\-H\-D\-T\-Find\-Table}}
+\index{\-H\-D\-T\-Find\-Table@{\-H\-D\-T\-Find\-Table}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Find\-Table}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-D\-T\-Find\-Table} (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{hdtfile, }
+\item[{char $\ast$}]{tabname, }
+\item[{{\bf \-H\-D\-T\-Table\-\_\-t} $\ast$}]{tabentry}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_a4c40d9d0e56b59d580e840afd466e2a9}
+
+
+finds a table in the hdt file that matches given name and copies the table data to given structure. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em void$\ast$} & hdtfile \-: hdt file (fopen with \char`\"{}rt\char`\"{} flag) \\
+\hline
+{\em char$\ast$} & tabname \-: name of table to search for \\
+\hline
+{\em \-H\-D\-T\-Table\-\_\-t$\ast$} & tabentry \-: storage structure for the table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-:\par
+ -\/1 on failure (no table found)\par
+ \mbox{[}table size\mbox{]} on success 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_a832326d1d55fa3f3a4194ed5db89021d}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Link\-D\-R\-V2\-E\-N\-C@{\-H\-D\-T\-Link\-D\-R\-V2\-E\-N\-C}}
+\index{\-H\-D\-T\-Link\-D\-R\-V2\-E\-N\-C@{\-H\-D\-T\-Link\-D\-R\-V2\-E\-N\-C}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Link\-D\-R\-V2\-E\-N\-C}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-D\-T\-Link\-D\-R\-V2\-E\-N\-C} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-H\-D\-T\-Dev\-D\-R\-I\-V\-E\-\_\-t} $\ast$}]{pdrives, }
+\item[{{\bf \-H\-D\-T\-Dev\-E\-N\-C\-O\-D\-E\-R\-\_\-t} $\ast$}]{pencoders}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_a832326d1d55fa3f3a4194ed5db89021d}
+
+
+\-Link the drives to the encoders. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-H\-D\-T\-Dev\-D\-R\-I\-V\-E\-\_\-t$\ast$} & pdrives \-: list of drive methods \\
+\hline
+{\em \-H\-D\-T\-Dev\-E\-N\-C\-O\-D\-E\-R\-\_\-t$\ast$} & pencoders \-: list of encoders \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-:\par
+ 0 on success\par
+ \-Negative value on failure (number of unconnected link) 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_aa888038a80d1006b209a391ac24a0fa1}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Link\-E\-N\-C2\-M\-O\-T@{\-H\-D\-T\-Link\-E\-N\-C2\-M\-O\-T}}
+\index{\-H\-D\-T\-Link\-E\-N\-C2\-M\-O\-T@{\-H\-D\-T\-Link\-E\-N\-C2\-M\-O\-T}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Link\-E\-N\-C2\-M\-O\-T}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-D\-T\-Link\-E\-N\-C2\-M\-O\-T} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-H\-D\-T\-Dev\-E\-N\-C\-O\-D\-E\-R\-\_\-t} $\ast$}]{pencoders, }
+\item[{{\bf \-H\-D\-T\-Dev\-M\-O\-T\-O\-R\-\_\-t} $\ast$}]{pmotors}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_aa888038a80d1006b209a391ac24a0fa1}
+
+
+\-Link the encoders to the motors. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-H\-D\-T\-Dev\-E\-N\-C\-O\-D\-E\-R\-\_\-t$\ast$} & pencoders \-: list of encoders \\
+\hline
+{\em \-H\-D\-T\-Dev\-M\-O\-T\-O\-R\-\_\-t$\ast$} & pmotors \-: list of motors \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-:\par
+ 0 on success\par
+ \-Negative value on failure (number of unconnected link) 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_ab699750eaf0f7bf69f253be9c38c0907}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-List\-Entry@{\-H\-D\-T\-List\-Entry}}
+\index{\-H\-D\-T\-List\-Entry@{\-H\-D\-T\-List\-Entry}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-List\-Entry}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-D\-T\-List\-Entry} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{{\bf \-H\-D\-T\-Entry\-\_\-t} $\ast$}]{deventry, }
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_ab699750eaf0f7bf69f253be9c38c0907}
+
+
+\-Copy all entries to deventry. user need to free the allocated memory by using free(deventry-\/$>$buffer). return value may be less than count. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$} & filename \-: name of \-H\-D\-T file to be checked for listing \\
+\hline
+{\em \-H\-D\-T\-Entry\-\_\-t$\ast$} & deventry \-: storage structure for the entry \\
+\hline
+{\em int} & count \-: number of deventry storage supplied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-:\par
+ -\/1 on failure\par
+ (number of entries) on success 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_a121cbba0ea188cc4e276666b11b0960c}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Load\-A\-D\-C@{\-H\-D\-T\-Load\-A\-D\-C}}
+\index{\-H\-D\-T\-Load\-A\-D\-C@{\-H\-D\-T\-Load\-A\-D\-C}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Load\-A\-D\-C}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-H\-D\-T\-Dev\-A\-D\-C\-\_\-t}$\ast$ {\bf \-H\-D\-T\-Load\-A\-D\-C} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{char $\ast$}]{devname}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_a121cbba0ea188cc4e276666b11b0960c}
+
+
+load all $<$device$>$ entry found in the hdt file if devname is null. else, load only the requested device. the return value is a pointer to the first $<$device$>$. the $<$devices$>$ are in a linked list allocated with dynamic memory. use \-H\-D\-T\-Clear$<$device$>$ to free up the resources. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$} & filename \-: hdt file to open \\
+\hline
+{\em char$\ast$} & devname \-: device semantics \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-H\-D\-T\-Dev\-A\-D\-C\-\_\-t$\ast$ handle \-:\par
+ 0x0 on failure (no $<$device$>$ found)\par
+ (pointer to first $<$device$>$) if found 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_ae968262dc5bbd277e997d113555b7d0e}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Load\-C\-A\-M@{\-H\-D\-T\-Load\-C\-A\-M}}
+\index{\-H\-D\-T\-Load\-C\-A\-M@{\-H\-D\-T\-Load\-C\-A\-M}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Load\-C\-A\-M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-H\-D\-T\-Dev\-C\-A\-M\-\_\-t}$\ast$ {\bf \-H\-D\-T\-Load\-C\-A\-M} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{char $\ast$}]{devname}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_ae968262dc5bbd277e997d113555b7d0e}
+
+
+load all $<$device$>$ entry found in the hdt file if devname is null. else, load only the requested device. the return value is a pointer to the first $<$device$>$. the $<$devices$>$ are in a linked list allocated with dynamic memory. use \-H\-D\-T\-Clear$<$device$>$ to free up the resources. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$} & filename \-: hdt file to open \\
+\hline
+{\em char$\ast$} & devname \-: device semantics \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-H\-D\-T\-Dev\-C\-A\-M\-\_\-t$\ast$ handle \-:\par
+ 0x0 on failure (no $<$device$>$ found)\par
+ (pointer to first $<$device$>$) if found 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_ac97aa6da22c878986e358a64981c057a}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Load\-C\-O\-M@{\-H\-D\-T\-Load\-C\-O\-M}}
+\index{\-H\-D\-T\-Load\-C\-O\-M@{\-H\-D\-T\-Load\-C\-O\-M}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Load\-C\-O\-M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-H\-D\-T\-Dev\-C\-O\-M\-\_\-t}$\ast$ {\bf \-H\-D\-T\-Load\-C\-O\-M} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{char $\ast$}]{devname}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_ac97aa6da22c878986e358a64981c057a}
+
+
+load all $<$device$>$ entry found in the hdt file if devname is null. else, load only the requested device. the return value is a pointer to the first $<$device$>$. the $<$devices$>$ are in a linked list allocated with dynamic memory. use \-H\-D\-T\-Clear$<$device$>$ to free up the resources. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$} & filename \-: hdt file to open \\
+\hline
+{\em char} & $\ast$devname \-: device semantics \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-H\-D\-T\-Dev\-C\-O\-M\-\_\-t$\ast$ handle \-:\par
+ 0x0 on failure (no $<$device$>$ found)\par
+ (pointer to first $<$device$>$) if found 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_a0abad603fa9917cf881e8c8f41615c23}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Load\-D\-R\-I\-V\-E@{\-H\-D\-T\-Load\-D\-R\-I\-V\-E}}
+\index{\-H\-D\-T\-Load\-D\-R\-I\-V\-E@{\-H\-D\-T\-Load\-D\-R\-I\-V\-E}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Load\-D\-R\-I\-V\-E}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-H\-D\-T\-Dev\-D\-R\-I\-V\-E\-\_\-t}$\ast$ {\bf \-H\-D\-T\-Load\-D\-R\-I\-V\-E} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{char $\ast$}]{devname}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_a0abad603fa9917cf881e8c8f41615c23}
+
+
+load all $<$device$>$ entry found in the hdt file if devname is null. else, load only the requested device. the return value is a pointer to the first $<$device$>$. the $<$devices$>$ are in a linked list allocated with dynamic memory. use \-H\-D\-T\-Clear$<$device$>$ to free up the resources. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$} & filename \-: hdt file to open \\
+\hline
+{\em char$\ast$} & devname \-: device semantics \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-H\-D\-T\-Dev\-D\-R\-I\-V\-E\-\_\-t$\ast$ handle \-:\par
+ 0x0 on failure (no $<$device$>$ found)\par
+ (pointer to first $<$device$>$) if found 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_a7236b756050f2f4aaba1c9046fc40924}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Load\-E\-N\-C\-O\-D\-E\-R@{\-H\-D\-T\-Load\-E\-N\-C\-O\-D\-E\-R}}
+\index{\-H\-D\-T\-Load\-E\-N\-C\-O\-D\-E\-R@{\-H\-D\-T\-Load\-E\-N\-C\-O\-D\-E\-R}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Load\-E\-N\-C\-O\-D\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-H\-D\-T\-Dev\-E\-N\-C\-O\-D\-E\-R\-\_\-t}$\ast$ {\bf \-H\-D\-T\-Load\-E\-N\-C\-O\-D\-E\-R} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{char $\ast$}]{devname}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_a7236b756050f2f4aaba1c9046fc40924}
+
+
+load all $<$device$>$ entry found in the hdt file if devname is null. else, load only the requested device. the return value is a pointer to the first $<$device$>$. the $<$devices$>$ are in a linked list allocated with dynamic memory. use \-H\-D\-T\-Clear$<$device$>$ to free up the resources. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$} & filename \-: hdt file to open \\
+\hline
+{\em char$\ast$} & devname \-: device semantics \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-H\-D\-T\-Dev\-E\-N\-C\-O\-D\-E\-R\-\_\-t$\ast$ handle \-:\par
+ 0x0 on failure (no $<$device$>$ found)\par
+ (pointer to first $<$device$>$) if found 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_a16a9035efdfbcc2bfbee98987c5fc15c}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Load\-I\-R\-T\-V@{\-H\-D\-T\-Load\-I\-R\-T\-V}}
+\index{\-H\-D\-T\-Load\-I\-R\-T\-V@{\-H\-D\-T\-Load\-I\-R\-T\-V}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Load\-I\-R\-T\-V}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-H\-D\-T\-Dev\-I\-R\-T\-V\-\_\-t}$\ast$ {\bf \-H\-D\-T\-Load\-I\-R\-T\-V} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{char $\ast$}]{devname}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_a16a9035efdfbcc2bfbee98987c5fc15c}
+
+
+load all $<$device$>$ entry found in the hdt file if devname is null. else, load only the requested device. the return value is a pointer to the first $<$device$>$. the $<$devices$>$ are in a linked list allocated with dynamic memory. use \-H\-D\-T\-Clear$<$device$>$ to free up the resources. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$} & filename \-: hdt file to open \\
+\hline
+{\em char$\ast$} & devname \-: device semantics \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-H\-D\-T\-Dev\-I\-R\-T\-V\-\_\-t$\ast$ handle \-:\par
+ 0x0 on failure (no $<$device$>$ found)\par
+ (pointer to first $<$device$>$) if found 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_a6eead3a447a4705ccab9bbe3c1659745}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Load\-M\-O\-T\-O\-R@{\-H\-D\-T\-Load\-M\-O\-T\-O\-R}}
+\index{\-H\-D\-T\-Load\-M\-O\-T\-O\-R@{\-H\-D\-T\-Load\-M\-O\-T\-O\-R}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Load\-M\-O\-T\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-H\-D\-T\-Dev\-M\-O\-T\-O\-R\-\_\-t}$\ast$ {\bf \-H\-D\-T\-Load\-M\-O\-T\-O\-R} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{char $\ast$}]{devname}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_a6eead3a447a4705ccab9bbe3c1659745}
+
+
+load all $<$device$>$ entry found in the hdt file if devname is null. else, load only the requested device. the return value is a pointer to the first $<$device$>$. the $<$devices$>$ are in a linked list allocated with dynamic memory. use \-H\-D\-T\-Clear$<$device$>$ to free up the resources. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$} & filename \-: hdt file to open \\
+\hline
+{\em char$\ast$} & devname \-: device semantics \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-H\-D\-T\-Dev\-M\-O\-T\-O\-R\-\_\-t$\ast$ handle \-:\par
+ 0x0 on failure (no $<$device$>$ found)\par
+ (pointer to first $<$device$>$) if found 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_aeb76b80cba687423ed8f5498d45198c6}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Load\-P\-S\-D@{\-H\-D\-T\-Load\-P\-S\-D}}
+\index{\-H\-D\-T\-Load\-P\-S\-D@{\-H\-D\-T\-Load\-P\-S\-D}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Load\-P\-S\-D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-H\-D\-T\-Dev\-P\-S\-D\-\_\-t}$\ast$ {\bf \-H\-D\-T\-Load\-P\-S\-D} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{char $\ast$}]{devname}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_aeb76b80cba687423ed8f5498d45198c6}
+
+
+load all $<$device$>$ entry found in the hdt file if devname is null. else, load only the requested device. the return value is a pointer to the first $<$device$>$. the $<$devices$>$ are in a linked list allocated with dynamic memory. use \-H\-D\-T\-Clear$<$device$>$ to free up the resources. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$} & filename \-: hdt file to open \\
+\hline
+{\em char$\ast$} & devname \-: device semantics \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-H\-D\-T\-Dev\-I\-R\-T\-V\-\_\-t$\ast$ handle \-:\par
+ 0x0 on failure (no $<$device$>$ found)\par
+ (pointer to first $<$device$>$) if found 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_a6699dedf81b0c6214d5707b56e9844f4}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Load\-S\-E\-R\-V\-O@{\-H\-D\-T\-Load\-S\-E\-R\-V\-O}}
+\index{\-H\-D\-T\-Load\-S\-E\-R\-V\-O@{\-H\-D\-T\-Load\-S\-E\-R\-V\-O}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Load\-S\-E\-R\-V\-O}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-H\-D\-T\-Dev\-S\-E\-R\-V\-O\-\_\-t}$\ast$ {\bf \-H\-D\-T\-Load\-S\-E\-R\-V\-O} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{char $\ast$}]{devname}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_a6699dedf81b0c6214d5707b56e9844f4}
+
+
+load all $<$device$>$ entry found in the hdt file if devname is null. else, load only the requested device. the return value is a pointer to the first $<$device$>$. the $<$devices$>$ are in a linked list allocated with dynamic memory. use \-H\-D\-T\-Clear$<$device$>$ to free up the resources. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$} & filename \-: hdt file to open \\
+\hline
+{\em char$\ast$} & devname \-: device semantics \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-H\-D\-T\-Dev\-S\-E\-R\-V\-O\-\_\-t$\ast$ handle \-:\par
+ 0x0 on failure (no $<$device$>$ found)\par
+ (pointer to first $<$device$>$) if found 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_a7c982e7789941891ff653f002cd66807}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Load\-Table@{\-H\-D\-T\-Load\-Table}}
+\index{\-H\-D\-T\-Load\-Table@{\-H\-D\-T\-Load\-Table}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Load\-Table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-H\-D\-T\-Table\-\_\-t}$\ast$ {\bf \-H\-D\-T\-Load\-Table} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{{\bf \-H\-D\-T\-Device\-\_\-t} $\ast$}]{pdevices}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_a7c982e7789941891ff653f002cd66807}
+
+
+load all tables needed by pdevices -\/ if found. the return value is a pointer to the first table. the tables are in a linked list allocated with dynamic memory. use \-H\-D\-T\-Clear\-Table to free up the resources. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$} & filename \-: hdt file to open \\
+\hline
+{\em \-H\-D\-T\-Device\-\_\-t$\ast$} & pdevices \-: devices with tablename in linked list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-H\-D\-T\-Table\-\_\-t$\ast$ table \-:\par
+ 0x0 on failure (no table found)\par
+ (pointer to first table) if found 
+\end{DoxyReturn}
+\hypertarget{hdt_8h_ab2b183339a32ec5daccc258317c5ab26}{\index{hdt.\-h@{hdt.\-h}!\-H\-D\-T\-Validate@{\-H\-D\-T\-Validate}}
+\index{\-H\-D\-T\-Validate@{\-H\-D\-T\-Validate}!hdt.h@{hdt.\-h}}
+\subsubsection[{\-H\-D\-T\-Validate}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-H\-D\-T\-Validate} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{hdt_8h_ab2b183339a32ec5daccc258317c5ab26}
+
+
+checks all \-H\-D\-T entries in given filename. will not check for specific entry (only check entry headers). 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$} & filename \-: name of \-H\-D\-T file to be checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-:\par
+ -\/1 if incorrect \-H\-D\-T entry found\par
+ (number of entries) if otherwise 
+\end{DoxyReturn}

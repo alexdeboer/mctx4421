@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['usb_5fbus',['usb_bus',['../structusb__bus.html',1,'']]],
+  ['usb_5fconfig_5fdescriptor',['usb_config_descriptor',['../structusb__config__descriptor.html',1,'']]],
+  ['usb_5fctrl_5fsetup',['usb_ctrl_setup',['../structusb__ctrl__setup.html',1,'']]],
+  ['usb_5fdescriptor_5fheader',['usb_descriptor_header',['../structusb__descriptor__header.html',1,'']]],
+  ['usb_5fdev',['usb_dev',['../structftdi__context.html#a190e410f4ed24583d7727d10d463ef4a',1,'ftdi_context']]],
+  ['usb_5fdevice',['usb_device',['../structusb__device.html',1,'']]],
+  ['usb_5fdevice_5fdescriptor',['usb_device_descriptor',['../structusb__device__descriptor.html',1,'']]],
+  ['usb_5fendpoint_5fdescriptor',['usb_endpoint_descriptor',['../structusb__endpoint__descriptor.html',1,'']]],
+  ['usb_5fhid_5fdescriptor',['usb_hid_descriptor',['../structusb__hid__descriptor.html',1,'']]],
+  ['usb_5finterface',['usb_interface',['../structusb__interface.html',1,'']]],
+  ['usb_5finterface_5fdescriptor',['usb_interface_descriptor',['../structusb__interface__descriptor.html',1,'']]],
+  ['usb_5fread_5ftimeout',['usb_read_timeout',['../structftdi__context.html#afa159483bb1153259ee7ceb3b45a2c9f',1,'ftdi_context']]],
+  ['usb_5fstring_5fdescriptor',['usb_string_descriptor',['../structusb__string__descriptor.html',1,'']]],
+  ['usb_5fversion',['usb_version',['../structftdi__eeprom.html#a7c0093a9bfbdf7a3c89e18228fcaba84',1,'ftdi_eeprom']]],
+  ['usb_5fwrite_5ftimeout',['usb_write_timeout',['../structftdi__context.html#ae98125557fc25c90953053a9992767cb',1,'ftdi_context']]],
+  ['use_5fserial',['use_serial',['../structftdi__eeprom.html#abe250275595d020fd8de3aa61d093d38',1,'ftdi_eeprom']]]
+];

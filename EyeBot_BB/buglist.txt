@@ -1,0 +1,9 @@
+===Bug List===
+
+#	:	Status	:	Bug
+1	:	Fixed	: 	No text showing on some of the demo page menu buttons
+2	:	Fixed	:	Unable to select items in a listmenu because it keeps jumping back to the first one
+3	:	Fixed	:	Once a hardware device was selected none of the onscreen buttons would work
+4	:	Fixed	:	The hardware test and information pages seize up and only IR input works
+5	:	Ongoing	:	Software freezes if LCDRefresh is not called regularly (this may explain bug number 4)
+6	:	Fixed	:	The number of devices for each device type not showing correctly when the pi starts up

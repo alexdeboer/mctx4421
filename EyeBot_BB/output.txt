@@ -1,0 +1,24 @@
+======Compiling EyeBot library======
+cd /home/pi/EyeBot_BB/src; make
+make[1]: Entering directory `/home/pi/EyeBot_BB/src'
+make[1]: Nothing to be done for `source'.
+make[1]: Leaving directory `/home/pi/EyeBot_BB/src'
+ar rcs lib/libeyebot.a src/adc.o src/camera.o src/globals.o src/hdt.o src/irtv.o src/key.o src/latches.o src/lcd.o src/misc.o src/mpsse.o src/multitasking.o src/psd_sensors.o src/servos_and_motors.o src/spi.o src/support.o src/system.o src/timer.o src/vomega.o src/listmenu.o
+ranlib lib/libeyebot.a
+gcc -I/home/pi/EyeBot_BB/include -I/home/pi/EyeBot_BB/raspicam/robidouille/raspicam_cv  -L/home/pi/EyeBot_BB/lib -L/home/pi/EyeBot_BB/raspicam/robidouille/raspicam_cv -L/home/pi/EyeBot_BB/raspicam/userland/build/lib -c -o robios_main.o robios_main.c
+======Compiling ROBIOS software======
+gcc -I/home/pi/EyeBot_BB/include -I/home/pi/EyeBot_BB/raspicam/robidouille/raspicam_cv  -L/home/pi/EyeBot_BB/lib -L/home/pi/EyeBot_BB/raspicam/robidouille/raspicam_cv -L/home/pi/EyeBot_BB/raspicam/userland/build/lib -o EyeBot src/adc.o src/camera.o src/globals.o src/hdt.o src/irtv.o src/key.o src/latches.o src/lcd.o src/misc.o src/mpsse.o src/multitasking.o src/psd_sensors.o src/servos_and_motors.o src/spi.o src/support.o src/system.o src/timer.o src/vomega.o src/listmenu.o robios_main.o robios_demo.o robios_exec.o robios_hdt.o robios_processes.o robios_common.o -lmpsse -lX11 -pthread -llirc_client -lm -lopencv_core -lopencv_highgui -lopencv_imgproc -lraspicamcv -lmmal_core -lmmal -lmmal_util -lvcos -lbcm_host
+======Making EyeBot Demos======
+cd /home/pi/EyeBot_BB/demos; make
+make[1]: Entering directory `/home/pi/EyeBot_BB/demos'
+cd /home/pi/EyeBot_BB/demos/eyebotDemo; make
+make[2]: Entering directory `/home/pi/EyeBot_BB/demos/eyebotDemo'
+======Making EyeBot demo======
+gcc -I/home/pi/EyeBot_BB/include -I/home/pi/EyeBot_BB/raspicam/robidouille/raspicam_cv -L/home/pi/EyeBot_BB/lib -o eyebotDemo eyebotDemo.c -leyebot -lX11 -ldl -lopencv_core -lopencv_highgui -lopencv_imgproc
+make[2]: Leaving directory `/home/pi/EyeBot_BB/demos/eyebotDemo'
+cd /home/pi/EyeBot_BB/demos/EyeBotIRTestDemo; make
+make[2]: Entering directory `/home/pi/EyeBot_BB/demos/EyeBotIRTestDemo'
+======Making EyeBot IR Demo======
+gcc -I/home/pi/EyeBot_BB/include -I/home/pi/Eyebot_BB -I/home/pi/EyeBot_BB/raspicam/robidouille/raspicam_cv -L/home/pi/EyeBot_BB/lib -o irDemo irDemo.c -leyebot -ldl -llirc_client -lX11 -lopencv_core -lopencv_highgui -lopencv_imgproc
+make[2]: Leaving directory `/home/pi/EyeBot_BB/demos/EyeBotIRTestDemo'
+make[1]: Leaving directory `/home/pi/EyeBot_BB/demos'

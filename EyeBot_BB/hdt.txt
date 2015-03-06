@@ -1,0 +1,33 @@
+TABLE "MOTOR_TABLE"
+END TABLE
+TABLE "PSD_TABLE"
+END TABLE
+# MOTOR Name | RegAddr | Freq (Hz) | TableName
+MOTOR "MOTOR0" 0 20000 "MOTOR_TABLE"
+MOTOR "MOTOR1" 1 20000 "MOTOR_TABLE"
+MOTOR "MOTOR2" 2 20000 "MOTOR_TABLE"
+MOTOR "MOTOR3" 3 20000 "MOTOR_TABLE"
+# Servo Name | Register | Freq (Hz) | Min-time (us) | Max-time (us)
+SERVO "SERVO0" 0 50 1000 2000
+# ENCODER Name | RegAddr | Clicks per meter | Max speed | MotorName
+ENCODER "ENCODER0" 0 0 0 "MOTOR0"
+ENCODER "ENCODER1" 1 0 0 "MOTOR1"
+ENCODER "ENCODER2" 2 0 0 "MOTOR2"
+ENCODER "ENCODER3" 3 0 0 "MOTOR3"
+# PSD Name | RegAddr | TableName
+PSD "PSD0" 0 "PSD_TABLE"
+PSD "PSD1" 1 "PSD_TABLE"
+PSD "PSD2" 2 "PSD_TABLE"
+PSD "PSD3" 3 "PSD_TABLE"
+PSD "PSD4" 4 "PSD_TABLE"
+PSD "PSD5" 5 "PSD_TABLE"
+# DRIVE Label | DIFFERENTIAL | Wheel distance (mm) | Encoder 1 | Encoder 2
+# DRIVE Label | ACKERMANN | S Wheel distance (mm) | D Wheel distance (mm) | Axes distance (mm) | Encoder 1 | Encoder 2
+# DRIVE Label | OMNI | Wheel distance (mm) | Axes distance (mm) | Encoder 1 | Encoder 2 | Encoder 3 | Encoder 4
+DRIVE "DIFF" DIFFERENTIAL 10 "ENCODER0" "ENCODER1"
+DRIVE "ACK" ACKERMANN 10 10 10 "ENCODER0" "ENCODER1"
+DRIVE "OMNI" OMNI 10 10 "ENCODER0" "ENCODER1" "ENCODER2" "ENCODER3"
+# IRTV Name | Type | Length | tog_mask | inv_mask | mode | bufsize | delay
+IRTV "IRTV0" 0 4 0 0 0 4 20
+# ADC Name | Constant | Proc Name
+ADC "ADC0" 4 Test

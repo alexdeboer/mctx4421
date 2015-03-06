@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node10" href="$structusb__bus.html" title="usb_bus" alt="" coords="187,525,256,555"/>
+<area shape="rect" id="node2" href="$structusb__config__descriptor.html" title="usb_config_descriptor" alt="" coords="12,293,164,323"/>
+<area shape="rect" id="node4" href="$structusb__interface.html" title="usb_interface" alt="" coords="37,197,139,227"/>
+<area shape="rect" id="node6" href="$structusb__interface__descriptor.html" title="usb_interface_descriptor" alt="" coords="5,101,171,131"/>
+<area shape="rect" id="node8" href="$structusb__endpoint__descriptor.html" title="usb_endpoint_descriptor" alt="" coords="5,5,171,35"/>
+<area shape="rect" id="node14" href="$structusb__device__descriptor.html" title="usb_device_descriptor" alt="" coords="188,293,345,323"/>
+</map>

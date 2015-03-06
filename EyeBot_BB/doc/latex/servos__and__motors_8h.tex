@@ -1,0 +1,238 @@
+\hypertarget{servos__and__motors_8h}{\section{\-Eye\-Bot\-\_\-\-B\-B/include/servos\-\_\-and\-\_\-motors.h \-File \-Reference}
+\label{servos__and__motors_8h}\index{\-Eye\-Bot\-\_\-\-B\-B/include/servos\-\_\-and\-\_\-motors.\-h@{\-Eye\-Bot\-\_\-\-B\-B/include/servos\-\_\-and\-\_\-motors.\-h}}
+}
+
+
+\-Header file for the servos and motors functions.  
+
+
+{\ttfamily \#include \char`\"{}spi.\-h\char`\"{}}\*
+\-Include dependency graph for servos\-\_\-and\-\_\-motors.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{servos__and__motors_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{servos__and__motors_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\-S\-E\-R\-V\-O\-Handle \hyperlink{servos__and__motors_8h_a5caae01365dfd628d399caf53ca7393c}{\-S\-E\-R\-V\-O\-Init} (\-Device\-Semantics semantics)
+\begin{DoxyCompactList}\small\item\em \-Initialize given servo. \end{DoxyCompactList}\item 
+int \hyperlink{servos__and__motors_8h_aea5ebb9e492543a0984ba3c06d535d56}{\-S\-E\-R\-V\-O\-Release} (\-S\-E\-R\-V\-O\-Handle handle)
+\begin{DoxyCompactList}\small\item\em \-Release given servos. \end{DoxyCompactList}\item 
+int \hyperlink{servos__and__motors_8h_a2080c0fe55886e91f7ab1bf62b6f2ea0}{\-S\-E\-R\-V\-O\-Set} (\-S\-E\-R\-V\-O\-Handle handle, int angle)
+\begin{DoxyCompactList}\small\item\em \-Set the given servos to the same given angle. \end{DoxyCompactList}\item 
+\-M\-O\-T\-O\-R\-Handle \hyperlink{servos__and__motors_8h_a702ca3154731dd1bd81b1e195feac77b}{\-M\-O\-T\-O\-R\-Init} (\-Device\-Semantics semantics)
+\begin{DoxyCompactList}\small\item\em \-Initialize given motor. \end{DoxyCompactList}\item 
+int \hyperlink{servos__and__motors_8h_af23be4e3f70ce1ea8dec3ef70225005b}{\-M\-O\-T\-O\-R\-Release} (\-M\-O\-T\-O\-R\-Handle handle)
+\begin{DoxyCompactList}\small\item\em \-Release given motor. \end{DoxyCompactList}\item 
+int \hyperlink{servos__and__motors_8h_af3f775525e00d4cb5df0de9605dd05ac}{\-M\-O\-T\-O\-R\-Drive} (\-M\-O\-T\-O\-R\-Handle handle, int speed)
+\begin{DoxyCompactList}\small\item\em \-Set the given motors to the same given speed. \end{DoxyCompactList}\item 
+long \hyperlink{servos__and__motors_8h_aeb82b4392c3ad90da744a15686684009}{\-Q\-U\-A\-D\-Read} (\-Q\-U\-A\-D\-Handle handle)
+\begin{DoxyCompactList}\small\item\em \-Read actual \-Quadrature-\/\-Decoder counter, initially zero. \end{DoxyCompactList}\item 
+int \hyperlink{servos__and__motors_8h_a9e5e8556e284086aceb0aaad450c8d1c}{\-Q\-U\-A\-D\-Reset} (\-Q\-U\-A\-D\-Handle handle)
+\begin{DoxyCompactList}\small\item\em \-Reset one or more \-Quadrature-\/\-Decoder. \end{DoxyCompactList}\item 
+int \hyperlink{servos__and__motors_8h_ac03dff0eb1bc3f8e936ea3bf4885385c}{\-Q\-U\-A\-D\-Release} (\-Q\-U\-A\-D\-Handle handle)
+\begin{DoxyCompactList}\small\item\em \-Release one or more \-Quadrature-\/\-Decoder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Header file for the servos and motors functions. \begin{DoxyAuthor}{\-Author}
+\-Remi \-K\-E\-A\-T 
+\end{DoxyAuthor}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{servos__and__motors_8h_af3f775525e00d4cb5df0de9605dd05ac}{\index{servos\-\_\-and\-\_\-motors.\-h@{servos\-\_\-and\-\_\-motors.\-h}!\-M\-O\-T\-O\-R\-Drive@{\-M\-O\-T\-O\-R\-Drive}}
+\index{\-M\-O\-T\-O\-R\-Drive@{\-M\-O\-T\-O\-R\-Drive}!servos_and_motors.h@{servos\-\_\-and\-\_\-motors.\-h}}
+\subsubsection[{\-M\-O\-T\-O\-R\-Drive}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-M\-O\-T\-O\-R\-Drive} (
+\begin{DoxyParamCaption}
+\item[{\-M\-O\-T\-O\-R\-Handle}]{handle, }
+\item[{int}]{speed}
+\end{DoxyParamCaption}
+)}}\label{servos__and__motors_8h_af3f775525e00d4cb5df0de9605dd05ac}
+
+
+\-Set the given motors to the same given speed. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-M\-O\-T\-O\-R\-Handle} & handle \\
+\hline
+{\em int} & speed \-: motor speed in percent\\
+\hline
+\end{DoxyParams}
+\-Valid values for speed \-:
+\begin{DoxyItemize}
+\item -\/100 to 100 (full backward to full forward)
+\item 0 for full stop
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{servos__and__motors_8h_a702ca3154731dd1bd81b1e195feac77b}{\index{servos\-\_\-and\-\_\-motors.\-h@{servos\-\_\-and\-\_\-motors.\-h}!\-M\-O\-T\-O\-R\-Init@{\-M\-O\-T\-O\-R\-Init}}
+\index{\-M\-O\-T\-O\-R\-Init@{\-M\-O\-T\-O\-R\-Init}!servos_and_motors.h@{servos\-\_\-and\-\_\-motors.\-h}}
+\subsubsection[{\-M\-O\-T\-O\-R\-Init}]{\setlength{\rightskip}{0pt plus 5cm}\-M\-O\-T\-O\-R\-Handle {\bf \-M\-O\-T\-O\-R\-Init} (
+\begin{DoxyParamCaption}
+\item[{\-Device\-Semantics}]{semantics}
+\end{DoxyParamCaption}
+)}}\label{servos__and__motors_8h_a702ca3154731dd1bd81b1e195feac77b}
+
+
+\-Initialize given motor. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-Device\-Semantics} & semantics \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-M\-O\-T\-O\-R\-Handle motor\-Handle 
+\end{DoxyReturn}
+\hypertarget{servos__and__motors_8h_af23be4e3f70ce1ea8dec3ef70225005b}{\index{servos\-\_\-and\-\_\-motors.\-h@{servos\-\_\-and\-\_\-motors.\-h}!\-M\-O\-T\-O\-R\-Release@{\-M\-O\-T\-O\-R\-Release}}
+\index{\-M\-O\-T\-O\-R\-Release@{\-M\-O\-T\-O\-R\-Release}!servos_and_motors.h@{servos\-\_\-and\-\_\-motors.\-h}}
+\subsubsection[{\-M\-O\-T\-O\-R\-Release}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-M\-O\-T\-O\-R\-Release} (
+\begin{DoxyParamCaption}
+\item[{\-M\-O\-T\-O\-R\-Handle}]{handle}
+\end{DoxyParamCaption}
+)}}\label{servos__and__motors_8h_af23be4e3f70ce1ea8dec3ef70225005b}
+
+
+\-Release given motor. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-M\-O\-T\-O\-R\-Handle} & handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{servos__and__motors_8h_aeb82b4392c3ad90da744a15686684009}{\index{servos\-\_\-and\-\_\-motors.\-h@{servos\-\_\-and\-\_\-motors.\-h}!\-Q\-U\-A\-D\-Read@{\-Q\-U\-A\-D\-Read}}
+\index{\-Q\-U\-A\-D\-Read@{\-Q\-U\-A\-D\-Read}!servos_and_motors.h@{servos\-\_\-and\-\_\-motors.\-h}}
+\subsubsection[{\-Q\-U\-A\-D\-Read}]{\setlength{\rightskip}{0pt plus 5cm}long {\bf \-Q\-U\-A\-D\-Read} (
+\begin{DoxyParamCaption}
+\item[{\-Q\-U\-A\-D\-Handle}]{handle}
+\end{DoxyParamCaption}
+)}}\label{servos__and__motors_8h_aeb82b4392c3ad90da744a15686684009}
+
+
+\-Read actual \-Quadrature-\/\-Decoder counter, initially zero. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-Q\-U\-A\-D\-Handle} & handle \-: \-O\-N\-E decoder-\/handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+long value of the encoder 
+\end{DoxyReturn}
+\hypertarget{servos__and__motors_8h_ac03dff0eb1bc3f8e936ea3bf4885385c}{\index{servos\-\_\-and\-\_\-motors.\-h@{servos\-\_\-and\-\_\-motors.\-h}!\-Q\-U\-A\-D\-Release@{\-Q\-U\-A\-D\-Release}}
+\index{\-Q\-U\-A\-D\-Release@{\-Q\-U\-A\-D\-Release}!servos_and_motors.h@{servos\-\_\-and\-\_\-motors.\-h}}
+\subsubsection[{\-Q\-U\-A\-D\-Release}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Q\-U\-A\-D\-Release} (
+\begin{DoxyParamCaption}
+\item[{\-Q\-U\-A\-D\-Handle}]{handle}
+\end{DoxyParamCaption}
+)}}\label{servos__and__motors_8h_ac03dff0eb1bc3f8e936ea3bf4885385c}
+
+
+\-Release one or more \-Quadrature-\/\-Decoder. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-Q\-U\-A\-D\-Handle} & handle \-: logical-\/or of decoder-\/handles to be released \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: 0 = ok\par
+ -\/1 = error wrong handle 
+\end{DoxyReturn}
+\hypertarget{servos__and__motors_8h_a9e5e8556e284086aceb0aaad450c8d1c}{\index{servos\-\_\-and\-\_\-motors.\-h@{servos\-\_\-and\-\_\-motors.\-h}!\-Q\-U\-A\-D\-Reset@{\-Q\-U\-A\-D\-Reset}}
+\index{\-Q\-U\-A\-D\-Reset@{\-Q\-U\-A\-D\-Reset}!servos_and_motors.h@{servos\-\_\-and\-\_\-motors.\-h}}
+\subsubsection[{\-Q\-U\-A\-D\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Q\-U\-A\-D\-Reset} (
+\begin{DoxyParamCaption}
+\item[{\-Q\-U\-A\-D\-Handle}]{handle}
+\end{DoxyParamCaption}
+)}}\label{servos__and__motors_8h_a9e5e8556e284086aceb0aaad450c8d1c}
+
+
+\-Reset one or more \-Quadrature-\/\-Decoder. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-Q\-U\-A\-D\-Handle} & handle \-: logical-\/or of decoder-\/handles to be reseted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: 0 = ok\par
+ -\/1 = error wrong handle 
+\end{DoxyReturn}
+\hypertarget{servos__and__motors_8h_a5caae01365dfd628d399caf53ca7393c}{\index{servos\-\_\-and\-\_\-motors.\-h@{servos\-\_\-and\-\_\-motors.\-h}!\-S\-E\-R\-V\-O\-Init@{\-S\-E\-R\-V\-O\-Init}}
+\index{\-S\-E\-R\-V\-O\-Init@{\-S\-E\-R\-V\-O\-Init}!servos_and_motors.h@{servos\-\_\-and\-\_\-motors.\-h}}
+\subsubsection[{\-S\-E\-R\-V\-O\-Init}]{\setlength{\rightskip}{0pt plus 5cm}\-S\-E\-R\-V\-O\-Handle {\bf \-S\-E\-R\-V\-O\-Init} (
+\begin{DoxyParamCaption}
+\item[{\-Device\-Semantics}]{semantics}
+\end{DoxyParamCaption}
+)}}\label{servos__and__motors_8h_a5caae01365dfd628d399caf53ca7393c}
+
+
+\-Initialize given servo. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-Device\-Semantics} & semantics \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-S\-E\-R\-V\-O\-Handle servo\-Handle 
+\end{DoxyReturn}
+\hypertarget{servos__and__motors_8h_aea5ebb9e492543a0984ba3c06d535d56}{\index{servos\-\_\-and\-\_\-motors.\-h@{servos\-\_\-and\-\_\-motors.\-h}!\-S\-E\-R\-V\-O\-Release@{\-S\-E\-R\-V\-O\-Release}}
+\index{\-S\-E\-R\-V\-O\-Release@{\-S\-E\-R\-V\-O\-Release}!servos_and_motors.h@{servos\-\_\-and\-\_\-motors.\-h}}
+\subsubsection[{\-S\-E\-R\-V\-O\-Release}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-S\-E\-R\-V\-O\-Release} (
+\begin{DoxyParamCaption}
+\item[{\-S\-E\-R\-V\-O\-Handle}]{handle}
+\end{DoxyParamCaption}
+)}}\label{servos__and__motors_8h_aea5ebb9e492543a0984ba3c06d535d56}
+
+
+\-Release given servos. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-S\-E\-R\-V\-O\-Handle} & handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{servos__and__motors_8h_a2080c0fe55886e91f7ab1bf62b6f2ea0}{\index{servos\-\_\-and\-\_\-motors.\-h@{servos\-\_\-and\-\_\-motors.\-h}!\-S\-E\-R\-V\-O\-Set@{\-S\-E\-R\-V\-O\-Set}}
+\index{\-S\-E\-R\-V\-O\-Set@{\-S\-E\-R\-V\-O\-Set}!servos_and_motors.h@{servos\-\_\-and\-\_\-motors.\-h}}
+\subsubsection[{\-S\-E\-R\-V\-O\-Set}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-S\-E\-R\-V\-O\-Set} (
+\begin{DoxyParamCaption}
+\item[{\-S\-E\-R\-V\-O\-Handle}]{handle, }
+\item[{int}]{angle}
+\end{DoxyParamCaption}
+)}}\label{servos__and__motors_8h_a2080c0fe55886e91f7ab1bf62b6f2ea0}
+
+
+\-Set the given servos to the same given angle. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-S\-E\-R\-V\-O\-Handle} & handle \\
+\hline
+{\em int} & angle \-: valid values = 0-\/360 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}

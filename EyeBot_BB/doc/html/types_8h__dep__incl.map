@@ -1,0 +1,31 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$globals_8h.html" title="Header file for global variables." alt="" coords="1413,83,1608,112"/>
+<area shape="rect" id="node61" href="$hdt_8h.html" title="Header file for the HDT functions." alt="" coords="933,83,1101,112"/>
+<area shape="rect" id="node66" href="$system_8h.html" title="Header file for system functions." alt="" coords="1708,83,1903,112"/>
+<area shape="rect" id="node5" href="$spi_8h.html" title="Header file for the SPI functions." alt="" coords="933,160,1101,189"/>
+<area shape="rect" id="node40" href="$camera_8h.html" title="Header file for the camera functions." alt="" coords="1516,160,1713,189"/>
+<area shape="rect" id="node45" href="$lcd_8h.html" title="Header file for the LCD functions." alt="" coords="1929,160,2097,189"/>
+<area shape="rect" id="node59" href="$globals_8c.html" title="Defines global variables." alt="" coords="1321,160,1492,189"/>
+<area shape="rect" id="node7" href="$adc_8h.html" title="Header file for the ADC functions." alt="" coords="1349,237,1523,267"/>
+<area shape="rect" id="node13" href="$servos__and__motors_8h.html" title="Header file for the servos and motors functions." alt="" coords="171,237,440,267"/>
+<area shape="rect" id="node18" href="$psd__sensors_8h.html" title="Header file for the PSD sensors functions." alt="" coords="464,237,691,267"/>
+<area shape="rect" id="node23" href="$latches_8h.html" title="Header file for the latches functions." alt="" coords="715,237,909,267"/>
+<area shape="rect" id="node28" href="$irtv_8h.html" title="Header file for the IRTV functions." alt="" coords="933,237,1101,267"/>
+<area shape="rect" id="node33" href="$vomega_8h.html" title="Header file for the VW functions." alt="" coords="1125,237,1325,267"/>
+<area shape="rect" id="node38" href="$spi_8c.html" title="Defines fonctions for sending and receiving SPI messages." alt="" coords="5,237,147,267"/>
+<area shape="rect" id="node9" href="$eyebot_8h.html" title="Header file for the EyeBot functions." alt="" coords="1099,315,1291,344"/>
+<area shape="rect" id="node11" href="$adc_8c.html" title="Defines the ADC functions." alt="" coords="1515,315,1664,344"/>
+<area shape="rect" id="node16" href="$servos__and__motors_8c.html" title="Defines functions to control servos and motors." alt="" coords="183,315,428,344"/>
+<area shape="rect" id="node21" href="$psd__sensors_8c.html" title="Defines functions to use the PSD sensors." alt="" coords="476,315,679,344"/>
+<area shape="rect" id="node26" href="$latches_8c.html" title="Defines functions to control latches." alt="" coords="728,315,896,344"/>
+<area shape="rect" id="node31" href="$irtv_8c.html" title="Defines IRTV functions." alt="" coords="933,315,1075,344"/>
+<area shape="rect" id="node36" href="$vomega_8c.html" title="Defines the VW functions." alt="" coords="1315,315,1491,344"/>
+<area shape="rect" id="node43" href="$camera_8c.html" title="Defines functions for the camera." alt="" coords="1597,237,1768,267"/>
+<area shape="rect" id="node47" href="$timer_8h.html" title="Header file for the timer functions." alt="" coords="2011,237,2189,267"/>
+<area shape="rect" id="node52" href="$key_8h.html" title="Header file for the key functions." alt="" coords="2213,237,2387,267"/>
+<area shape="rect" id="node57" href="$lcd_8c.html" title="Defines functions to interact with the LCD screen." alt="" coords="1843,237,1987,267"/>
+<area shape="rect" id="node50" href="$timer_8c.html" title="Defines functions related to the timer." alt="" coords="2023,315,2177,344"/>
+<area shape="rect" id="node55" href="$key_8c.html" title="Defines functions for the key input." alt="" coords="2227,315,2373,344"/>
+<area shape="rect" id="node64" href="$hdt_8c.html" title="Defines functions used by the HDT system." alt="" coords="765,160,909,189"/>
+<area shape="rect" id="node69" href="$system_8c.html" title="Defines functions for the system." alt="" coords="2121,160,2289,189"/>
+</map>

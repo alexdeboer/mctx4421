@@ -1,0 +1,81 @@
+\hypertarget{irtv_8h}{\section{\-Eye\-Bot\-\_\-\-B\-B/include/irtv.h \-File \-Reference}
+\label{irtv_8h}\index{\-Eye\-Bot\-\_\-\-B\-B/include/irtv.\-h@{\-Eye\-Bot\-\_\-\-B\-B/include/irtv.\-h}}
+}
+
+
+\-Header file for the \-I\-R\-T\-V functions.  
+
+
+{\ttfamily \#include \char`\"{}spi.\-h\char`\"{}}\*
+\-Include dependency graph for irtv.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{irtv_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{irtv_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{irtv_8h_a0ef0618edbe45664fe191767bc172e35}{\-I\-R\-T\-V\-Init} (\-Device\-Semantics semantics)
+\begin{DoxyCompactList}\small\item\em \-Initializes the \-I\-R remote control decoder by calling \hyperlink{irtv_8h_a0ef0618edbe45664fe191767bc172e35}{\-I\-R\-T\-V\-Init()} with the device name found in the corresponding \-H\-D\-T entry. \end{DoxyCompactList}\item 
+int \hyperlink{irtv_8h_accc3f1e1e508e3d64c830e16cf54cc84}{\-I\-R\-T\-V\-Read} (void)
+\begin{DoxyCompactList}\small\item\em \-Reads and removes the next key code from the code buffer. \-Does not wait. \end{DoxyCompactList}\item 
+\hypertarget{irtv_8h_a2bbb5f3ad44d7602658620757c7642a3}{void \hyperlink{irtv_8h_a2bbb5f3ad44d7602658620757c7642a3}{\-I\-R\-T\-V\-Release} (void)}\label{irtv_8h_a2bbb5f3ad44d7602658620757c7642a3}
+
+\begin{DoxyCompactList}\small\item\em \-Terminates the remote control decoder and releases the irtv thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Header file for the \-I\-R\-T\-V functions. \begin{DoxyAuthor}{\-Author}
+\-Remi \-K\-E\-A\-T 
+\end{DoxyAuthor}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{irtv_8h_a0ef0618edbe45664fe191767bc172e35}{\index{irtv.\-h@{irtv.\-h}!\-I\-R\-T\-V\-Init@{\-I\-R\-T\-V\-Init}}
+\index{\-I\-R\-T\-V\-Init@{\-I\-R\-T\-V\-Init}!irtv.h@{irtv.\-h}}
+\subsubsection[{\-I\-R\-T\-V\-Init}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-I\-R\-T\-V\-Init} (
+\begin{DoxyParamCaption}
+\item[{\-Device\-Semantics}]{semantics}
+\end{DoxyParamCaption}
+)}}\label{irtv_8h_a0ef0618edbe45664fe191767bc172e35}
+
+
+\-Initializes the \-I\-R remote control decoder by calling \hyperlink{irtv_8h_a0ef0618edbe45664fe191767bc172e35}{\-I\-R\-T\-V\-Init()} with the device name found in the corresponding \-H\-D\-T entry. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-Device\-Semantics} & semantics \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-:
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item 0 = ok
+\item 1 = \-H\-D\-T file error
+\item 2 = invalid or missing \char`\"{}\-I\-R\-T\-V\char`\"{} \-H\-D\-T entry for this semantics 
+\end{DoxyItemize}\hypertarget{irtv_8h_accc3f1e1e508e3d64c830e16cf54cc84}{\index{irtv.\-h@{irtv.\-h}!\-I\-R\-T\-V\-Read@{\-I\-R\-T\-V\-Read}}
+\index{\-I\-R\-T\-V\-Read@{\-I\-R\-T\-V\-Read}!irtv.h@{irtv.\-h}}
+\subsubsection[{\-I\-R\-T\-V\-Read}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-I\-R\-T\-V\-Read} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{irtv_8h_accc3f1e1e508e3d64c830e16cf54cc84}
+
+
+\-Reads and removes the next key code from the code buffer. \-Does not wait. 
+
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: \-Next code from the buffer
+\end{DoxyReturn}
+0 = no key 

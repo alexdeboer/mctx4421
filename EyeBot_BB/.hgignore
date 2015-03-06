@@ -1,0 +1,11 @@
+syntax: glob
+cmake_install.cmake
+.cproject
+.project
+CMakeCache.txt
+EyeBot
+Makefile
+CMakeFiles/*
+doc/*
+lib/Debug/libeyebot.a
+lib/libeyebot.a

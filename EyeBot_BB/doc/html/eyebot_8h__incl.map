@@ -1,0 +1,21 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$servos__and__motors_8h.html" title="Header file for the servos and motors functions." alt="" coords="184,83,333,112"/>
+<area shape="rect" id="node38" href="$psd__sensors_8h.html" title="Header file for the PSD sensors functions." alt="" coords="357,83,467,112"/>
+<area shape="rect" id="node41" href="$timer_8h.html" title="Header file for the timer functions." alt="" coords="843,83,904,112"/>
+<area shape="rect" id="node51" href="$latches_8h.html" title="Header file for the latches functions." alt="" coords="491,83,565,112"/>
+<area shape="rect" id="node54" href="$multitasking_8h.html" title="Header file for multitasking functions." alt="" coords="717,83,819,112"/>
+<area shape="rect" id="node58" href="$system_8h.html" title="Header file for system functions." alt="" coords="904,237,979,267"/>
+<area shape="rect" id="node65" href="$misc_8h.html" title="Header file for misc functions." alt="" coords="983,160,1041,189"/>
+<area shape="rect" id="node68" href="$adc_8h.html" title="Header file for the ADC functions." alt="" coords="589,83,643,112"/>
+<area shape="rect" id="node73" href="$irtv_8h.html" title="Header file for the IRTV functions." alt="" coords="5,83,53,112"/>
+<area shape="rect" id="node76" href="$vomega_8h.html" title="Header file for the VW functions." alt="" coords="77,83,160,112"/>
+<area shape="rect" id="node79" href="$camera_8h.html" title="Header file for the camera functions." alt="" coords="628,160,705,189"/>
+<area shape="rect" id="node5" href="$spi_8h.html" title="Header file for the SPI functions." alt="" coords="411,160,459,189"/>
+<area shape="rect" id="node9" href="$spi__commands_8h.html" title="Defines the OP&#45;codes for the SPI messages." alt="" coords="397,237,520,267"/>
+<area shape="rect" id="node11" href="$globals_8h.html" title="Header file for global variables." alt="" coords="635,237,709,267"/>
+<area shape="rect" id="node29" href="$hdt_8h.html" title="Header file for the HDT functions." alt="" coords="323,237,373,267"/>
+<area shape="rect" id="node13" href="$types_8h.html" title="Defines types." alt="" coords="640,315,704,344"/>
+<area shape="rect" id="node25" href="$params_8h.html" title="Defines main parameters." alt="" coords="825,392,903,421"/>
+<area shape="rect" id="node43" href="$lcd_8h.html" title="Header file for the LCD functions." alt="" coords="831,160,881,189"/>
+<area shape="rect" id="node48" href="$key_8h.html" title="Header file for the key functions." alt="" coords="733,237,787,267"/>
+</map>

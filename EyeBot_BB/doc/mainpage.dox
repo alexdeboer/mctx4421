@@ -1,0 +1,12 @@
+/**
+ * \mainpage EyeBot_BB Documentation
+ * The following describes the RoBIOS operating system library routines.\n
+ * In application files use:\n
+ * \code
+ * #include "eyebot.h"
+ * \endcode
+ * The following libraries are available for programming the BeagleBoard in C.\n
+ * In application program, include "eyebot.h" and the library will be automatically linked when calling "gcc" (refer to the example makefile provided).\n
+ * Note that there are also a number of libraries available which are not listed here but are included in the EyeBot distribution (e.g. elaborate image processing library).\n
+ * They can also be linked with an application program. Some of the library functions (in gray text) are not finalized yet and they are not included in this distribution.
+ */

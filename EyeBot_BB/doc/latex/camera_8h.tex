@@ -1,0 +1,82 @@
+\hypertarget{camera_8h}{\section{\-Eye\-Bot\-\_\-\-B\-B/include/camera.h \-File \-Reference}
+\label{camera_8h}\index{\-Eye\-Bot\-\_\-\-B\-B/include/camera.\-h@{\-Eye\-Bot\-\_\-\-B\-B/include/camera.\-h}}
+}
+
+
+\-Header file for the camera functions.  
+
+
+{\ttfamily \#include \char`\"{}globals.\-h\char`\"{}}\*
+\-Include dependency graph for camera.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{camera_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{camera_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\-C\-A\-M\-Handle \hyperlink{camera_8h_ac8e8261c6add860588aa718c38bee287}{\-C\-A\-M\-Init} (\-Device\-Semantics semantics)
+\begin{DoxyCompactList}\small\item\em \-Configure \& \-Initialize camera. \end{DoxyCompactList}\item 
+int \hyperlink{camera_8h_aea0788a11ce9846679a9cc9752860a27}{\-C\-A\-M\-Get\-Frame\-R\-G\-B} (\-C\-A\-M\-Handle handle, \-B\-Y\-T\-E $\ast$buf)
+\begin{DoxyCompactList}\small\item\em \-Reads one full color image in \-R\-B\-G format, 3 bytes per pixel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Header file for the camera functions. \begin{DoxyAuthor}{\-Author}
+\-Remi \-K\-E\-A\-T 
+\end{DoxyAuthor}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{camera_8h_aea0788a11ce9846679a9cc9752860a27}{\index{camera.\-h@{camera.\-h}!\-C\-A\-M\-Get\-Frame\-R\-G\-B@{\-C\-A\-M\-Get\-Frame\-R\-G\-B}}
+\index{\-C\-A\-M\-Get\-Frame\-R\-G\-B@{\-C\-A\-M\-Get\-Frame\-R\-G\-B}!camera.h@{camera.\-h}}
+\subsubsection[{\-C\-A\-M\-Get\-Frame\-R\-G\-B}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-C\-A\-M\-Get\-Frame\-R\-G\-B} (
+\begin{DoxyParamCaption}
+\item[{\-C\-A\-M\-Handle}]{handle, }
+\item[{\-B\-Y\-T\-E $\ast$}]{buf}
+\end{DoxyParamCaption}
+)}}\label{camera_8h_aea0788a11ce9846679a9cc9752860a27}
+
+
+\-Reads one full color image in \-R\-B\-G format, 3 bytes per pixel. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-C\-A\-M\-Handle} & handle \-: handle of the desired camera \\
+\hline
+{\em \-B\-Y\-T\-E$\ast$} & buf \-: pointer to image buffer of full size (use \-C\-A\-M\-Get) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: return code\par
+ 0 = success\par
+ -\/1 = error (camera not initialized) 
+\end{DoxyReturn}
+\hypertarget{camera_8h_ac8e8261c6add860588aa718c38bee287}{\index{camera.\-h@{camera.\-h}!\-C\-A\-M\-Init@{\-C\-A\-M\-Init}}
+\index{\-C\-A\-M\-Init@{\-C\-A\-M\-Init}!camera.h@{camera.\-h}}
+\subsubsection[{\-C\-A\-M\-Init}]{\setlength{\rightskip}{0pt plus 5cm}\-C\-A\-M\-Handle {\bf \-C\-A\-M\-Init} (
+\begin{DoxyParamCaption}
+\item[{\-Device\-Semantics}]{semantics}
+\end{DoxyParamCaption}
+)}}\label{camera_8h_ac8e8261c6add860588aa718c38bee287}
+
+
+\-Configure \& \-Initialize camera. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-Device\-Semantics} & semantics \-: handle of the desired camera \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-C\-A\-M\-Handle handle 
+\end{DoxyReturn}

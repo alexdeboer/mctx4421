@@ -1,0 +1,11 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$hdt_8h.html" title="Header file for the HDT functions." alt="" coords="383,83,551,112"/>
+<area shape="rect" id="node5" href="$lcd_8h.html" title="Header file for the LCD functions." alt="" coords="293,160,461,189"/>
+<area shape="rect" id="node20" href="$hdt_8c.html" title="Defines functions used by the HDT system." alt="" coords="485,160,629,189"/>
+<area shape="rect" id="node7" href="$timer_8h.html" title="Header file for the timer functions." alt="" coords="88,237,267,267"/>
+<area shape="rect" id="node13" href="$key_8h.html" title="Header file for the key functions." alt="" coords="291,237,464,267"/>
+<area shape="rect" id="node18" href="$lcd_8c.html" title="Defines functions to interact with the LCD screen." alt="" coords="488,237,632,267"/>
+<area shape="rect" id="node9" href="$eyebot_8h.html" title="Header file for the EyeBot functions." alt="" coords="184,315,376,344"/>
+<area shape="rect" id="node11" href="$timer_8c.html" title="Defines functions related to the timer." alt="" coords="5,315,160,344"/>
+<area shape="rect" id="node16" href="$key_8c.html" title="Defines functions for the key input." alt="" coords="400,315,547,344"/>
+</map>

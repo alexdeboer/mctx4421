@@ -1,0 +1,239 @@
+\hypertarget{system_8h}{\section{\-Eye\-Bot\-\_\-\-B\-B/include/system.h \-File \-Reference}
+\label{system_8h}\index{\-Eye\-Bot\-\_\-\-B\-B/include/system.\-h@{\-Eye\-Bot\-\_\-\-B\-B/include/system.\-h}}
+}
+
+
+\-Header file for system functions.  
+
+
+{\ttfamily \#include \char`\"{}types.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}string.\-h\char`\"{}}\*
+{\ttfamily \#include $<$sys/sysinfo.\-h$>$}\*
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+\-Include dependency graph for system.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{system_8h_ad944f802170845aa1b8f7e94cbfaf725}{char $\ast$ {\bfseries execute} (char $\ast$command)}\label{system_8h_ad944f802170845aa1b8f7e94cbfaf725}
+
+\item 
+char $\ast$ \hyperlink{system_8h_a678c6f7f1bdef948e4d19c4f2ccfbfdb}{\-O\-S\-Version} (void)
+\begin{DoxyCompactList}\small\item\em \-Returns string containing running \-Ro\-B\-I\-O\-S version. \end{DoxyCompactList}\item 
+int \hyperlink{system_8h_acbd1aac07faac8de14f8241223e1312d}{\-O\-S\-Machine\-Speed} (void)
+\begin{DoxyCompactList}\small\item\em \-Inform the user how fast the processor runs. \end{DoxyCompactList}\item 
+int \hyperlink{system_8h_a588552d8454d1c6448db1c392a16eaf6}{\-O\-S\-Machine\-Type} (void)
+\begin{DoxyCompactList}\small\item\em \-Inform the user in which environment the program runs. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{system_8h_ae881073bd12963242f6e98453ac45069}{\-O\-S\-Machine\-Name} (void)
+\begin{DoxyCompactList}\small\item\em \-Inform the user with which name the \-Eyebot is titled. \end{DoxyCompactList}\item 
+unsigned char \hyperlink{system_8h_aa1142247292c4cfc038686a995032e35}{\-O\-S\-Machine\-I\-D} (void)
+\begin{DoxyCompactList}\small\item\em \-Inform the user with which \-I\-D the \-Eyebot is titled. \end{DoxyCompactList}\item 
+int \hyperlink{system_8h_a811e7f24f174bc6cd77dda7d7fb09216}{\-O\-S\-Error} (char $\ast$msg, int number, bool deadend)
+\begin{DoxyCompactList}\small\item\em \-Print message and number to display then stop processor (deadend) or wait for key. \end{DoxyCompactList}\item 
+int \hyperlink{system_8h_aec6f1e7c0248621160484ad700fe518e}{\-O\-S\-Info\-C\-P\-U} (\hyperlink{structinfo__cpu__t}{info\-\_\-cpu\-\_\-t} $\ast$info\-C\-P\-U)
+\begin{DoxyCompactList}\small\item\em \-Collects infos about the \-C\-P\-U – name, speed, architecture and bogus\-Mips. \end{DoxyCompactList}\item 
+int \hyperlink{system_8h_a52ff62369a0bb81e082774b6b1bcb4cc}{\-O\-S\-Info\-Mem} (\hyperlink{structinfo__mem__t}{info\-\_\-mem\-\_\-t} $\ast$info\-Mem)
+\begin{DoxyCompactList}\small\item\em \-Collects infos about the memory. \end{DoxyCompactList}\item 
+int \hyperlink{system_8h_a1c4395c6666244f2d10c21d5e6b7c6bd}{\-O\-S\-Info\-Proc} (\hyperlink{structinfo__proc__t}{info\-\_\-proc\-\_\-t} $\ast$info\-Proc)
+\begin{DoxyCompactList}\small\item\em \-Collects infos about processes. \end{DoxyCompactList}\item 
+int \hyperlink{system_8h_a906bc4141b67c39c3969be340a3f9910}{\-O\-S\-Info\-Misc} (\hyperlink{structinfo__misc__t}{info\-\_\-misc\-\_\-t} $\ast$info\-Misc)
+\begin{DoxyCompactList}\small\item\em \-Collects system’s miscellaneous infos – uptime, vbatt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Header file for system functions. \begin{DoxyAuthor}{\-Author}
+\-Remi \-K\-E\-A\-T 
+\end{DoxyAuthor}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{system_8h_a811e7f24f174bc6cd77dda7d7fb09216}{\index{system.\-h@{system.\-h}!\-O\-S\-Error@{\-O\-S\-Error}}
+\index{\-O\-S\-Error@{\-O\-S\-Error}!system.h@{system.\-h}}
+\subsubsection[{\-O\-S\-Error}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-O\-S\-Error} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{msg, }
+\item[{int}]{number, }
+\item[{bool}]{deadend}
+\end{DoxyParamCaption}
+)}}\label{system_8h_a811e7f24f174bc6cd77dda7d7fb09216}
+
+
+\-Print message and number to display then stop processor (deadend) or wait for key. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$} & msg \-: pointer to message \\
+\hline
+{\em int} & number \-: int number \\
+\hline
+{\em \-B\-O\-O\-L} & deadend \-: switch to choose deadend or keywait\\
+\hline
+\end{DoxyParams}
+\-Valid values are\-:
+\begin{DoxyItemize}
+\item 0 = no deadend
+\item 1 = deadend
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: \-Always 0 
+\end{DoxyReturn}
+\hypertarget{system_8h_aec6f1e7c0248621160484ad700fe518e}{\index{system.\-h@{system.\-h}!\-O\-S\-Info\-C\-P\-U@{\-O\-S\-Info\-C\-P\-U}}
+\index{\-O\-S\-Info\-C\-P\-U@{\-O\-S\-Info\-C\-P\-U}!system.h@{system.\-h}}
+\subsubsection[{\-O\-S\-Info\-C\-P\-U}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-O\-S\-Info\-C\-P\-U} (
+\begin{DoxyParamCaption}
+\item[{{\bf info\-\_\-cpu\-\_\-t} $\ast$}]{info\-C\-P\-U}
+\end{DoxyParamCaption}
+)}}\label{system_8h_aec6f1e7c0248621160484ad700fe518e}
+
+
+\-Collects infos about the \-C\-P\-U – name, speed, architecture and bogus\-Mips. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em info\-\_\-cpu\-\_\-t$\ast$} & info\-C\-P\-U \-: pointer to a structure (\hyperlink{structinfo__cpu__t}{info\-\_\-cpu\-\_\-t}) containing the cpu infos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{system_8h_a52ff62369a0bb81e082774b6b1bcb4cc}{\index{system.\-h@{system.\-h}!\-O\-S\-Info\-Mem@{\-O\-S\-Info\-Mem}}
+\index{\-O\-S\-Info\-Mem@{\-O\-S\-Info\-Mem}!system.h@{system.\-h}}
+\subsubsection[{\-O\-S\-Info\-Mem}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-O\-S\-Info\-Mem} (
+\begin{DoxyParamCaption}
+\item[{{\bf info\-\_\-mem\-\_\-t} $\ast$}]{info\-Mem}
+\end{DoxyParamCaption}
+)}}\label{system_8h_a52ff62369a0bb81e082774b6b1bcb4cc}
+
+
+\-Collects infos about the memory. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em info\-\_\-mem\-\_\-t$\ast$} & info\-Mem \-: pointer to a structure (\hyperlink{structinfo__mem__t}{info\-\_\-mem\-\_\-t}) which contains the memory infos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{system_8h_a906bc4141b67c39c3969be340a3f9910}{\index{system.\-h@{system.\-h}!\-O\-S\-Info\-Misc@{\-O\-S\-Info\-Misc}}
+\index{\-O\-S\-Info\-Misc@{\-O\-S\-Info\-Misc}!system.h@{system.\-h}}
+\subsubsection[{\-O\-S\-Info\-Misc}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-O\-S\-Info\-Misc} (
+\begin{DoxyParamCaption}
+\item[{{\bf info\-\_\-misc\-\_\-t} $\ast$}]{info\-Misc}
+\end{DoxyParamCaption}
+)}}\label{system_8h_a906bc4141b67c39c3969be340a3f9910}
+
+
+\-Collects system’s miscellaneous infos – uptime, vbatt. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \hyperlink{structinfo__misc__t}{info\-\_\-misc\-\_\-t}} & info\-Misc \-: pointer to a structure (\hyperlink{structinfo__misc__t}{info\-\_\-misc\-\_\-t}) which contains the misc infos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{system_8h_a1c4395c6666244f2d10c21d5e6b7c6bd}{\index{system.\-h@{system.\-h}!\-O\-S\-Info\-Proc@{\-O\-S\-Info\-Proc}}
+\index{\-O\-S\-Info\-Proc@{\-O\-S\-Info\-Proc}!system.h@{system.\-h}}
+\subsubsection[{\-O\-S\-Info\-Proc}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-O\-S\-Info\-Proc} (
+\begin{DoxyParamCaption}
+\item[{{\bf info\-\_\-proc\-\_\-t} $\ast$}]{info\-Proc}
+\end{DoxyParamCaption}
+)}}\label{system_8h_a1c4395c6666244f2d10c21d5e6b7c6bd}
+
+
+\-Collects infos about processes. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \hyperlink{structinfo__proc__t}{info\-\_\-proc\-\_\-t}} & info\-Proc \-: pointer to a structure (\hyperlink{structinfo__proc__t}{info\-\_\-proc\-\_\-t}) which contains the process infos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{system_8h_aa1142247292c4cfc038686a995032e35}{\index{system.\-h@{system.\-h}!\-O\-S\-Machine\-I\-D@{\-O\-S\-Machine\-I\-D}}
+\index{\-O\-S\-Machine\-I\-D@{\-O\-S\-Machine\-I\-D}!system.h@{system.\-h}}
+\subsubsection[{\-O\-S\-Machine\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char {\bf \-O\-S\-Machine\-I\-D} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{system_8h_aa1142247292c4cfc038686a995032e35}
+
+
+\-Inform the user with which \-I\-D the \-Eyebot is titled. 
+
+\begin{DoxyReturn}{\-Returns}
+unsigned char \-I\-D \-: \-I\-D of actual \-Eyebot 
+\end{DoxyReturn}
+\hypertarget{system_8h_ae881073bd12963242f6e98453ac45069}{\index{system.\-h@{system.\-h}!\-O\-S\-Machine\-Name@{\-O\-S\-Machine\-Name}}
+\index{\-O\-S\-Machine\-Name@{\-O\-S\-Machine\-Name}!system.h@{system.\-h}}
+\subsubsection[{\-O\-S\-Machine\-Name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf \-O\-S\-Machine\-Name} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{system_8h_ae881073bd12963242f6e98453ac45069}
+
+
+\-Inform the user with which name the \-Eyebot is titled. 
+
+\begin{DoxyReturn}{\-Returns}
+char$\ast$ machine\-Name \-: \-Name of actual \-Eyebot 
+\end{DoxyReturn}
+\hypertarget{system_8h_acbd1aac07faac8de14f8241223e1312d}{\index{system.\-h@{system.\-h}!\-O\-S\-Machine\-Speed@{\-O\-S\-Machine\-Speed}}
+\index{\-O\-S\-Machine\-Speed@{\-O\-S\-Machine\-Speed}!system.h@{system.\-h}}
+\subsubsection[{\-O\-S\-Machine\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-O\-S\-Machine\-Speed} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{system_8h_acbd1aac07faac8de14f8241223e1312d}
+
+
+\-Inform the user how fast the processor runs. 
+
+\begin{DoxyReturn}{\-Returns}
+int speed \-: actual clockrate of \-C\-P\-U in \-Hz 
+\end{DoxyReturn}
+\hypertarget{system_8h_a588552d8454d1c6448db1c392a16eaf6}{\index{system.\-h@{system.\-h}!\-O\-S\-Machine\-Type@{\-O\-S\-Machine\-Type}}
+\index{\-O\-S\-Machine\-Type@{\-O\-S\-Machine\-Type}!system.h@{system.\-h}}
+\subsubsection[{\-O\-S\-Machine\-Type}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-O\-S\-Machine\-Type} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{system_8h_a588552d8454d1c6448db1c392a16eaf6}
+
+
+\-Inform the user in which environment the program runs. 
+
+\begin{DoxyReturn}{\-Returns}
+int machine\-Type \-: \-Type of used hardware
+\end{DoxyReturn}
+\-Valid values are\-: \-V\-E\-H\-I\-C\-L\-E, \-P\-L\-A\-T\-F\-O\-R\-M, \-W\-A\-L\-K\-E\-R \hypertarget{system_8h_a678c6f7f1bdef948e4d19c4f2ccfbfdb}{\index{system.\-h@{system.\-h}!\-O\-S\-Version@{\-O\-S\-Version}}
+\index{\-O\-S\-Version@{\-O\-S\-Version}!system.h@{system.\-h}}
+\subsubsection[{\-O\-S\-Version}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf \-O\-S\-Version} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{system_8h_a678c6f7f1bdef948e4d19c4f2ccfbfdb}
+
+
+\-Returns string containing running \-Ro\-B\-I\-O\-S version. 
+
+\begin{DoxyReturn}{\-Returns}
+char$\ast$ version \-: \-O\-S version
+\end{DoxyReturn}
+\-Example\-: \char`\"{}3.\-1b\char`\"{} 

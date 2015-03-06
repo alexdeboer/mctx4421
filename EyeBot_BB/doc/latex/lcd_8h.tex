@@ -1,0 +1,1277 @@
+\hypertarget{lcd_8h}{\section{\-Eye\-Bot\-\_\-\-B\-B/include/lcd.h \-File \-Reference}
+\label{lcd_8h}\index{\-Eye\-Bot\-\_\-\-B\-B/include/lcd.\-h@{\-Eye\-Bot\-\_\-\-B\-B/include/lcd.\-h}}
+}
+
+
+\-Header file for the \-L\-C\-D functions.  
+
+
+{\ttfamily \#include \char`\"{}globals.\-h\char`\"{}}\*
+{\ttfamily \#include $<$stdarg.\-h$>$}\*
+{\ttfamily \#include \char`\"{}key.\-h\char`\"{}}\*
+\-Include dependency graph for lcd.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lcd_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lcd_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{lcd_8h_a34f95804d4bfa75ef2ab12cc2b65a65c}{\#define {\bfseries \-L\-C\-D\-\_\-\-W\-H\-I\-T\-E}~\hyperlink{lcd_8c_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color}(\char`\"{}white\char`\"{})}\label{lcd_8h_a34f95804d4bfa75ef2ab12cc2b65a65c}
+
+\item 
+\hypertarget{lcd_8h_a7fde864d9e042b2dad158edc4c95d48e}{\#define {\bfseries \-L\-C\-D\-\_\-\-S\-I\-L\-V\-E\-R}~\hyperlink{lcd_8c_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color}(\char`\"{}light gray\char`\"{})}\label{lcd_8h_a7fde864d9e042b2dad158edc4c95d48e}
+
+\item 
+\hypertarget{lcd_8h_af86642b068f666ea42302de16a5feee3}{\#define {\bfseries \-L\-C\-D\-\_\-\-L\-I\-G\-H\-T\-G\-R\-A\-Y}~\hyperlink{lcd_8c_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color}(\char`\"{}light gray\char`\"{})}\label{lcd_8h_af86642b068f666ea42302de16a5feee3}
+
+\item 
+\hypertarget{lcd_8h_a70f4d0ab1201f2dd1ebe20daccd5305f}{\#define {\bfseries \-L\-C\-D\-\_\-\-L\-I\-G\-H\-T\-G\-R\-E\-Y}~\hyperlink{lcd_8c_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color}(\char`\"{}light grey\char`\"{})}\label{lcd_8h_a70f4d0ab1201f2dd1ebe20daccd5305f}
+
+\item 
+\hypertarget{lcd_8h_a251fbe0f632afb3c87ce96a61435454e}{\#define {\bfseries \-L\-C\-D\-\_\-\-G\-R\-A\-Y}~\hyperlink{lcd_8c_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color}(\char`\"{}gray\char`\"{})}\label{lcd_8h_a251fbe0f632afb3c87ce96a61435454e}
+
+\item 
+\hypertarget{lcd_8h_a03bc48d6ae97bd2f885ed7d4b95a3d0a}{\#define {\bfseries \-L\-C\-D\-\_\-\-D\-A\-R\-K\-G\-R\-A\-Y}~\hyperlink{lcd_8c_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color}(\char`\"{}dark gray\char`\"{})}\label{lcd_8h_a03bc48d6ae97bd2f885ed7d4b95a3d0a}
+
+\item 
+\hypertarget{lcd_8h_a4f2a1586402ad5526c8fad99c0d888d6}{\#define {\bfseries \-L\-C\-D\-\_\-\-D\-A\-R\-K\-G\-R\-E\-Y}~\hyperlink{lcd_8c_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color}(\char`\"{}dark grey\char`\"{})}\label{lcd_8h_a4f2a1586402ad5526c8fad99c0d888d6}
+
+\item 
+\hypertarget{lcd_8h_a89194c8cf2691afa77b4f81ad1cde821}{\#define {\bfseries \-L\-C\-D\-\_\-\-B\-L\-A\-C\-K}~\hyperlink{lcd_8c_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color}(\char`\"{}black\char`\"{})}\label{lcd_8h_a89194c8cf2691afa77b4f81ad1cde821}
+
+\item 
+\hypertarget{lcd_8h_ae08bdcd40ed17c40c7ff537b31ae6c20}{\#define {\bfseries \-L\-C\-D\-\_\-\-B\-L\-U\-E}~\hyperlink{lcd_8c_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color}(\char`\"{}blue\char`\"{})}\label{lcd_8h_ae08bdcd40ed17c40c7ff537b31ae6c20}
+
+\item 
+\hypertarget{lcd_8h_a6fd37fd426517041547b566bb8821d44}{\#define {\bfseries \-L\-C\-D\-\_\-\-N\-A\-V\-Y}~\hyperlink{lcd_8c_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color}(\char`\"{}navy\char`\"{})}\label{lcd_8h_a6fd37fd426517041547b566bb8821d44}
+
+\item 
+\hypertarget{lcd_8h_ae97201a3dd1086b8947068e25cdbcc6f}{\#define {\bfseries \-L\-C\-D\-\_\-\-A\-Q\-U\-A}~\hyperlink{lcd_8c_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color}(\char`\"{}aquamarine\char`\"{})}\label{lcd_8h_ae97201a3dd1086b8947068e25cdbcc6f}
+
+\item 
+\hypertarget{lcd_8h_aa73471fd9276eddf1e8f60aacea5f2e4}{\#define {\bfseries \-L\-C\-D\-\_\-\-C\-Y\-A\-N}~\hyperlink{lcd_8c_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color}(\char`\"{}cyan\char`\"{})}\label{lcd_8h_aa73471fd9276eddf1e8f60aacea5f2e4}
+
+\item 
+\hypertarget{lcd_8h_ad687184b90249fc95e0750d572874289}{\#define {\bfseries \-L\-C\-D\-\_\-\-T\-E\-A\-L}~\hyperlink{lcd_8c_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color}(\char`\"{}dark cyan\char`\"{})}\label{lcd_8h_ad687184b90249fc95e0750d572874289}
+
+\item 
+\hypertarget{lcd_8h_a934c16f1b1051c98aa2b28eeb66fff53}{\#define {\bfseries \-L\-C\-D\-\_\-\-F\-U\-C\-H\-S\-I\-A}~\hyperlink{lcd_8c_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color}(\char`\"{}magenta\char`\"{})}\label{lcd_8h_a934c16f1b1051c98aa2b28eeb66fff53}
+
+\item 
+\hypertarget{lcd_8h_aee1fb729b04f50f41f5a9ae886ce536e}{\#define {\bfseries \-L\-C\-D\-\_\-\-M\-A\-G\-E\-N\-T\-A}~\hyperlink{lcd_8c_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color}(\char`\"{}magenta\char`\"{})}\label{lcd_8h_aee1fb729b04f50f41f5a9ae886ce536e}
+
+\item 
+\hypertarget{lcd_8h_a0bb50efbe26976eae32b4403630c85ee}{\#define {\bfseries \-L\-C\-D\-\_\-\-P\-U\-R\-P\-L\-E}~\hyperlink{lcd_8c_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color}(\char`\"{}purple\char`\"{})}\label{lcd_8h_a0bb50efbe26976eae32b4403630c85ee}
+
+\item 
+\hypertarget{lcd_8h_aa32f6c50fe89cc11c61d8571acabaca7}{\#define {\bfseries \-L\-C\-D\-\_\-\-R\-E\-D}~\hyperlink{lcd_8c_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color}(\char`\"{}red\char`\"{})}\label{lcd_8h_aa32f6c50fe89cc11c61d8571acabaca7}
+
+\item 
+\hypertarget{lcd_8h_af571d0f6ff60b07379faec6b1a5611fa}{\#define {\bfseries \-L\-C\-D\-\_\-\-M\-A\-R\-O\-O\-N}~\hyperlink{lcd_8c_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color}(\char`\"{}maroon\char`\"{})}\label{lcd_8h_af571d0f6ff60b07379faec6b1a5611fa}
+
+\item 
+\hypertarget{lcd_8h_afdc90728740e3c7f3550dd2aa86d3249}{\#define {\bfseries \-L\-C\-D\-\_\-\-Y\-E\-L\-L\-O\-W}~\hyperlink{lcd_8c_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color}(\char`\"{}yellow\char`\"{})}\label{lcd_8h_afdc90728740e3c7f3550dd2aa86d3249}
+
+\item 
+\hypertarget{lcd_8h_a285b6af93051864e7af6d5e71382b778}{\#define {\bfseries \-L\-C\-D\-\_\-\-O\-L\-I\-V\-E}~\hyperlink{lcd_8c_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color}(\char`\"{}dark olive green\char`\"{})}\label{lcd_8h_a285b6af93051864e7af6d5e71382b778}
+
+\item 
+\hypertarget{lcd_8h_a62817a4f01122911f7419846ade57811}{\#define {\bfseries \-L\-C\-D\-\_\-\-L\-I\-M\-E}~\hyperlink{lcd_8c_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color}(\char`\"{}lime green\char`\"{})}\label{lcd_8h_a62817a4f01122911f7419846ade57811}
+
+\item 
+\hypertarget{lcd_8h_a93c7d21d563437550a6873fe0cfe3c0b}{\#define {\bfseries \-L\-C\-D\-\_\-\-G\-R\-E\-E\-N}~\hyperlink{lcd_8c_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color}(\char`\"{}green\char`\"{})}\label{lcd_8h_a93c7d21d563437550a6873fe0cfe3c0b}
+
+\item 
+\hypertarget{lcd_8h_a986b81313ccdad3ff201a628af1033bc}{\#define {\bfseries \-L\-C\-D\-\_\-\-B\-G\-C\-O\-L\-\_\-\-T\-R\-A\-N\-S\-P\-A\-R\-E\-N\-T}~0x01}\label{lcd_8h_a986b81313ccdad3ff201a628af1033bc}
+
+\item 
+\hypertarget{lcd_8h_aff0ac8db601f2c8fc232dfb41af8908c}{\#define {\bfseries \-L\-C\-D\-\_\-\-B\-G\-C\-O\-L\-\_\-\-N\-O\-T\-R\-A\-N\-S\-P\-A\-R\-E\-N\-T}~0x10}\label{lcd_8h_aff0ac8db601f2c8fc232dfb41af8908c}
+
+\item 
+\hypertarget{lcd_8h_a79f2958f903b783363773d55592717ed}{\#define {\bfseries \-L\-C\-D\-\_\-\-B\-G\-C\-O\-L\-\_\-\-I\-N\-V\-E\-R\-S\-E}~0x02}\label{lcd_8h_a79f2958f903b783363773d55592717ed}
+
+\item 
+\hypertarget{lcd_8h_a7f3f2183a92940587742c6cccb61c7b9}{\#define {\bfseries \-L\-C\-D\-\_\-\-B\-G\-C\-O\-L\-\_\-\-N\-O\-I\-N\-V\-E\-R\-S\-E}~0x20}\label{lcd_8h_a7f3f2183a92940587742c6cccb61c7b9}
+
+\item 
+\hypertarget{lcd_8h_ae3a3db9fe4cf7c765e4d1bcfa589d94a}{\#define {\bfseries \-L\-C\-D\-\_\-\-F\-G\-C\-O\-L\-\_\-\-I\-N\-V\-E\-R\-S\-E}~0x04}\label{lcd_8h_ae3a3db9fe4cf7c765e4d1bcfa589d94a}
+
+\item 
+\hypertarget{lcd_8h_af027ad4fd6b45cbbd6b47013d625848e}{\#define {\bfseries \-L\-C\-D\-\_\-\-F\-G\-C\-O\-L\-\_\-\-N\-O\-I\-N\-V\-E\-R\-S\-E}~0x40}\label{lcd_8h_af027ad4fd6b45cbbd6b47013d625848e}
+
+\item 
+\hypertarget{lcd_8h_aeb76ee5766483ec012775e0e9a5f7c3b}{\#define {\bfseries \-L\-C\-D\-\_\-\-A\-U\-T\-O\-R\-E\-F\-R\-E\-S\-H}~0x0001}\label{lcd_8h_aeb76ee5766483ec012775e0e9a5f7c3b}
+
+\item 
+\hypertarget{lcd_8h_ae54c4d1cee1ba2a3d4f0736f40b23894}{\#define {\bfseries \-L\-C\-D\-\_\-\-N\-O\-A\-U\-T\-O\-R\-E\-F\-R\-E\-S\-H}~0x0100}\label{lcd_8h_ae54c4d1cee1ba2a3d4f0736f40b23894}
+
+\item 
+\hypertarget{lcd_8h_a8590efda1dd1b1808675651d8106f64d}{\#define {\bfseries \-L\-C\-D\-\_\-\-S\-C\-R\-O\-L\-L\-I\-N\-G}~0x0002}\label{lcd_8h_a8590efda1dd1b1808675651d8106f64d}
+
+\item 
+\hypertarget{lcd_8h_a68ae107096f4be7180d8e23271ec6f7b}{\#define {\bfseries \-L\-C\-D\-\_\-\-N\-O\-S\-C\-R\-O\-L\-L\-I\-N\-G}~0x0200}\label{lcd_8h_a68ae107096f4be7180d8e23271ec6f7b}
+
+\item 
+\hypertarget{lcd_8h_a78b3803b62419acd7bc62f471b879507}{\#define {\bfseries \-L\-C\-D\-\_\-\-L\-I\-N\-E\-F\-E\-E\-D}~0x0004}\label{lcd_8h_a78b3803b62419acd7bc62f471b879507}
+
+\item 
+\hypertarget{lcd_8h_a260b21884d9525235fac42d0d6a65247}{\#define {\bfseries \-L\-C\-D\-\_\-\-N\-O\-L\-I\-N\-E\-F\-E\-E\-D}~0x0400}\label{lcd_8h_a260b21884d9525235fac42d0d6a65247}
+
+\item 
+\hypertarget{lcd_8h_a9e9bfb2237116212f76f1f48e1d054bb}{\#define {\bfseries \-L\-C\-D\-\_\-\-S\-H\-O\-W\-M\-E\-N\-U}~0x0008}\label{lcd_8h_a9e9bfb2237116212f76f1f48e1d054bb}
+
+\item 
+\hypertarget{lcd_8h_a733166190ed38b3522ec7e7571c633a5}{\#define {\bfseries \-L\-C\-D\-\_\-\-H\-I\-D\-E\-M\-E\-N\-U}~0x0800}\label{lcd_8h_a733166190ed38b3522ec7e7571c633a5}
+
+\item 
+\hypertarget{lcd_8h_a1372ee5122030d3c585a891558cad3a0}{\#define {\bfseries \-L\-C\-D\-\_\-\-L\-I\-S\-T\-M\-E\-N\-U}~0x0010}\label{lcd_8h_a1372ee5122030d3c585a891558cad3a0}
+
+\item 
+\hypertarget{lcd_8h_a96dae25884789e5f788cd851fbfec65f}{\#define {\bfseries \-L\-C\-D\-\_\-\-C\-L\-A\-S\-S\-I\-C\-M\-E\-N\-U}~0x1000}\label{lcd_8h_a96dae25884789e5f788cd851fbfec65f}
+
+\item 
+\hypertarget{lcd_8h_ae9c1b715f24e396d7ab3e3f011fb9deb}{\#define {\bfseries \-L\-C\-D\-\_\-\-F\-B\-\_\-\-R\-O\-T\-A\-T\-E}~0x0080}\label{lcd_8h_ae9c1b715f24e396d7ab3e3f011fb9deb}
+
+\item 
+\hypertarget{lcd_8h_ab18a048f691217e6d5b93c3263d3d1d3}{\#define {\bfseries \-L\-C\-D\-\_\-\-F\-B\-\_\-\-N\-O\-R\-O\-T\-A\-T\-I\-O\-N}~0x8000}\label{lcd_8h_ab18a048f691217e6d5b93c3263d3d1d3}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{lcd_8h_a69a36b77d20e71a330aa6c55d81f06a0}{\-L\-C\-D\-Init} ()
+\begin{DoxyCompactList}\small\item\em \-Initialize the \-L\-C\-D. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_a37a2b5f8472562a869b3566916c570e7}{\-L\-C\-D\-Clear} (void)
+\begin{DoxyCompactList}\small\item\em \-Clear the \-L\-C\-D display and all display buffers. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_ab41766b91a90c849eceab0f2d648b370}{\-L\-C\-D\-Set\-Mode} (hword\-\_\-t mode)
+\begin{DoxyCompactList}\small\item\em \-Update the internal mode flag bits. \end{DoxyCompactList}\item 
+hword\-\_\-t \hyperlink{lcd_8h_acfcada7d207da191f0667fa00aa2f31d}{\-L\-C\-D\-Get\-Mode} (void)
+\begin{DoxyCompactList}\small\item\em \-Get the internal mode flag bits. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_af7afbe39ffb3f3a99b6357b95692db87}{\-L\-C\-D\-Reset\-Mode} (hword\-\_\-t mode)
+\begin{DoxyCompactList}\small\item\em \-Reset the internal mode flag bits to a previously saved mode. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_a956b3d26824cb2f0b8016b5d230cf937}{\-L\-C\-D\-Menu} (char $\ast$string1, char $\ast$string2, char $\ast$string3, char $\ast$string4)
+\begin{DoxyCompactList}\small\item\em \-Set menu entries in \-K\-E\-Y\-\_\-\-C\-L\-A\-S\-S\-I\-C mode (4-\/buttons). \-Also sets the \-L\-C\-D\-\_\-\-S\-H\-O\-W\-M\-E\-N\-U flag and refresh the \-L\-C\-D. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_ad9963aafe9ed4c33a09008e5ae5fb838}{\-L\-C\-D\-Menu\-I} (int pos, char $\ast$string, rgb\-\_\-t fgcol, rgb\-\_\-t bgcol, void $\ast$userp)
+\begin{DoxyCompactList}\small\item\em \-Set specific menu entry in \-K\-E\-Y\-\_\-\-C\-L\-A\-S\-S\-I\-C mode (index given by pos). \-Color customization for specific key is now possible (fgcol/bgcol). \-A user-\/specific data can be linked to the menu using userp pointer. \-Will also set the \-L\-C\-D\-\_\-\-S\-H\-O\-W\-M\-E\-N\-U flag and refresh the \-L\-C\-D. \end{DoxyCompactList}\item 
+\hyperlink{structmenuitem__t}{menuitem\-\_\-t} $\ast$ \hyperlink{lcd_8h_adaa270264218d4e94e19a9286ca2a440}{\-L\-C\-D\-Menu\-Item} (int index)
+\begin{DoxyCompactList}\small\item\em \-Return the menuitem at a given position. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_af743ceef5378c372cdcecdda89ba2de1}{\-L\-C\-D\-List} (\hyperlink{structlistmenu__t}{listmenu\-\_\-t} $\ast$menulist)
+\begin{DoxyCompactList}\small\item\em \-Setup the list menu display and update appropriate info in the \hyperlink{structlistmenu__t}{listmenu\-\_\-t} structure pointed by menulist (e.\-g. scroll, count). \-Will also set the \-L\-C\-D\-\_\-\-L\-I\-S\-T\-M\-E\-N\-U flag and refresh the \-L\-C\-D. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_ab3fc733f64a1f2db21761218443cddf4}{\-L\-C\-D\-Set\-List} (\hyperlink{structlistmenu__t}{listmenu\-\_\-t} $\ast$menulist)
+\begin{DoxyCompactList}\small\item\em \-Unlike \hyperlink{lcd_8h_af743ceef5378c372cdcecdda89ba2de1}{\-L\-C\-D\-List()}, this will blindly assign menulist to the mainlist for display. \-Doesn't update anything in the menulist structure, nor modify any internal flags. \-Useful to maintain multiple lists fo menu display. \end{DoxyCompactList}\item 
+\hyperlink{structlistmenu__t}{listmenu\-\_\-t} $\ast$ \hyperlink{lcd_8h_a450b1e4d4c7bc4d727e35f22584c1e00}{\-L\-C\-D\-Get\-List} (void)
+\begin{DoxyCompactList}\small\item\em \-Get the currently active list menu. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a33f86c737c8251c056700f812bb7fd5b}{menurect\-\_\-t} $\ast$ \hyperlink{lcd_8h_aa09ef1e0be16b10209555b23fedb5a7f}{\-L\-C\-D\-List\-Box} (int pos)
+\begin{DoxyCompactList}\small\item\em \-Get the frame info of a specific list item in form of a menurect\-\_\-t structure. \end{DoxyCompactList}\item 
+\hyperlink{structmenuitem__t}{menuitem\-\_\-t} $\ast$ \hyperlink{lcd_8h_abfce57fa8012c1ba6072b19c90c64dd2}{\-L\-C\-D\-List\-Active\-Item} (void)
+\begin{DoxyCompactList}\small\item\em \-Get the selected menuitem in the list menu – using index \& start variable in \hyperlink{structlistmenu__t}{listmenu\-\_\-t}. \-Will return 0x0 (\-N\-U\-L) if no item is currently selected. \end{DoxyCompactList}\item 
+rgb\-\_\-t \hyperlink{lcd_8h_aae80cb9280365e9e7a1c9e72ead76114}{get\-Color} (char $\ast$color\-Name)
+\begin{DoxyCompactList}\small\item\em \-Return the rgb\-\_\-t color from the color name. \end{DoxyCompactList}\item 
+rgb\-\_\-t \hyperlink{lcd_8h_a95875885c33f3250de2ca3bf6c53011c}{\-Invert\-Color} (rgb\-\_\-t color)
+\begin{DoxyCompactList}\small\item\em \-Invert a \-R\-G\-B color. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_a6bbecff2b499f883a5445a6691b4fd53}{\-L\-C\-D\-Need\-Refresh} (void)
+\begin{DoxyCompactList}\small\item\em \-Indicate if the \-L\-C\-D need to be refreshed. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_ae4dc3c35dca139fdb24efb57e0e841be}{\-L\-C\-D\-Area} (int x1, int y1, int x2, int y2, rgb\-\_\-t color)
+\begin{DoxyCompactList}\small\item\em \-Draw a color-\/filled rectangle with (x1,y1) as top-\/left coordinate and (x2,y2) as the bottom-\/right coordinate. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_ad050175a524bcc6dd327ddd8d176b645}{\-L\-C\-D\-Set\-Pixel} (int x, int y, rgb\-\_\-t color)
+\begin{DoxyCompactList}\small\item\em \-Sets the color of the pixel at (x,y) coordinate to color. \end{DoxyCompactList}\item 
+rgb\-\_\-t \hyperlink{lcd_8h_ab8a655422f417f2671f21966df04466a}{\-L\-C\-D\-Get\-Pixel} (int x, int y)
+\begin{DoxyCompactList}\small\item\em \-Get the \-R\-G\-B color value of the pixel at (x,y) coordinate. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_a278f94fff5752d16da7695ea9558aa60}{\-L\-C\-D\-Invert\-Pixel} (int x, int y)
+\begin{DoxyCompactList}\small\item\em \-Bit-\/invert the color of the pixel at (x,y) coordinate. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_a1dfbeb8e19f35a5b99d58e49fcbc474e}{\-L\-C\-D\-Line} (int x1, int y1, int x2, int y2, rgb\-\_\-t color)
+\begin{DoxyCompactList}\small\item\em \-Draw a color line from (x1,y1) to (x2,y2). \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_a40626c3b0d0ecdc97ef3ba4981d2aeb8}{\-L\-C\-D\-Line\-Invert} (int x1, int y1, int x2, int y2)
+\begin{DoxyCompactList}\small\item\em \-Draw a line from (x1,y1) to (x2,y2). \-The line pixels will invert the color of existing pixels. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_ab6980aa49dd88599b2b9abd95a0a87bc}{\-L\-C\-D\-Area\-Invert} (int x1, int y1, int x2, int y2)
+\begin{DoxyCompactList}\small\item\em \-Draw a rectangle with (x1,y1) as top-\/left coordinate and (x2,y2) as the bottom-\/right coordinate. \-The pixels in the specified area will invert the color of existing pixels. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_aeda1a7ae85f0496806c5d165195bc2a0}{\-L\-C\-D\-Frame} (int x1, int y1, int x2, int y2, rgb\-\_\-t color)
+\begin{DoxyCompactList}\small\item\em \-Draw a color rectangle frame with (x1,y1) as top-\/left coordinate and (x2,y2) as the bottom-\/right coordinate. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_a29aac30ba7374196705d952154abbf0b}{\-L\-C\-D\-Text\-Color} (rgb\-\_\-t fgcol, rgb\-\_\-t bgcol, char colorflags)
+\begin{DoxyCompactList}\small\item\em \-Set the default color for text (including background) and related flags (e.\-g. for transparent background). \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_a32fbc3e4a67649d676dc866eb6d29bf8}{\-L\-C\-D\-Printf} (const char $\ast$format,...)
+\begin{DoxyCompactList}\small\item\em \-Print formatted string to \-L\-C\-D and refresh \-L\-C\-D. \-Cursor position is updated. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_a61fa9135471a750876910e4a528d244e}{\-L\-C\-D\-Set\-Printf} (int row, int column, const char $\ast$format,...)
+\begin{DoxyCompactList}\small\item\em \-L\-C\-D\-Printf with text position specified. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_a36753632def49abd4a9d80f5c8c6c716}{\-L\-C\-D\-Put\-Char} (char c)
+\begin{DoxyCompactList}\small\item\em \-Write a character to \-L\-C\-D and refresh \-L\-C\-D. \-Cursor position is updated. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_ac9d4835d4ce322d6093a102d2c166de2}{\-L\-C\-D\-Set\-Char} (int row, int column, char c)
+\begin{DoxyCompactList}\small\item\em \-L\-C\-D\-Put\-Char with text position specified. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_a0d5aeebef806b49e1699d3b7c67d8cdb}{\-L\-C\-D\-Put\-String} (char $\ast$string)
+\begin{DoxyCompactList}\small\item\em \-Print string to \-L\-C\-D and refresh \-L\-C\-D. \-Cursor position is updated. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_ae7492eaabfac7303946df1a35478b562}{\-L\-C\-D\-Set\-String} (int row, int column, char $\ast$string)
+\begin{DoxyCompactList}\small\item\em \-L\-C\-D\-Put\-String with text position specified. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_ac3cf933bfc1aaccf69558423f143359f}{\-L\-C\-D\-Put\-Hex} (int val)
+\begin{DoxyCompactList}\small\item\em \-Print hexadecimal number to \-L\-C\-D and refresh \-L\-C\-D. \-Cursor position is updated. \-Utilize \-L\-C\-D\-Printf for conversion. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_a16c86a8675911d96dc3ab03676acfd89}{\-L\-C\-D\-Put\-Hex1} (int val)
+\begin{DoxyCompactList}\small\item\em \-Print hexadecimal number to \-L\-C\-D and refresh \-L\-C\-D. \-Cursor position is updated. \-Utilize \-L\-C\-D\-Printf for conversion. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_a27708e358511a1dbe768c2896b90de4a}{\-L\-C\-D\-Put\-Int} (int val)
+\begin{DoxyCompactList}\small\item\em \-Print integer to \-L\-C\-D and refresh \-L\-C\-D. \-Cursor position is updated. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_aa0e374ed66ae28795375b392a87a6d94}{\-L\-C\-D\-Put\-Int\-S} (int val, int spaces)
+\begin{DoxyCompactList}\small\item\em \-Print integer to \-L\-C\-D and refresh \-L\-C\-D. \-Cursor position is updated. \-Text space usage can be specified (formatting). \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_a43e577948ba707b700e235a0c9a09fad}{\-L\-C\-D\-Put\-Float} (float val)
+\begin{DoxyCompactList}\small\item\em \-Print floating-\/point value to \-L\-C\-D and refresh \-L\-C\-D. \-Cursor position is updated. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_a52c3c51b181e50eb1c569d7412d30a19}{\-L\-C\-D\-Put\-Float\-S} (float val, int spaces, int decimals)
+\begin{DoxyCompactList}\small\item\em \-Print floating-\/point value to \-L\-C\-D and refresh \-L\-C\-D. \-Cursor position is updated. \-Text space usage can be specified (formatting). \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_ad1b4937dea8b38f017710f0abcff634a}{\-L\-C\-D\-Set\-Pos} (int row, int column)
+\begin{DoxyCompactList}\small\item\em \-Set the text cursor position to (row, column). \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_aa559edcff301357fb3922325b1276363}{\-L\-C\-D\-Get\-Pos} (int $\ast$row, int $\ast$column)
+\begin{DoxyCompactList}\small\item\em \-Get the text cursor position. \end{DoxyCompactList}\item 
+\hyperlink{structrect__t}{rect\-\_\-t} \hyperlink{lcd_8h_a0fdac99da2a8db3417a653679b5d8349}{\-L\-C\-D\-Text\-Bar} (int row, int column, int length, int fill, rgb\-\_\-t color)
+\begin{DoxyCompactList}\small\item\em \-Draw a textbar for text starting at position (row, column) until (row, column+length). \-The textbar will take about 25\%-\/50\% of text height \& width to draw its frame. \-The fill parameter will define how much of the text bar should be 'filled' with color (like a progress bar). \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_a01fb1be63d07b391c385e19a0940f963}{\-L\-C\-D\-Release} ()
+\begin{DoxyCompactList}\small\item\em \-Release the \-L\-C\-D. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_aada4852d9daa0fef5fa9b84033f68f95}{\-L\-C\-D\-Refresh} (void)
+\begin{DoxyCompactList}\small\item\em \-Refresh the screen (i.\-e write display buffers to the framebuffer device). \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_a748e3a9cdcf0dec6694a0be2e31a9667}{\-L\-C\-D\-Get\-F\-B\-Info} (\hyperlink{structfbinfo__t}{fbinfo\-\_\-t} $\ast$pinfo)
+\begin{DoxyCompactList}\small\item\em \-Get display information and save to structure pointed by pinfo. \-Cursor info needs \hyperlink{lcd_8h_a69a36b77d20e71a330aa6c55d81f06a0}{\-L\-C\-D\-Init()} for textsize. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_a6842d2b2ec669a0b0eae30162e4d1a70}{\-L\-C\-D\-List\-Count} (void)
+\begin{DoxyCompactList}\small\item\em \-Get the number of list items supported by the current display (text) configuration. \-This includes the item for title bar -\/ thus, different from count variable in \hyperlink{structlistmenu__t}{listmenu\-\_\-t} as updated by an \hyperlink{lcd_8h_af743ceef5378c372cdcecdda89ba2de1}{\-L\-C\-D\-List()} call. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_a8c08cd5b1f4a9bfb3c55b093644b111d}{\-L\-C\-D\-List\-Index} (int index)
+\begin{DoxyCompactList}\small\item\em \-Set the list index. \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_a60014678191ad3ac5aa990ad140982ba}{\-L\-C\-D\-List\-Scroll\-Up} (void)
+\begin{DoxyCompactList}\small\item\em \-Scrolls the list display up. \-Menu index is not altered. \-If the active menu item goes out of focus, the index becomes negative (no item selected). \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_abaf75ff9abc72b4f9e9fc68fe3cca85d}{\-L\-C\-D\-List\-Scroll\-Down} (void)
+\begin{DoxyCompactList}\small\item\em \-Scrolls the list display down. \-Menu index is not altered. \-If the active menu item goes out of focus, the index becomes negative (no item selected). \end{DoxyCompactList}\item 
+int \hyperlink{lcd_8h_a47e8796c915b9333cbf8cf165f351ade}{\-L\-C\-D\-Put\-Image\-R\-G\-B} (int xpos, int ypos, int xsize, int ysize, byte\-\_\-t $\ast$data)
+\begin{DoxyCompactList}\small\item\em \-Place a \-R\-G\-B color image (24bpp) at (xpos,ypos) position on the \-L\-C\-D screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Header file for the \-L\-C\-D functions. \begin{DoxyAuthor}{\-Author}
+\-Remi \-K\-E\-A\-T 
+\end{DoxyAuthor}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{lcd_8h_aae80cb9280365e9e7a1c9e72ead76114}{\index{lcd.\-h@{lcd.\-h}!get\-Color@{get\-Color}}
+\index{get\-Color@{get\-Color}!lcd.h@{lcd.\-h}}
+\subsubsection[{get\-Color}]{\setlength{\rightskip}{0pt plus 5cm}rgb\-\_\-t {\bf get\-Color} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{color\-Name}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_aae80cb9280365e9e7a1c9e72ead76114}
+
+
+\-Return the rgb\-\_\-t color from the color name. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$} & color\-Name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+rgb\-\_\-t color 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a95875885c33f3250de2ca3bf6c53011c}{\index{lcd.\-h@{lcd.\-h}!\-Invert\-Color@{\-Invert\-Color}}
+\index{\-Invert\-Color@{\-Invert\-Color}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-Invert\-Color}]{\setlength{\rightskip}{0pt plus 5cm}rgb\-\_\-t {\bf \-Invert\-Color} (
+\begin{DoxyParamCaption}
+\item[{rgb\-\_\-t}]{color}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a95875885c33f3250de2ca3bf6c53011c}
+
+
+\-Invert a \-R\-G\-B color. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em rgb\-\_\-t} & color \-: \-R\-G\-B color value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+rgb\-\_\-t color \-: \-R\-G\-B color value 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_ae4dc3c35dca139fdb24efb57e0e841be}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Area@{\-L\-C\-D\-Area}}
+\index{\-L\-C\-D\-Area@{\-L\-C\-D\-Area}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Area}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Area} (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2, }
+\item[{rgb\-\_\-t}]{color}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_ae4dc3c35dca139fdb24efb57e0e841be}
+
+
+\-Draw a color-\/filled rectangle with (x1,y1) as top-\/left coordinate and (x2,y2) as the bottom-\/right coordinate. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & x1 \-: \-X-\/coordinate of top-\/left pixel \\
+\hline
+{\em int} & y1 \-: \-Y-\/coordinate of top-\/left pixel \\
+\hline
+{\em int} & x2 \-: \-X-\/coordinate of bottom-\/right pixel \\
+\hline
+{\em int} & y2 \-: \-Y-\/coordinate of bottom-\/right pixel \\
+\hline
+{\em rgb\-\_\-t} & color \-: \-R\-G\-B fill color value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_ab6980aa49dd88599b2b9abd95a0a87bc}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Area\-Invert@{\-L\-C\-D\-Area\-Invert}}
+\index{\-L\-C\-D\-Area\-Invert@{\-L\-C\-D\-Area\-Invert}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Area\-Invert}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Area\-Invert} (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_ab6980aa49dd88599b2b9abd95a0a87bc}
+
+
+\-Draw a rectangle with (x1,y1) as top-\/left coordinate and (x2,y2) as the bottom-\/right coordinate. \-The pixels in the specified area will invert the color of existing pixels. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & x1 \-: \-X-\/coordinate of top-\/left pixel \\
+\hline
+{\em int} & y1 \-: \-Y-\/coordinate of top-\/left pixel \\
+\hline
+{\em int} & x2 \-: \-X-\/coordinate of bottom-\/right pixel \\
+\hline
+{\em int} & y2 \-: \-Y-\/coordinate of bottom-\/right pixel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a37a2b5f8472562a869b3566916c570e7}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Clear@{\-L\-C\-D\-Clear}}
+\index{\-L\-C\-D\-Clear@{\-L\-C\-D\-Clear}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Clear}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Clear} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a37a2b5f8472562a869b3566916c570e7}
+
+
+\-Clear the \-L\-C\-D display and all display buffers. 
+
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_aeda1a7ae85f0496806c5d165195bc2a0}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Frame@{\-L\-C\-D\-Frame}}
+\index{\-L\-C\-D\-Frame@{\-L\-C\-D\-Frame}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Frame} (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2, }
+\item[{rgb\-\_\-t}]{color}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_aeda1a7ae85f0496806c5d165195bc2a0}
+
+
+\-Draw a color rectangle frame with (x1,y1) as top-\/left coordinate and (x2,y2) as the bottom-\/right coordinate. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & x1 \-: \-X-\/coordinate of top-\/left pixel \\
+\hline
+{\em int} & y1 \-: \-Y-\/coordinate of top-\/left pixel \\
+\hline
+{\em int} & x2 \-: \-X-\/coordinate of bottom-\/right pixel \\
+\hline
+{\em int} & y2 \-: \-Y-\/coordinate of bottom-\/right pixel \\
+\hline
+{\em rgb\-\_\-t} & color \-: \-R\-G\-B fill color value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a748e3a9cdcf0dec6694a0be2e31a9667}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Get\-F\-B\-Info@{\-L\-C\-D\-Get\-F\-B\-Info}}
+\index{\-L\-C\-D\-Get\-F\-B\-Info@{\-L\-C\-D\-Get\-F\-B\-Info}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Get\-F\-B\-Info}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Get\-F\-B\-Info} (
+\begin{DoxyParamCaption}
+\item[{{\bf fbinfo\-\_\-t} $\ast$}]{pinfo}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a748e3a9cdcf0dec6694a0be2e31a9667}
+
+
+\-Get display information and save to structure pointed by pinfo. \-Cursor info needs \hyperlink{lcd_8h_a69a36b77d20e71a330aa6c55d81f06a0}{\-L\-C\-D\-Init()} for textsize. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em fbinfo\-\_\-t$\ast$} & pinfo \-: \-Pointer to storage for screen \& cursor info \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val\par
+ 0 on success\par
+ \-Negative value on failure 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a450b1e4d4c7bc4d727e35f22584c1e00}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Get\-List@{\-L\-C\-D\-Get\-List}}
+\index{\-L\-C\-D\-Get\-List@{\-L\-C\-D\-Get\-List}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Get\-List}]{\setlength{\rightskip}{0pt plus 5cm}{\bf listmenu\-\_\-t}$\ast$ {\bf \-L\-C\-D\-Get\-List} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a450b1e4d4c7bc4d727e35f22584c1e00}
+
+
+\-Get the currently active list menu. 
+
+\begin{DoxyReturn}{\-Returns}
+listmenu\-\_\-t$\ast$ ret\-List\-Menu \-: \-Pointer to \hyperlink{structlistmenu__t}{listmenu\-\_\-t} structure 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_acfcada7d207da191f0667fa00aa2f31d}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Get\-Mode@{\-L\-C\-D\-Get\-Mode}}
+\index{\-L\-C\-D\-Get\-Mode@{\-L\-C\-D\-Get\-Mode}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Get\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}hword\-\_\-t {\bf \-L\-C\-D\-Get\-Mode} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_acfcada7d207da191f0667fa00aa2f31d}
+
+
+\-Get the internal mode flag bits. 
+
+\begin{DoxyReturn}{\-Returns}
+hword\-\_\-t mode \-: \-Current mode flag bits 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_ab8a655422f417f2671f21966df04466a}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Get\-Pixel@{\-L\-C\-D\-Get\-Pixel}}
+\index{\-L\-C\-D\-Get\-Pixel@{\-L\-C\-D\-Get\-Pixel}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Get\-Pixel}]{\setlength{\rightskip}{0pt plus 5cm}rgb\-\_\-t {\bf \-L\-C\-D\-Get\-Pixel} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_ab8a655422f417f2671f21966df04466a}
+
+
+\-Get the \-R\-G\-B color value of the pixel at (x,y) coordinate. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & x \-: \-X-\/coordinate of the pixel \\
+\hline
+{\em int} & y \-: \-Y-\/coordinate of the pixel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+rgb\-\_\-t color \-: \-R\-G\-B color value 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_aa559edcff301357fb3922325b1276363}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Get\-Pos@{\-L\-C\-D\-Get\-Pos}}
+\index{\-L\-C\-D\-Get\-Pos@{\-L\-C\-D\-Get\-Pos}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Get\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Get\-Pos} (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{row, }
+\item[{int $\ast$}]{column}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_aa559edcff301357fb3922325b1276363}
+
+
+\-Get the text cursor position. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int$\ast$} & row \-: \-Pointer to cursor row index \\
+\hline
+{\em int$\ast$} & column \-: \-Pointer to cursor column index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a69a36b77d20e71a330aa6c55d81f06a0}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Init@{\-L\-C\-D\-Init}}
+\index{\-L\-C\-D\-Init@{\-L\-C\-D\-Init}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Init}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Init} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a69a36b77d20e71a330aa6c55d81f06a0}
+
+
+\-Initialize the \-L\-C\-D. 
+
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a278f94fff5752d16da7695ea9558aa60}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Invert\-Pixel@{\-L\-C\-D\-Invert\-Pixel}}
+\index{\-L\-C\-D\-Invert\-Pixel@{\-L\-C\-D\-Invert\-Pixel}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Invert\-Pixel}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Invert\-Pixel} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a278f94fff5752d16da7695ea9558aa60}
+
+
+\-Bit-\/invert the color of the pixel at (x,y) coordinate. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & x \-: \-X-\/coordinate of the pixel \\
+\hline
+{\em int} & y \-: \-Y-\/coordinate of the pixel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a1dfbeb8e19f35a5b99d58e49fcbc474e}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Line@{\-L\-C\-D\-Line}}
+\index{\-L\-C\-D\-Line@{\-L\-C\-D\-Line}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Line}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Line} (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2, }
+\item[{rgb\-\_\-t}]{color}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a1dfbeb8e19f35a5b99d58e49fcbc474e}
+
+
+\-Draw a color line from (x1,y1) to (x2,y2). 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & x1 \-: \-X-\/coordinate of first pixel \\
+\hline
+{\em int} & y1 \-: \-Y-\/coordinate of first pixel \\
+\hline
+{\em int} & x2 \-: \-X-\/coordinate of second pixel \\
+\hline
+{\em int} & y2 \-: \-Y-\/coordinate of second pixel \\
+\hline
+{\em rgb\-\_\-t} & color \-: \-R\-G\-B color value for the pixel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a40626c3b0d0ecdc97ef3ba4981d2aeb8}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Line\-Invert@{\-L\-C\-D\-Line\-Invert}}
+\index{\-L\-C\-D\-Line\-Invert@{\-L\-C\-D\-Line\-Invert}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Line\-Invert}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Line\-Invert} (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a40626c3b0d0ecdc97ef3ba4981d2aeb8}
+
+
+\-Draw a line from (x1,y1) to (x2,y2). \-The line pixels will invert the color of existing pixels. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & x1 \-: \-X-\/coordinate of first pixel \\
+\hline
+{\em int} & y1 \-: \-Y-\/coordinate of first pixel \\
+\hline
+{\em int} & x2 \-: \-X-\/coordinate of second pixel \\
+\hline
+{\em int} & y2 \-: \-Y-\/coordinate of second pixel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_af743ceef5378c372cdcecdda89ba2de1}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-List@{\-L\-C\-D\-List}}
+\index{\-L\-C\-D\-List@{\-L\-C\-D\-List}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-List}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-List} (
+\begin{DoxyParamCaption}
+\item[{{\bf listmenu\-\_\-t} $\ast$}]{menulist}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_af743ceef5378c372cdcecdda89ba2de1}
+
+
+\-Setup the list menu display and update appropriate info in the \hyperlink{structlistmenu__t}{listmenu\-\_\-t} structure pointed by menulist (e.\-g. scroll, count). \-Will also set the \-L\-C\-D\-\_\-\-L\-I\-S\-T\-M\-E\-N\-U flag and refresh the \-L\-C\-D. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em listmenu\-\_\-t$\ast$} & menulist \-: \-Listmenu to be used for display \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_abfce57fa8012c1ba6072b19c90c64dd2}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-List\-Active\-Item@{\-L\-C\-D\-List\-Active\-Item}}
+\index{\-L\-C\-D\-List\-Active\-Item@{\-L\-C\-D\-List\-Active\-Item}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-List\-Active\-Item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf menuitem\-\_\-t}$\ast$ {\bf \-L\-C\-D\-List\-Active\-Item} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_abfce57fa8012c1ba6072b19c90c64dd2}
+
+
+\-Get the selected menuitem in the list menu – using index \& start variable in \hyperlink{structlistmenu__t}{listmenu\-\_\-t}. \-Will return 0x0 (\-N\-U\-L) if no item is currently selected. 
+
+\begin{DoxyReturn}{\-Returns}
+menuitem\-\_\-t$\ast$ ret\-Menu\-Item \-: \-Pointer to a \hyperlink{structmenuitem__t}{menuitem\-\_\-t} structure 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_aa09ef1e0be16b10209555b23fedb5a7f}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-List\-Box@{\-L\-C\-D\-List\-Box}}
+\index{\-L\-C\-D\-List\-Box@{\-L\-C\-D\-List\-Box}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-List\-Box}]{\setlength{\rightskip}{0pt plus 5cm}{\bf menurect\-\_\-t}$\ast$ {\bf \-L\-C\-D\-List\-Box} (
+\begin{DoxyParamCaption}
+\item[{int}]{pos}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_aa09ef1e0be16b10209555b23fedb5a7f}
+
+
+\-Get the frame info of a specific list item in form of a menurect\-\_\-t structure. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & pos \-: \-Index of list item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+menurect\-\_\-t$\ast$ ret\-Menu\-Rect \-: \-Pointer to a menurect\-\_\-t structure 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a6842d2b2ec669a0b0eae30162e4d1a70}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-List\-Count@{\-L\-C\-D\-List\-Count}}
+\index{\-L\-C\-D\-List\-Count@{\-L\-C\-D\-List\-Count}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-List\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-List\-Count} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a6842d2b2ec669a0b0eae30162e4d1a70}
+
+
+\-Get the number of list items supported by the current display (text) configuration. \-This includes the item for title bar -\/ thus, different from count variable in \hyperlink{structlistmenu__t}{listmenu\-\_\-t} as updated by an \hyperlink{lcd_8h_af743ceef5378c372cdcecdda89ba2de1}{\-L\-C\-D\-List()} call. 
+
+\begin{DoxyReturn}{\-Returns}
+int list\-Count \-: \-Number of list items (including title box) 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a8c08cd5b1f4a9bfb3c55b093644b111d}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-List\-Index@{\-L\-C\-D\-List\-Index}}
+\index{\-L\-C\-D\-List\-Index@{\-L\-C\-D\-List\-Index}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-List\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-List\-Index} (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a8c08cd5b1f4a9bfb3c55b093644b111d}
+
+
+\-Set the list index. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & index \-: \-List index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: \-List index 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_abaf75ff9abc72b4f9e9fc68fe3cca85d}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-List\-Scroll\-Down@{\-L\-C\-D\-List\-Scroll\-Down}}
+\index{\-L\-C\-D\-List\-Scroll\-Down@{\-L\-C\-D\-List\-Scroll\-Down}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-List\-Scroll\-Down}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-List\-Scroll\-Down} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_abaf75ff9abc72b4f9e9fc68fe3cca85d}
+
+
+\-Scrolls the list display down. \-Menu index is not altered. \-If the active menu item goes out of focus, the index becomes negative (no item selected). 
+
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a60014678191ad3ac5aa990ad140982ba}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-List\-Scroll\-Up@{\-L\-C\-D\-List\-Scroll\-Up}}
+\index{\-L\-C\-D\-List\-Scroll\-Up@{\-L\-C\-D\-List\-Scroll\-Up}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-List\-Scroll\-Up}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-List\-Scroll\-Up} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a60014678191ad3ac5aa990ad140982ba}
+
+
+\-Scrolls the list display up. \-Menu index is not altered. \-If the active menu item goes out of focus, the index becomes negative (no item selected). 
+
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a956b3d26824cb2f0b8016b5d230cf937}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Menu@{\-L\-C\-D\-Menu}}
+\index{\-L\-C\-D\-Menu@{\-L\-C\-D\-Menu}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Menu}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Menu} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string1, }
+\item[{char $\ast$}]{string2, }
+\item[{char $\ast$}]{string3, }
+\item[{char $\ast$}]{string4}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a956b3d26824cb2f0b8016b5d230cf937}
+
+
+\-Set menu entries in \-K\-E\-Y\-\_\-\-C\-L\-A\-S\-S\-I\-C mode (4-\/buttons). \-Also sets the \-L\-C\-D\-\_\-\-S\-H\-O\-W\-M\-E\-N\-U flag and refresh the \-L\-C\-D. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$} & string1 \-: \-Menu entry for \-K\-E\-Y1 in classic mode \\
+\hline
+{\em char$\ast$} & string2 \-: \-Menu entry for \-K\-E\-Y2 in classic mode \\
+\hline
+{\em char$\ast$} & string3 \-: \-Menu entry for \-K\-E\-Y3 in classic mode \\
+\hline
+{\em char$\ast$} & string4 \-: \-Menu entry for \-K\-E\-Y4 in classic mode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_ad9963aafe9ed4c33a09008e5ae5fb838}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Menu\-I@{\-L\-C\-D\-Menu\-I}}
+\index{\-L\-C\-D\-Menu\-I@{\-L\-C\-D\-Menu\-I}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Menu\-I}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Menu\-I} (
+\begin{DoxyParamCaption}
+\item[{int}]{pos, }
+\item[{char $\ast$}]{string, }
+\item[{rgb\-\_\-t}]{fgcol, }
+\item[{rgb\-\_\-t}]{bgcol, }
+\item[{void $\ast$}]{userp}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_ad9963aafe9ed4c33a09008e5ae5fb838}
+
+
+\-Set specific menu entry in \-K\-E\-Y\-\_\-\-C\-L\-A\-S\-S\-I\-C mode (index given by pos). \-Color customization for specific key is now possible (fgcol/bgcol). \-A user-\/specific data can be linked to the menu using userp pointer. \-Will also set the \-L\-C\-D\-\_\-\-S\-H\-O\-W\-M\-E\-N\-U flag and refresh the \-L\-C\-D. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & pos \-: \-Select menu entry in classic mode \\
+\hline
+{\em char$\ast$} & string \-: \-Menu entry for the key at specified index \\
+\hline
+{\em rgb\-\_\-t} & fgcol \-: \-Textcolor for the menu \\
+\hline
+{\em rgb\-\_\-t} & bgcol \-: \-Background color for the menu \\
+\hline
+{\em void$\ast$} & userp \-: \-A general purpose pointer for user-\/specific data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_adaa270264218d4e94e19a9286ca2a440}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Menu\-Item@{\-L\-C\-D\-Menu\-Item}}
+\index{\-L\-C\-D\-Menu\-Item@{\-L\-C\-D\-Menu\-Item}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Menu\-Item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf menuitem\-\_\-t}$\ast$ {\bf \-L\-C\-D\-Menu\-Item} (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_adaa270264218d4e94e19a9286ca2a440}
+
+
+\-Return the menuitem at a given position. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & index \-: position of the menuitem \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+menuitem\-\_\-t$\ast$ menu\-Item 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a6bbecff2b499f883a5445a6691b4fd53}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Need\-Refresh@{\-L\-C\-D\-Need\-Refresh}}
+\index{\-L\-C\-D\-Need\-Refresh@{\-L\-C\-D\-Need\-Refresh}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Need\-Refresh}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Need\-Refresh} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a6bbecff2b499f883a5445a6691b4fd53}
+
+
+\-Indicate if the \-L\-C\-D need to be refreshed. 
+
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: non-\/null value indicate that the \-L\-C\-D need to be refreshed 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a32fbc3e4a67649d676dc866eb6d29bf8}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Printf@{\-L\-C\-D\-Printf}}
+\index{\-L\-C\-D\-Printf@{\-L\-C\-D\-Printf}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Printf}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Printf} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a32fbc3e4a67649d676dc866eb6d29bf8}
+
+
+\-Print formatted string to \-L\-C\-D and refresh \-L\-C\-D. \-Cursor position is updated. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em const} & char$\ast$ format \-: \-Formatted string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a36753632def49abd4a9d80f5c8c6c716}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Put\-Char@{\-L\-C\-D\-Put\-Char}}
+\index{\-L\-C\-D\-Put\-Char@{\-L\-C\-D\-Put\-Char}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Put\-Char}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Put\-Char} (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a36753632def49abd4a9d80f5c8c6c716}
+
+
+\-Write a character to \-L\-C\-D and refresh \-L\-C\-D. \-Cursor position is updated. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em char} & c \-: \-Character to be displayed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a43e577948ba707b700e235a0c9a09fad}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Put\-Float@{\-L\-C\-D\-Put\-Float}}
+\index{\-L\-C\-D\-Put\-Float@{\-L\-C\-D\-Put\-Float}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Put\-Float}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Put\-Float} (
+\begin{DoxyParamCaption}
+\item[{float}]{val}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a43e577948ba707b700e235a0c9a09fad}
+
+
+\-Print floating-\/point value to \-L\-C\-D and refresh \-L\-C\-D. \-Cursor position is updated. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & val \-: \-Floating-\/point value to be displayed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a52c3c51b181e50eb1c569d7412d30a19}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Put\-Float\-S@{\-L\-C\-D\-Put\-Float\-S}}
+\index{\-L\-C\-D\-Put\-Float\-S@{\-L\-C\-D\-Put\-Float\-S}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Put\-Float\-S}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Put\-Float\-S} (
+\begin{DoxyParamCaption}
+\item[{float}]{val, }
+\item[{int}]{spaces, }
+\item[{int}]{decimals}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a52c3c51b181e50eb1c569d7412d30a19}
+
+
+\-Print floating-\/point value to \-L\-C\-D and refresh \-L\-C\-D. \-Cursor position is updated. \-Text space usage can be specified (formatting). 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & val \-: \-Floating-\/point value to be displayed \\
+\hline
+{\em int} & spaces \-: \-Text space for the integer \\
+\hline
+{\em int} & decimals \-: \-Number of decimal points to display \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_ac3cf933bfc1aaccf69558423f143359f}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Put\-Hex@{\-L\-C\-D\-Put\-Hex}}
+\index{\-L\-C\-D\-Put\-Hex@{\-L\-C\-D\-Put\-Hex}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Put\-Hex}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Put\-Hex} (
+\begin{DoxyParamCaption}
+\item[{int}]{val}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_ac3cf933bfc1aaccf69558423f143359f}
+
+
+\-Print hexadecimal number to \-L\-C\-D and refresh \-L\-C\-D. \-Cursor position is updated. \-Utilize \-L\-C\-D\-Printf for conversion. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & val \-: \-Hex number to be displayed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a16c86a8675911d96dc3ab03676acfd89}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Put\-Hex1@{\-L\-C\-D\-Put\-Hex1}}
+\index{\-L\-C\-D\-Put\-Hex1@{\-L\-C\-D\-Put\-Hex1}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Put\-Hex1}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Put\-Hex1} (
+\begin{DoxyParamCaption}
+\item[{int}]{val}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a16c86a8675911d96dc3ab03676acfd89}
+
+
+\-Print hexadecimal number to \-L\-C\-D and refresh \-L\-C\-D. \-Cursor position is updated. \-Utilize \-L\-C\-D\-Printf for conversion. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & val \-: \-Hex number to be displayed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a47e8796c915b9333cbf8cf165f351ade}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Put\-Image\-R\-G\-B@{\-L\-C\-D\-Put\-Image\-R\-G\-B}}
+\index{\-L\-C\-D\-Put\-Image\-R\-G\-B@{\-L\-C\-D\-Put\-Image\-R\-G\-B}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Put\-Image\-R\-G\-B}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Put\-Image\-R\-G\-B} (
+\begin{DoxyParamCaption}
+\item[{int}]{xpos, }
+\item[{int}]{ypos, }
+\item[{int}]{xsize, }
+\item[{int}]{ysize, }
+\item[{byte\-\_\-t $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a47e8796c915b9333cbf8cf165f351ade}
+
+
+\-Place a \-R\-G\-B color image (24bpp) at (xpos,ypos) position on the \-L\-C\-D screen. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & xpos \-: \-X-\/coordinate of top-\/left image position \\
+\hline
+{\em int} & ypos \-: \-Y-\/coordinate of top-\/left image position \\
+\hline
+{\em int} & xsize \-: \-Image width \\
+\hline
+{\em int} & ysize \-: \-Image height \\
+\hline
+{\em byte\-\_\-t$\ast$} & data \-: \-Pointer to image data (24-\/bit per pixel) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a27708e358511a1dbe768c2896b90de4a}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Put\-Int@{\-L\-C\-D\-Put\-Int}}
+\index{\-L\-C\-D\-Put\-Int@{\-L\-C\-D\-Put\-Int}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Put\-Int}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Put\-Int} (
+\begin{DoxyParamCaption}
+\item[{int}]{val}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a27708e358511a1dbe768c2896b90de4a}
+
+
+\-Print integer to \-L\-C\-D and refresh \-L\-C\-D. \-Cursor position is updated. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & val \-: \-Integer to be displayed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_aa0e374ed66ae28795375b392a87a6d94}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Put\-Int\-S@{\-L\-C\-D\-Put\-Int\-S}}
+\index{\-L\-C\-D\-Put\-Int\-S@{\-L\-C\-D\-Put\-Int\-S}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Put\-Int\-S}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Put\-Int\-S} (
+\begin{DoxyParamCaption}
+\item[{int}]{val, }
+\item[{int}]{spaces}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_aa0e374ed66ae28795375b392a87a6d94}
+
+
+\-Print integer to \-L\-C\-D and refresh \-L\-C\-D. \-Cursor position is updated. \-Text space usage can be specified (formatting). 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & val \-: \-Integer to be displayed \\
+\hline
+{\em int} & spaces \-: \-Text space for the integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a0d5aeebef806b49e1699d3b7c67d8cdb}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Put\-String@{\-L\-C\-D\-Put\-String}}
+\index{\-L\-C\-D\-Put\-String@{\-L\-C\-D\-Put\-String}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Put\-String}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Put\-String} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a0d5aeebef806b49e1699d3b7c67d8cdb}
+
+
+\-Print string to \-L\-C\-D and refresh \-L\-C\-D. \-Cursor position is updated. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em char$\ast$} & string \-: \-String to be displayed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_aada4852d9daa0fef5fa9b84033f68f95}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Refresh@{\-L\-C\-D\-Refresh}}
+\index{\-L\-C\-D\-Refresh@{\-L\-C\-D\-Refresh}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Refresh}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Refresh} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_aada4852d9daa0fef5fa9b84033f68f95}
+
+
+\-Refresh the screen (i.\-e write display buffers to the framebuffer device). 
+
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a01fb1be63d07b391c385e19a0940f963}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Release@{\-L\-C\-D\-Release}}
+\index{\-L\-C\-D\-Release@{\-L\-C\-D\-Release}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Release}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Release} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a01fb1be63d07b391c385e19a0940f963}
+
+
+\-Release the \-L\-C\-D. 
+
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_af7afbe39ffb3f3a99b6357b95692db87}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Reset\-Mode@{\-L\-C\-D\-Reset\-Mode}}
+\index{\-L\-C\-D\-Reset\-Mode@{\-L\-C\-D\-Reset\-Mode}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Reset\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Reset\-Mode} (
+\begin{DoxyParamCaption}
+\item[{hword\-\_\-t}]{mode}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_af7afbe39ffb3f3a99b6357b95692db87}
+
+
+\-Reset the internal mode flag bits to a previously saved mode. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em hword\-\_\-t} & mode \-: \-Mode flag -\/ bit \-X\-O\-Red \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_ac9d4835d4ce322d6093a102d2c166de2}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Set\-Char@{\-L\-C\-D\-Set\-Char}}
+\index{\-L\-C\-D\-Set\-Char@{\-L\-C\-D\-Set\-Char}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Set\-Char}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Set\-Char} (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{int}]{column, }
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_ac9d4835d4ce322d6093a102d2c166de2}
+
+
+\-L\-C\-D\-Put\-Char with text position specified. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & row \-: \-Cursor position \\
+\hline
+{\em int} & column \-: \-Cursor position \\
+\hline
+{\em char} & c \-: \-Character to be displayed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_ab3fc733f64a1f2db21761218443cddf4}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Set\-List@{\-L\-C\-D\-Set\-List}}
+\index{\-L\-C\-D\-Set\-List@{\-L\-C\-D\-Set\-List}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Set\-List}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Set\-List} (
+\begin{DoxyParamCaption}
+\item[{{\bf listmenu\-\_\-t} $\ast$}]{menulist}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_ab3fc733f64a1f2db21761218443cddf4}
+
+
+\-Unlike \hyperlink{lcd_8h_af743ceef5378c372cdcecdda89ba2de1}{\-L\-C\-D\-List()}, this will blindly assign menulist to the mainlist for display. \-Doesn't update anything in the menulist structure, nor modify any internal flags. \-Useful to maintain multiple lists fo menu display. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em listmenu\-\_\-t$\ast$} & menulist \-: \-Listmenu to be used for display \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_ab41766b91a90c849eceab0f2d648b370}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Set\-Mode@{\-L\-C\-D\-Set\-Mode}}
+\index{\-L\-C\-D\-Set\-Mode@{\-L\-C\-D\-Set\-Mode}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Set\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Set\-Mode} (
+\begin{DoxyParamCaption}
+\item[{hword\-\_\-t}]{mode}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_ab41766b91a90c849eceab0f2d648b370}
+
+
+\-Update the internal mode flag bits. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em hword\-\_\-t} & mode \-: \-L\-C\-D \-Mode flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_ad050175a524bcc6dd327ddd8d176b645}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Set\-Pixel@{\-L\-C\-D\-Set\-Pixel}}
+\index{\-L\-C\-D\-Set\-Pixel@{\-L\-C\-D\-Set\-Pixel}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Set\-Pixel}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Set\-Pixel} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{rgb\-\_\-t}]{color}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_ad050175a524bcc6dd327ddd8d176b645}
+
+
+\-Sets the color of the pixel at (x,y) coordinate to color. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & x \-: \-X-\/coordinate of the pixel \\
+\hline
+{\em int} & y \-: \-Y-\/coordinate of the pixel \\
+\hline
+{\em rgb\-\_\-t} & color \-: \-R\-G\-B color value for the pixel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_ad1b4937dea8b38f017710f0abcff634a}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Set\-Pos@{\-L\-C\-D\-Set\-Pos}}
+\index{\-L\-C\-D\-Set\-Pos@{\-L\-C\-D\-Set\-Pos}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Set\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Set\-Pos} (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{int}]{column}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_ad1b4937dea8b38f017710f0abcff634a}
+
+
+\-Set the text cursor position to (row, column). 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & row \-: \-Text cursor row index \\
+\hline
+{\em int} & column \-: \-Text cursor column index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a61fa9135471a750876910e4a528d244e}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Set\-Printf@{\-L\-C\-D\-Set\-Printf}}
+\index{\-L\-C\-D\-Set\-Printf@{\-L\-C\-D\-Set\-Printf}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Set\-Printf}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Set\-Printf} (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{int}]{column, }
+\item[{const char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a61fa9135471a750876910e4a528d244e}
+
+
+\-L\-C\-D\-Printf with text position specified. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & row \-: \-Cursor position \\
+\hline
+{\em int} & column \-: \-Cursor position \\
+\hline
+{\em const} & char$\ast$ format \-: \-Formatted string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_ae7492eaabfac7303946df1a35478b562}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Set\-String@{\-L\-C\-D\-Set\-String}}
+\index{\-L\-C\-D\-Set\-String@{\-L\-C\-D\-Set\-String}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Set\-String}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Set\-String} (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{int}]{column, }
+\item[{char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_ae7492eaabfac7303946df1a35478b562}
+
+
+\-L\-C\-D\-Put\-String with text position specified. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & row \-: \-Cursor position \\
+\hline
+{\em int} & column \-: \-Cursor position \\
+\hline
+{\em char$\ast$} & c \-: \-String to be displayed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a0fdac99da2a8db3417a653679b5d8349}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Text\-Bar@{\-L\-C\-D\-Text\-Bar}}
+\index{\-L\-C\-D\-Text\-Bar@{\-L\-C\-D\-Text\-Bar}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Text\-Bar}]{\setlength{\rightskip}{0pt plus 5cm}{\bf rect\-\_\-t} {\bf \-L\-C\-D\-Text\-Bar} (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{int}]{column, }
+\item[{int}]{length, }
+\item[{int}]{fill, }
+\item[{rgb\-\_\-t}]{color}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a0fdac99da2a8db3417a653679b5d8349}
+
+
+\-Draw a textbar for text starting at position (row, column) until (row, column+length). \-The textbar will take about 25\%-\/50\% of text height \& width to draw its frame. \-The fill parameter will define how much of the text bar should be 'filled' with color (like a progress bar). 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & row \-: \-Start text cursor position \\
+\hline
+{\em int} & column \-: \-Start text cursor position \\
+\hline
+{\em int} & length \-: \-Text length of the bar \\
+\hline
+{\em int} & fill \-: \-Percentage of textbar to be filled \\
+\hline
+{\em rgb\-\_\-t} & color \-: \-Fill color for the textbar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\hyperlink{structrect__t}{rect\-\_\-t} rect \-: \hyperlink{structrect__t}{rect\-\_\-t} structure for the textbar's frame 
+\end{DoxyReturn}
+\hypertarget{lcd_8h_a29aac30ba7374196705d952154abbf0b}{\index{lcd.\-h@{lcd.\-h}!\-L\-C\-D\-Text\-Color@{\-L\-C\-D\-Text\-Color}}
+\index{\-L\-C\-D\-Text\-Color@{\-L\-C\-D\-Text\-Color}!lcd.h@{lcd.\-h}}
+\subsubsection[{\-L\-C\-D\-Text\-Color}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-L\-C\-D\-Text\-Color} (
+\begin{DoxyParamCaption}
+\item[{rgb\-\_\-t}]{fgcol, }
+\item[{rgb\-\_\-t}]{bgcol, }
+\item[{char}]{colorflags}
+\end{DoxyParamCaption}
+)}}\label{lcd_8h_a29aac30ba7374196705d952154abbf0b}
+
+
+\-Set the default color for text (including background) and related flags (e.\-g. for transparent background). 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em rgb\-\_\-t} & fgcol \-: \-Default color for text \\
+\hline
+{\em rgb\-\_\-t} & bgcol \-: \-Default color for text background \\
+\hline
+{\em char} & colorflags \-: \-Mode flag for text color\\
+\hline
+\end{DoxyParams}
+\-Valid value for colorflags \-:
+\begin{DoxyItemize}
+\item \-L\-C\-D\-\_\-\-B\-G\-C\-O\-L\-\_\-\-T\-R\-A\-N\-S\-P\-A\-R\-E\-N\-T
+\item \-L\-C\-D\-\_\-\-B\-G\-C\-O\-L\-\_\-\-I\-N\-V\-E\-R\-S\-E
+\item \-L\-C\-D\-\_\-\-F\-G\-C\-O\-L\-\_\-\-I\-N\-V\-E\-R\-S\-E
+\item \-L\-C\-D\-\_\-\-B\-G\-C\-O\-L\-\_\-\-N\-O\-T\-R\-A\-N\-S\-P\-A\-R\-E
+\item \-L\-C\-D\-\_\-\-B\-G\-C\-O\-L\-\_\-\-N\-O\-I\-N\-V\-E\-R\-S\-E
+\item \-L\-C\-D\-\_\-\-F\-G\-C\-O\-L\-\_\-\-N\-O\-I\-N\-V\-E\-R\-S\-E
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}

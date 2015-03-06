@@ -1,0 +1,187 @@
+\hypertarget{latches_8c}{\section{\-Eye\-Bot\-\_\-\-B\-B/src/latches.c \-File \-Reference}
+\label{latches_8c}\index{\-Eye\-Bot\-\_\-\-B\-B/src/latches.\-c@{\-Eye\-Bot\-\_\-\-B\-B/src/latches.\-c}}
+}
+
+
+\-Defines functions to control latches.  
+
+
+{\ttfamily \#include \char`\"{}latches.\-h\char`\"{}}\*
+\-Include dependency graph for latches.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{latches_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{latches_8c_a437c003da4cfdd78ccfe73723e2f4345}{\-O\-S\-Latch\-Setup} (int latchnum, int direction)
+\begin{DoxyCompactList}\small\item\em \-Setup the given latch as input or output. \end{DoxyCompactList}\item 
+int \hyperlink{latches_8c_ac4f6a2673b378a5b355994e88cd2abd6}{\-O\-S\-Latch\-Bank\-Setup} (int banknum, int direction)
+\begin{DoxyCompactList}\small\item\em \-Setup the given io buffer bank as input or output. \end{DoxyCompactList}\item 
+int \hyperlink{latches_8c_ab97b8fe3cc948516dc20b288fc66384e}{\-O\-S\-Latch\-Read} (int latchnum)
+\begin{DoxyCompactList}\small\item\em \-Read content of the selected input latch. \end{DoxyCompactList}\item 
+int \hyperlink{latches_8c_afd750fca5f9ce81cf67055154da71247}{\-O\-S\-Latch\-Write} (int latchnum, int state)
+\begin{DoxyCompactList}\small\item\em \-Write to the selected output latch. \end{DoxyCompactList}\item 
+int \hyperlink{latches_8c_a9e51a11e6ab23b13e3ca0914677366ff}{\-O\-S\-Latch\-Init} (void)
+\begin{DoxyCompactList}\small\item\em \-Initialize the digital \-I\-O, call this before using any digital \-I\-O functions. \end{DoxyCompactList}\item 
+int \hyperlink{latches_8c_a9ef75ee40738aa07d7e94e2a73890a0e}{\-O\-S\-Latch\-Cleanup} (void)
+\begin{DoxyCompactList}\small\item\em \-Unmap the memory for digital \-I\-Os, call these when the digital \-I\-Os functions are no longer needed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Defines functions to control latches. \begin{DoxyAuthor}{\-Author}
+\-Remi \-K\-E\-A\-T 
+\end{DoxyAuthor}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{latches_8c_ac4f6a2673b378a5b355994e88cd2abd6}{\index{latches.\-c@{latches.\-c}!\-O\-S\-Latch\-Bank\-Setup@{\-O\-S\-Latch\-Bank\-Setup}}
+\index{\-O\-S\-Latch\-Bank\-Setup@{\-O\-S\-Latch\-Bank\-Setup}!latches.c@{latches.\-c}}
+\subsubsection[{\-O\-S\-Latch\-Bank\-Setup}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-O\-S\-Latch\-Bank\-Setup} (
+\begin{DoxyParamCaption}
+\item[{int}]{banknum, }
+\item[{int}]{direction}
+\end{DoxyParamCaption}
+)}}\label{latches_8c_ac4f6a2673b378a5b355994e88cd2abd6}
+
+
+\-Setup the given io buffer bank as input or output. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & banknum \-: bank number \\
+\hline
+{\em int} & direction \-: signal direction\\
+\hline
+\end{DoxyParams}
+\-Valid values for direction\-:
+\begin{DoxyItemize}
+\item 0 = input
+\item 1 = output
+\end{DoxyItemize}
+
+\-Note\-:
+\begin{DoxyItemize}
+\item \-L\-A\-T\-C\-H0..\-L\-A\-T\-C\-H7 are connected to \-I\-O\-B\-A\-N\-K0
+\item \-L\-A\-T\-C\-H8..\-L\-A\-T\-C\-H15 are connected to \-I\-O\-B\-A\-N\-K1
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{latches_8c_a9ef75ee40738aa07d7e94e2a73890a0e}{\index{latches.\-c@{latches.\-c}!\-O\-S\-Latch\-Cleanup@{\-O\-S\-Latch\-Cleanup}}
+\index{\-O\-S\-Latch\-Cleanup@{\-O\-S\-Latch\-Cleanup}!latches.c@{latches.\-c}}
+\subsubsection[{\-O\-S\-Latch\-Cleanup}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-O\-S\-Latch\-Cleanup} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{latches_8c_a9ef75ee40738aa07d7e94e2a73890a0e}
+
+
+\-Unmap the memory for digital \-I\-Os, call these when the digital \-I\-Os functions are no longer needed. 
+
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{latches_8c_a9e51a11e6ab23b13e3ca0914677366ff}{\index{latches.\-c@{latches.\-c}!\-O\-S\-Latch\-Init@{\-O\-S\-Latch\-Init}}
+\index{\-O\-S\-Latch\-Init@{\-O\-S\-Latch\-Init}!latches.c@{latches.\-c}}
+\subsubsection[{\-O\-S\-Latch\-Init}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-O\-S\-Latch\-Init} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{latches_8c_a9e51a11e6ab23b13e3ca0914677366ff}
+
+
+\-Initialize the digital \-I\-O, call this before using any digital \-I\-O functions. 
+
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val
+\end{DoxyReturn}
+\-Return code\-:
+\begin{DoxyItemize}
+\item 0 = ok
+\item -\/1 = \-Initialization error 
+\end{DoxyItemize}\hypertarget{latches_8c_ab97b8fe3cc948516dc20b288fc66384e}{\index{latches.\-c@{latches.\-c}!\-O\-S\-Latch\-Read@{\-O\-S\-Latch\-Read}}
+\index{\-O\-S\-Latch\-Read@{\-O\-S\-Latch\-Read}!latches.c@{latches.\-c}}
+\subsubsection[{\-O\-S\-Latch\-Read}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-O\-S\-Latch\-Read} (
+\begin{DoxyParamCaption}
+\item[{int}]{latchnum}
+\end{DoxyParamCaption}
+)}}\label{latches_8c_ab97b8fe3cc948516dc20b288fc66384e}
+
+
+\-Read content of the selected input latch. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & latchnum \-: latch number to read\\
+\hline
+\end{DoxyParams}
+\-Return latch status \-:
+\begin{DoxyItemize}
+\item 0 = low
+\item 1 = high
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{\-Returns}
+int read\-Value 
+\end{DoxyReturn}
+\hypertarget{latches_8c_a437c003da4cfdd78ccfe73723e2f4345}{\index{latches.\-c@{latches.\-c}!\-O\-S\-Latch\-Setup@{\-O\-S\-Latch\-Setup}}
+\index{\-O\-S\-Latch\-Setup@{\-O\-S\-Latch\-Setup}!latches.c@{latches.\-c}}
+\subsubsection[{\-O\-S\-Latch\-Setup}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-O\-S\-Latch\-Setup} (
+\begin{DoxyParamCaption}
+\item[{int}]{latchnum, }
+\item[{int}]{direction}
+\end{DoxyParamCaption}
+)}}\label{latches_8c_a437c003da4cfdd78ccfe73723e2f4345}
+
+
+\-Setup the given latch as input or output. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & latchnum \-: latch number \\
+\hline
+{\em int} & direction \-: signal direction\\
+\hline
+\end{DoxyParams}
+\-Valid values for direction \-:
+\begin{DoxyItemize}
+\item 0 = input
+\item 1 = output
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{latches_8c_afd750fca5f9ce81cf67055154da71247}{\index{latches.\-c@{latches.\-c}!\-O\-S\-Latch\-Write@{\-O\-S\-Latch\-Write}}
+\index{\-O\-S\-Latch\-Write@{\-O\-S\-Latch\-Write}!latches.c@{latches.\-c}}
+\subsubsection[{\-O\-S\-Latch\-Write}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-O\-S\-Latch\-Write} (
+\begin{DoxyParamCaption}
+\item[{int}]{latchnum, }
+\item[{int}]{state}
+\end{DoxyParamCaption}
+)}}\label{latches_8c_afd750fca5f9ce81cf67055154da71247}
+
+
+\-Write to the selected output latch. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & latchnum \-: latch number to write \\
+\hline
+{\em int} & state \-: state to be set to the selected out latch\\
+\hline
+\end{DoxyParams}
+\-Valid values for state \-:
+\begin{DoxyItemize}
+\item 0 = low
+\item 1 = high
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}

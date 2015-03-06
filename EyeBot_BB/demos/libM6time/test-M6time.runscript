@@ -1,0 +1,4 @@
+chmod +x /tmp/test-M6time 
+/tmp/test-M6time 
+echo -en "\r\nHit <ENTER> to exit... " 
+read dummy 

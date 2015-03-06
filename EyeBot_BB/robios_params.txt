@@ -1,0 +1,4 @@
+irEnabled 0
+irCode 786
+runProg 0
+progName -1

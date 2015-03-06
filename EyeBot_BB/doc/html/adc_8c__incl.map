@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$adc_8h.html" title="Header file for the ADC functions." alt="" coords="285,83,339,112"/>
+<area shape="rect" id="node5" href="$spi_8h.html" title="Header file for the SPI functions." alt="" coords="244,160,292,189"/>
+<area shape="rect" id="node9" href="$spi__commands_8h.html" title="Defines the OP&#45;codes for the SPI messages." alt="" coords="145,237,268,267"/>
+<area shape="rect" id="node11" href="$globals_8h.html" title="Header file for global variables." alt="" coords="292,237,367,267"/>
+<area shape="rect" id="node29" href="$hdt_8h.html" title="Header file for the HDT functions." alt="" coords="391,237,441,267"/>
+<area shape="rect" id="node13" href="$types_8h.html" title="Defines types." alt="" coords="297,315,361,344"/>
+<area shape="rect" id="node25" href="$params_8h.html" title="Defines main parameters." alt="" coords="483,392,560,421"/>
+</map>

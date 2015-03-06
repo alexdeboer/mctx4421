@@ -1,0 +1,193 @@
+\hypertarget{spi_8c}{\section{\-Eye\-Bot\-\_\-\-B\-B/src/spi.c \-File \-Reference}
+\label{spi_8c}\index{\-Eye\-Bot\-\_\-\-B\-B/src/spi.\-c@{\-Eye\-Bot\-\_\-\-B\-B/src/spi.\-c}}
+}
+
+
+\-Defines fonctions for sending and receiving \-S\-P\-I messages.  
+
+
+{\ttfamily \#include \char`\"{}spi.\-h\char`\"{}}\*
+\-Include dependency graph for spi.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{spi_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{spi_8c_aec539c05b27e975aa88e50e39c4d7fe7}{check\-Error} (\-S\-P\-I\-Handle handle)
+\begin{DoxyCompactList}\small\item\em \-Check if an error happened if so print error message. \end{DoxyCompactList}\item 
+\-S\-P\-I\-Handle \hyperlink{spi_8c_a539467fb8e33050d8eb9210136adfd7c}{\-S\-P\-I\-Init} (int device\-Number)
+\begin{DoxyCompactList}\small\item\em \-Initialize the \-S\-P\-I device. \end{DoxyCompactList}\item 
+int \hyperlink{spi_8c_a30599a8e451db6ae1306bdb411b55c5e}{\-S\-P\-I\-Release} (\-S\-P\-I\-Handle spi\-Handle)
+\begin{DoxyCompactList}\small\item\em \-Release the \-S\-P\-I device. \end{DoxyCompactList}\item 
+int \hyperlink{spi_8c_af5c24860d5228e800c7b3d8d94839e66}{\-S\-P\-I\-Send} (\-S\-P\-I\-Handle spi\-Handle, size\-\_\-t length, const uint8\-\_\-t data\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em \-Send a \-S\-P\-I message. \end{DoxyCompactList}\item 
+int \hyperlink{spi_8c_a869e5a1edd879d49925a65f30f5f2c19}{\-S\-P\-I\-Read} (\-S\-P\-I\-Handle spi\-Handle, size\-\_\-t length, uint8\-\_\-t $\ast$data\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em \-Read a \-S\-P\-I message. \end{DoxyCompactList}\item 
+int \hyperlink{spi_8c_af4c5c6c165e9c77ced75cd5fddad65dc}{\-S\-P\-I\-Read\-Default} (size\-\_\-t length, uint8\-\_\-t $\ast$data\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em \-Read a \-S\-P\-I message on the default \-S\-P\-I device. \end{DoxyCompactList}\item 
+int \hyperlink{spi_8c_a16ab4bd84281c9a8d252c362c049d400}{\-S\-P\-I\-Send\-Default} (size\-\_\-t length, const uint8\-\_\-t data\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em \-Send a \-S\-P\-I message on the default \-S\-P\-I device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Defines fonctions for sending and receiving \-S\-P\-I messages. \begin{DoxyAuthor}{\-Author}
+\-Remi \-K\-E\-A\-T 
+\end{DoxyAuthor}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{spi_8c_aec539c05b27e975aa88e50e39c4d7fe7}{\index{spi.\-c@{spi.\-c}!check\-Error@{check\-Error}}
+\index{check\-Error@{check\-Error}!spi.c@{spi.\-c}}
+\subsubsection[{check\-Error}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf check\-Error} (
+\begin{DoxyParamCaption}
+\item[{\-S\-P\-I\-Handle}]{handle}
+\end{DoxyParamCaption}
+)}}\label{spi_8c_aec539c05b27e975aa88e50e39c4d7fe7}
+
+
+\-Check if an error happened if so print error message. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-S\-P\-I\-Handle} & handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: non-\/null value if an error happened 
+\end{DoxyReturn}
+\hypertarget{spi_8c_a539467fb8e33050d8eb9210136adfd7c}{\index{spi.\-c@{spi.\-c}!\-S\-P\-I\-Init@{\-S\-P\-I\-Init}}
+\index{\-S\-P\-I\-Init@{\-S\-P\-I\-Init}!spi.c@{spi.\-c}}
+\subsubsection[{\-S\-P\-I\-Init}]{\setlength{\rightskip}{0pt plus 5cm}\-S\-P\-I\-Handle {\bf \-S\-P\-I\-Init} (
+\begin{DoxyParamCaption}
+\item[{int}]{device\-Number}
+\end{DoxyParamCaption}
+)}}\label{spi_8c_a539467fb8e33050d8eb9210136adfd7c}
+
+
+\-Initialize the \-S\-P\-I device. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em int} & device\-Number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-S\-P\-I\-Handle spi\-Handle 
+\end{DoxyReturn}
+\hypertarget{spi_8c_a869e5a1edd879d49925a65f30f5f2c19}{\index{spi.\-c@{spi.\-c}!\-S\-P\-I\-Read@{\-S\-P\-I\-Read}}
+\index{\-S\-P\-I\-Read@{\-S\-P\-I\-Read}!spi.c@{spi.\-c}}
+\subsubsection[{\-S\-P\-I\-Read}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-S\-P\-I\-Read} (
+\begin{DoxyParamCaption}
+\item[{\-S\-P\-I\-Handle}]{spi\-Handle, }
+\item[{size\-\_\-t}]{length, }
+\item[{uint8\-\_\-t $\ast$}]{data\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{spi_8c_a869e5a1edd879d49925a65f30f5f2c19}
+
+
+\-Read a \-S\-P\-I message. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-S\-P\-I\-Handle} & spi\-Handle \\
+\hline
+{\em size\-\_\-t} & length \\
+\hline
+{\em uint8\-\_\-t$\ast$} & data\mbox{[}\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{spi_8c_af4c5c6c165e9c77ced75cd5fddad65dc}{\index{spi.\-c@{spi.\-c}!\-S\-P\-I\-Read\-Default@{\-S\-P\-I\-Read\-Default}}
+\index{\-S\-P\-I\-Read\-Default@{\-S\-P\-I\-Read\-Default}!spi.c@{spi.\-c}}
+\subsubsection[{\-S\-P\-I\-Read\-Default}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-S\-P\-I\-Read\-Default} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{length, }
+\item[{uint8\-\_\-t $\ast$}]{data\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{spi_8c_af4c5c6c165e9c77ced75cd5fddad65dc}
+
+
+\-Read a \-S\-P\-I message on the default \-S\-P\-I device. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em size\-\_\-t} & length \\
+\hline
+{\em uint8\-\_\-t$\ast$} & data\mbox{[}\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{spi_8c_a30599a8e451db6ae1306bdb411b55c5e}{\index{spi.\-c@{spi.\-c}!\-S\-P\-I\-Release@{\-S\-P\-I\-Release}}
+\index{\-S\-P\-I\-Release@{\-S\-P\-I\-Release}!spi.c@{spi.\-c}}
+\subsubsection[{\-S\-P\-I\-Release}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-S\-P\-I\-Release} (
+\begin{DoxyParamCaption}
+\item[{\-S\-P\-I\-Handle}]{spi\-Handle}
+\end{DoxyParamCaption}
+)}}\label{spi_8c_a30599a8e451db6ae1306bdb411b55c5e}
+
+
+\-Release the \-S\-P\-I device. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-S\-P\-I\-Handle} & spi\-Handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{spi_8c_af5c24860d5228e800c7b3d8d94839e66}{\index{spi.\-c@{spi.\-c}!\-S\-P\-I\-Send@{\-S\-P\-I\-Send}}
+\index{\-S\-P\-I\-Send@{\-S\-P\-I\-Send}!spi.c@{spi.\-c}}
+\subsubsection[{\-S\-P\-I\-Send}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-S\-P\-I\-Send} (
+\begin{DoxyParamCaption}
+\item[{\-S\-P\-I\-Handle}]{spi\-Handle, }
+\item[{size\-\_\-t}]{length, }
+\item[{const uint8\-\_\-t}]{data\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{spi_8c_af5c24860d5228e800c7b3d8d94839e66}
+
+
+\-Send a \-S\-P\-I message. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-S\-P\-I\-Handle} & spi\-Handle \\
+\hline
+{\em size\-\_\-t} & length \\
+\hline
+{\em const} & uint8\-\_\-t data\mbox{[}\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{spi_8c_a16ab4bd84281c9a8d252c362c049d400}{\index{spi.\-c@{spi.\-c}!\-S\-P\-I\-Send\-Default@{\-S\-P\-I\-Send\-Default}}
+\index{\-S\-P\-I\-Send\-Default@{\-S\-P\-I\-Send\-Default}!spi.c@{spi.\-c}}
+\subsubsection[{\-S\-P\-I\-Send\-Default}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-S\-P\-I\-Send\-Default} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{length, }
+\item[{const uint8\-\_\-t}]{data\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{spi_8c_a16ab4bd84281c9a8d252c362c049d400}
+
+
+\-Send a \-S\-P\-I message on the default \-S\-P\-I device. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em size\-\_\-t} & length \\
+\hline
+{\em const} & uint8\-\_\-t data\mbox{[}\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}

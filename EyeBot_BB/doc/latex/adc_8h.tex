@@ -1,0 +1,129 @@
+\hypertarget{adc_8h}{\section{\-Eye\-Bot\-\_\-\-B\-B/include/adc.h \-File \-Reference}
+\label{adc_8h}\index{\-Eye\-Bot\-\_\-\-B\-B/include/adc.\-h@{\-Eye\-Bot\-\_\-\-B\-B/include/adc.\-h}}
+}
+
+
+\-Header file for the \-A\-D\-C functions.  
+
+
+{\ttfamily \#include \char`\"{}spi.\-h\char`\"{}}\*
+\-Include dependency graph for adc.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{adc_8h__incl}
+\end{center}
+\end{figure}
+\-This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{adc_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\-A\-D\-C\-Handle \hyperlink{adc_8h_abc9590442e2d5f17da66406dfcb86bb5}{\-O\-S\-Init\-A\-D\-C} (\-Device\-Semantics semantics)
+\begin{DoxyCompactList}\small\item\em \-Captures one single 10bit value from the specified adc channel. \end{DoxyCompactList}\item 
+int \hyperlink{adc_8h_a6732400d8c12ab46669213635ec72815}{\-O\-S\-A\-D\-C\-Release} (\-A\-D\-C\-Handle handle)
+\begin{DoxyCompactList}\small\item\em \-Release the adc channel. \end{DoxyCompactList}\item 
+int \hyperlink{adc_8h_a7c17fa66ccb6bf0d5d620eaed86714d5}{\-O\-S\-Get\-A\-D\-C} (\-A\-D\-C\-Handle adchandle)
+\begin{DoxyCompactList}\small\item\em \-Captures one single 10bit value from specified \-A\-D-\/channel. \-The return value is stored in the least significant bits of the 32 bit return value. \end{DoxyCompactList}\item 
+int \hyperlink{adc_8h_a90246f6f5c925acee5d2e26f9c20ac16}{\-Conv\-A\-D\-C\-Sample\-To\-Voltage} (\-A\-D\-C\-Handle adchandle, char $\ast$volt, int sample)
+\begin{DoxyCompactList}\small\item\em \-Convert the adc sample to voltage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Header file for the \-A\-D\-C functions. \begin{DoxyAuthor}{\-Author}
+\-Remi \-K\-E\-A\-T 
+\end{DoxyAuthor}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{adc_8h_a90246f6f5c925acee5d2e26f9c20ac16}{\index{adc.\-h@{adc.\-h}!\-Conv\-A\-D\-C\-Sample\-To\-Voltage@{\-Conv\-A\-D\-C\-Sample\-To\-Voltage}}
+\index{\-Conv\-A\-D\-C\-Sample\-To\-Voltage@{\-Conv\-A\-D\-C\-Sample\-To\-Voltage}!adc.h@{adc.\-h}}
+\subsubsection[{\-Conv\-A\-D\-C\-Sample\-To\-Voltage}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Conv\-A\-D\-C\-Sample\-To\-Voltage} (
+\begin{DoxyParamCaption}
+\item[{\-A\-D\-C\-Handle}]{adchandle, }
+\item[{char $\ast$}]{volt, }
+\item[{int}]{sample}
+\end{DoxyParamCaption}
+)}}\label{adc_8h_a90246f6f5c925acee5d2e26f9c20ac16}
+
+
+\-Convert the adc sample to voltage. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-A\-D\-C\-Handle} & adchandle \-: desired \-A\-D-\/channel \\
+\hline
+{\em char$\ast$} & volt \-: pointer to string \\
+\hline
+{\em int} & sample \-: \-A\-D\-C sample\\
+\hline
+\end{DoxyParams}
+\-Result is stored in char $\ast$volt. \-Valid values\-: \-A\-D\-C0, \-A\-D\-C1, \-A\-D\-C2, \-A\-D\-C3 \begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: 0\-: ok\par
+ -\/1\-: invalid channel 
+\end{DoxyReturn}
+\hypertarget{adc_8h_a6732400d8c12ab46669213635ec72815}{\index{adc.\-h@{adc.\-h}!\-O\-S\-A\-D\-C\-Release@{\-O\-S\-A\-D\-C\-Release}}
+\index{\-O\-S\-A\-D\-C\-Release@{\-O\-S\-A\-D\-C\-Release}!adc.h@{adc.\-h}}
+\subsubsection[{\-O\-S\-A\-D\-C\-Release}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-O\-S\-A\-D\-C\-Release} (
+\begin{DoxyParamCaption}
+\item[{\-A\-D\-C\-Handle}]{handle}
+\end{DoxyParamCaption}
+)}}\label{adc_8h_a6732400d8c12ab46669213635ec72815}
+
+
+\-Release the adc channel. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-A\-D\-C\-Handle} & handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val \-: always 0 
+\end{DoxyReturn}
+\hypertarget{adc_8h_a7c17fa66ccb6bf0d5d620eaed86714d5}{\index{adc.\-h@{adc.\-h}!\-O\-S\-Get\-A\-D\-C@{\-O\-S\-Get\-A\-D\-C}}
+\index{\-O\-S\-Get\-A\-D\-C@{\-O\-S\-Get\-A\-D\-C}!adc.h@{adc.\-h}}
+\subsubsection[{\-O\-S\-Get\-A\-D\-C}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-O\-S\-Get\-A\-D\-C} (
+\begin{DoxyParamCaption}
+\item[{\-A\-D\-C\-Handle}]{adchandle}
+\end{DoxyParamCaption}
+)}}\label{adc_8h_a7c17fa66ccb6bf0d5d620eaed86714d5}
+
+
+\-Captures one single 10bit value from specified \-A\-D-\/channel. \-The return value is stored in the least significant bits of the 32 bit return value. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-A\-D\-C\-Handle} & handle \-: \-Handler for the adc channel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+int ret\-Val $>$0\-: 10 bit sampled value\par
+ -\/1\-: invalid channel 
+\end{DoxyReturn}
+\hypertarget{adc_8h_abc9590442e2d5f17da66406dfcb86bb5}{\index{adc.\-h@{adc.\-h}!\-O\-S\-Init\-A\-D\-C@{\-O\-S\-Init\-A\-D\-C}}
+\index{\-O\-S\-Init\-A\-D\-C@{\-O\-S\-Init\-A\-D\-C}!adc.h@{adc.\-h}}
+\subsubsection[{\-O\-S\-Init\-A\-D\-C}]{\setlength{\rightskip}{0pt plus 5cm}\-A\-D\-C\-Handle {\bf \-O\-S\-Init\-A\-D\-C} (
+\begin{DoxyParamCaption}
+\item[{\-Device\-Semantics}]{semantics}
+\end{DoxyParamCaption}
+)}}\label{adc_8h_abc9590442e2d5f17da66406dfcb86bb5}
+
+
+\-Captures one single 10bit value from the specified adc channel. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-Device\-Semantics} & semantics \-: desired \-A\-D\-C channel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A\-D\-C\-Handle handle $>$0\-: \-Handler for the adc channel\par
+ 0\-: \-Initialization error
+\end{DoxyReturn}
+\-Valid values for semantics \-: \-A\-D\-C0, \-A\-D\-C1, \-A\-D\-C2, \-A\-D\-C3 

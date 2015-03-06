@@ -1,0 +1,5 @@
+irEnabled 1
+irCode 786
+runProg 0
+progName -1
+irDelay 5
