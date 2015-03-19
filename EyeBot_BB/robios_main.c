@@ -25,6 +25,8 @@
 
 #include <pthread.h>
 
+#include <string.h>
+
 #define M6MAIN_TEXTROW 1
 #define M6MAIN_TEXTCOL 0
 #define M6MAIN_BATTBAR_COLOR LCD_BLUE
@@ -655,6 +657,27 @@ int page_info(void)
 				LCDMenu(" SYSTEM","","SETTINGS"," BACK");
 				changed = 0;
 			}
+            
+            LCDPrintfFont(eyeFontBoldWhite, " Wifi SSID: ");
+            
+            char temp[20]="";
+            char serial[20]="";
+            temp[0]='\0';
+            serial[0]='\0';
+            sprintf(temp,"%s" , execute("cat /proc/cpuinfo |grep Serial|cut -d' ' -f2"));
+            int i =0;
+            while(temp[i]=='0') {
+                i++;
+                continue;
+            }
+            int j=0;
+            for (i;i<(int)strlen(temp); i++) {
+                serial[j] = temp[i];
+                j++;
+            }
+            
+            LCDPrintfFont(eyeFontDefaultYellow, "%s\n", serial);
+            
 			LCDRefresh2();
 		}
 	}
@@ -670,6 +693,8 @@ int page_main(void)
 	const int vbatt_max_8 = 12 << 8;
 	char hostname[M6MAIN_HOSTNAME_LEN];
 	char ipAddress[400] = "";
+    char temp[20]="";
+    char serial[20]="";
 	XEvent event;
 	
 	EyeFont eyeFontDefaultYellow;
@@ -704,6 +729,7 @@ int page_main(void)
 			LCDRefresh();
 		}
 		LCDSetPos(row,col);
+        
 		LCDPrintfFont(eyeFontBoldWhite," Welcome to the EyeBot M7.\n\n RoBIOS version: ");
 		LCDPrintfFont(eyeFontDefaultYellow,"%s\n\n\n",ROBIOS_VERSION);
 		LCDGetPos(&row,&col);
@@ -715,8 +741,10 @@ int page_main(void)
 			misc.vbatt_8 = vbatt_max_8;
 		p = 100 * (misc.vbatt_8 - vbatt_min_8) / (vbatt_max_8 - vbatt_min_8);
 		LCDTextBar(row, col, fb.cursor.xmax, p, M6MAIN_BATTBAR_COLOR);
+        
+        //displaying the battery status
 		LCDSetPrintf(row, col+1, "Battery: %s\n\n", misc.vbatt);
-		// added by mgeier
+		// displaying the IP Address of the ethernet connection, default to 10.0.0.1 if none
 		LCDPrintfFont(eyeFontBoldWhite," IP-Addr : ");
 		ipAddress[0] = '\0';
 		sprintf(ipAddress,"%s",execute("ifconfig eth0"));
@@ -728,10 +756,39 @@ int page_main(void)
 		{
 			LCDPrintfFont(eyeFontDefaultYellow,"10.0.0.1\n");
 		}
+        //displaying the hostname
 		gethostname(hostname,M6MAIN_HOSTNAME_LEN);
 		LCDPrintfFont(eyeFontBoldWhite," Hostname: ");
 		LCDPrintfFont(eyeFontDefaultYellow,"%s\n", hostname);
-		printfile("/sys/class/net/eth0/address", "MAC-Addr");
+        
+        //displaying the mac address
+        //using fopen
+		printfile("/sys/class/net/eth0/address\n", "MAC-Addr");
+        
+        //displaying the SSID
+        LCDPrintfFont(eyeFontBoldWhite, " Wifi SSID: ");
+        
+        temp[0]='\0';
+        serial[0]='\0';
+        sprintf(temp,"%s" , execute("cat /proc/cpuinfo |grep Serial|cut -d' ' -f2"));
+        int i =0;
+        while(temp[i]=='0') {
+            i++;
+            continue;
+        }
+        int j=0;
+        for (i;i<(int)strlen(temp); i++) {
+            serial[j] = temp[i];
+            j++;
+        }
+        
+        LCDPrintfFont(eyeFontDefaultYellow, "%s\n", serial);
+        
+        //chaning SSID
+        char cmd[50];
+        sprintf(cmd,"sed -i '3s/.*/ssid=%s/' /etc/hostapd/hostapd.conf",serial);
+        system(cmd);
+     
 		LCDRefresh2();
 		
 		switch(keycode)
