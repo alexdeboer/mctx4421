@@ -652,11 +652,7 @@ int page_info(void)
 			}
         		// new version by mgeier 20080905
 			printfile("/sys/class/net/eth0/address", "MAC-Addr");
-			if (changed == 1)
-			{
-				LCDMenu(" SYSTEM","","SETTINGS"," BACK");
-				changed = 0;
-			}
+
             
             LCDPrintfFont(eyeFontBoldWhite, " Wifi SSID: ");
             
@@ -676,7 +672,13 @@ int page_info(void)
                 j++;
             }
             
-            LCDPrintfFont(eyeFontDefaultYellow, "%s\n", serial);
+            LCDPrintfFont(eyeFontDefaultYellow, "Pi_%s\n", serial);
+            
+			if (changed == 1)
+			{
+				LCDMenu(" SYSTEM","","SETTINGS"," BACK");
+				changed = 0;
+			}
             
 			LCDRefresh2();
 		}
@@ -695,6 +697,7 @@ int page_main(void)
 	char ipAddress[400] = "";
     char temp[20]="";
     char serial[20]="";
+    char cmd[50]="";
 	XEvent event;
 	
 	EyeFont eyeFontDefaultYellow;
@@ -763,7 +766,9 @@ int page_main(void)
         
         //displaying the mac address
         //using fopen
-		printfile("/sys/class/net/eth0/address\n", "MAC-Addr");
+		printfile("/sys/class/net/eth0/address", "MAC-Addr");
+        
+        
         
         //displaying the SSID
         LCDPrintfFont(eyeFontBoldWhite, " Wifi SSID: ");
@@ -781,13 +786,17 @@ int page_main(void)
             serial[j] = temp[i];
             j++;
         }
-        
+
+        sprintf(serial,"Pi_%s", serial);
         LCDPrintfFont(eyeFontDefaultYellow, "%s\n", serial);
         
         //chaning SSID
-        char cmd[50];
+        cmd[0]='\0';
         sprintf(cmd,"sed -i '3s/.*/ssid=%s/' /etc/hostapd/hostapd.conf",serial);
         system(cmd);
+        
+        system("sudo service hostapd restart");
+        system("sudo service isc-dhcp-server restart");
      
 		LCDRefresh2();
 		
