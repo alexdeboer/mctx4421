@@ -650,7 +650,7 @@ int page_info(void)
 			{
 				LCDPrintfFont(eyeFontDefaultYellow,"10.0.0.1\n");
 			}
-        		// new version by mgeier 20080905
+        		
 			printfile("/sys/class/net/eth0/address", "MAC-Addr");
 
             
@@ -672,7 +672,13 @@ int page_info(void)
                 j++;
             }
             
-            LCDPrintfFont(eyeFontDefaultYellow, "Pi_%s\n", serial);
+            strcpy(temp,"Pi_");
+            strcat(temp,serial);
+            LCDPrintfFont(eyeFontDefaultYellow, "%s\n", temp);
+            
+            LCDPrintfFont(eyeFontBoldWhite, " Wifi IP: ");
+            LCDPrintfFont(eyeFontDefaultYellow, "10.1.1.1\n");
+            
             
 			if (changed == 1)
 			{
@@ -719,6 +725,32 @@ int page_main(void)
 
 	LCDClear();
 	keycode = 0x0;
+    
+    temp[0]='\0';
+    serial[0]='\0';
+    sprintf(temp,"%s" , execute("cat /proc/cpuinfo |grep Serial|cut -d' ' -f2"));
+    int i =0;
+    while(temp[i]=='0') {
+        i++;
+        continue;
+    }
+    int j=0;
+    for (i;i<(int)strlen(temp); i++) {
+        serial[j] = temp[i];
+        j++;
+    }
+    
+    //Setting the SSID
+    strcpy(temp,"Pi_");
+    strcat(temp,serial);
+    
+    cmd[0]='\0';
+    sprintf(cmd,"sed -i '3s/.*/ssid=%s/' /etc/hostapd/hostapd.conf",temp);
+    system(cmd);
+    
+    system("sudo service hostapd restart");
+    system("sudo service isc-dhcp-server restart");
+    
 	
 	LCDMenu("INFO","HARDWARE"," SOFTWARE","DEMO");
 	do
@@ -768,35 +800,14 @@ int page_main(void)
         //using fopen
 		printfile("/sys/class/net/eth0/address", "MAC-Addr");
         
-        
-        
         //displaying the SSID
         LCDPrintfFont(eyeFontBoldWhite, " Wifi SSID: ");
         
-        temp[0]='\0';
-        serial[0]='\0';
-        sprintf(temp,"%s" , execute("cat /proc/cpuinfo |grep Serial|cut -d' ' -f2"));
-        int i =0;
-        while(temp[i]=='0') {
-            i++;
-            continue;
-        }
-        int j=0;
-        for (i;i<(int)strlen(temp); i++) {
-            serial[j] = temp[i];
-            j++;
-        }
-
-        sprintf(serial,"Pi_%s", serial);
-        LCDPrintfFont(eyeFontDefaultYellow, "%s\n", serial);
+        LCDPrintfFont(eyeFontDefaultYellow, "%s\n", temp);
         
-        //chaning SSID
-        cmd[0]='\0';
-        sprintf(cmd,"sed -i '3s/.*/ssid=%s/' /etc/hostapd/hostapd.conf",serial);
-        system(cmd);
+        LCDPrintfFont(eyeFontBoldWhite, " Wifi IP: ");
         
-        system("sudo service hostapd restart");
-        system("sudo service isc-dhcp-server restart");
+        LCDPrintfFont(eyeFontDefaultYellow, "10.1.1.1\n", temp);
      
 		LCDRefresh2();
 		

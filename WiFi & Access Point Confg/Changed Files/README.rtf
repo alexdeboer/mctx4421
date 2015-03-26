@@ -1,0 +1,110 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1344\cocoasubrtf720
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;\f2\fnil\fcharset0 Consolas;
+}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red193\green193\blue193;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid1\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 \cb1 Files Changed for AP access:\
+\
+1. 
+\f1\b \expnd0\expndtw0\kerning0
+/etc/dhcp/dhcpd.conf\
+2. 
+\fs28 \cf2 \cb1 /etc/default/isc-dhcp-server
+\fs24 \cf0 \cb1 \
+3. 
+\fs28 \cf2 \cb1 /etc/network/interfaces 
+\fs24 \cf0 \cb1 \
+4. 
+\fs28 \cf2 \cb1 /etc/hostapd/hostapd.conf
+\fs24 \cf0 \cb1 \
+5. 
+\fs28 \cf2 \cb1 /etc/sysctl.conf
+\fs24 \cf0 \cb1 \
+6. 
+\fs28 \cf2 \cb1 /etc/default/hostapd\
+
+\fs24 \cf0 \cb1 \
+\pard\pardeftab720
+
+\b0 \cf0 \expnd0\expndtw0\kerning0
+Assign a static IP address to the wifi adapter by running \
+\pard\pardeftab720
+
+\b \cf0 \expnd0\expndtw0\kerning0
+sudo ifconfig wlan0 192.168.42.1\
+\
+\pard\pardeftab720
+
+\b0 \cf0 \expnd0\expndtw0\kerning0
+Run the following commands to create the network translation between the ethernet port 
+\b \expnd0\expndtw0\kerning0
+eth0
+\b0 \expnd0\expndtw0\kerning0
+ and the wifi port 
+\b \expnd0\expndtw0\kerning0
+wlan0:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0
+\f2\b0 \cf0 \kerning1\expnd0\expndtw0 {\listtext	1	}\expnd0\expndtw0\kerning0
+sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE\expnd0\expndtw0\kerning0
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	2	}\expnd0\expndtw0\kerning0
+sudo iptables -A FORWARD -i eth0 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT\expnd0\expndtw0\kerning0
+\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	3	}\expnd0\expndtw0\kerning0
+sudo iptables -A FORWARD -i wlan0 -o eth0 -j ACCEPT\
+\pard\tx566\pardeftab720
+\cf0 \
+\
+\pard\pardeftab720
+
+\f1 \cf0 \expnd0\expndtw0\kerning0
+You can check to see whats in the tables with\
+
+\b \expnd0\expndtw0\kerning0
+sudo iptables -t nat -S
+\b0 \expnd0\expndtw0\kerning0
+\
+
+\b \expnd0\expndtw0\kerning0
+sudo iptables -S\
+\
+
+\b0 \expnd0\expndtw0\kerning0
+To make this happen on reboot (so you don't have to type it every time) run\
+\
+
+\b \expnd0\expndtw0\kerning0
+sudo sh -c "iptables-save > /etc/iptables.ipv4.nat"\
+\
+
+\b0 \expnd0\expndtw0\kerning0
+Starting the Service
+\b \expnd0\expndtw0\kerning0
+\
+sudo service hostapd start 
+\b0 \expnd0\expndtw0\kerning0
+\
+
+\b \expnd0\expndtw0\kerning0
+sudo service isc-dhcp-server start\
+\
+
+\b0 \expnd0\expndtw0\kerning0
+Start on boot
+\b \expnd0\expndtw0\kerning0
+\
+sudo update-rc.d hostapd enable 
+\b0 \expnd0\expndtw0\kerning0
+\
+
+\b \expnd0\expndtw0\kerning0
+sudo update-rc.d isc-dhcp-server enable
+\f2\b0\fs26 \cf3 \expnd0\expndtw0\kerning0
+\
+}
