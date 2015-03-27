@@ -195,6 +195,7 @@ int show_info(HDTDevice_t* pdev, int type)
 		LCDPrintf("=> Delay: %d\n",pirtv->delay);
 		break;
 	case HDT_IDX_CAM:
+        LCDPrintf("Raspi-Cam\n");    
 		break;
 	case HDT_IDX_ADC:
 		padc = (HDTDevADC_t*) pdev;
@@ -1005,6 +1006,9 @@ int load_hdt(char* hdtfile, HDTDevALL_t *pdevs, listmenu_t *plist)
 	/* ADC ENTRY */
 	sprintf(device_name,"%d ADC(s)",pdevs->countADC);
 	listmenuAddItem(plist,device_name,pdevs->padc);
+    /* Raspicam Entry */
+    sprintf(device_name,"RASPI-CAM");
+    listmenuAddItem(plist,device_name,pdevs->pcam);
 	
 	/* assign the list! */
 	LCDList(plist);

@@ -728,8 +728,10 @@ int page_main(void)
     
     temp[0]='\0';
     serial[0]='\0';
+    //reading in the serial number into temp
     sprintf(temp,"%s" , execute("cat /proc/cpuinfo |grep Serial|cut -d' ' -f2"));
     int i =0;
+    //removing the leading 0's, storing serial into serial
     while(temp[i]=='0') {
         i++;
         continue;
@@ -748,6 +750,7 @@ int page_main(void)
     sprintf(cmd,"sed -i '3s/.*/ssid=%s/' /etc/hostapd/hostapd.conf",temp);
     system(cmd);
     
+    //restarting the services for the new changes to ssid
     system("sudo service hostapd restart");
     system("sudo service isc-dhcp-server restart");
     
