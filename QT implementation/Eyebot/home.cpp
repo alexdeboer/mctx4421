@@ -7,28 +7,39 @@ Home::Home()
 
 QString Home::batt() {
     //had a read through the old code, doesnt do anything =/
-    return "5V      100%";
+    return "5V          100%";
 }
 
 
 QString Home::ip() {
+    QString ip = " ";
+#ifndef TEST
     QProcess findip;
-    findip.start("ifconfig eth0 | sed -rn 's/.*r:([^ ]+) .*/\\1/p' | awk '{printf \"%s \",$0} END {print \"\"}'");
+    QStringList arguments;
+    arguments << "-c";
+    arguments << "ifconfig eth0|grep inet|cut -d ':' -f2|cut -d ' ' -f1";
+    findip.start("bash", arguments);
     findip.waitForFinished(-1); // will wait forever until finished
-    QString stdout = findip.readAllStandardOutput();
-    return stdout;
+    ip = findip.readAllStandardOutput();
+#endif
+    return ip;
 }
 
 QString Home::hostname() {
-    char hostname[70];
-    hostname[69] = '\0';
-    gethostname(hostname,70);
+    QString hostname = " ";
+#ifndef TEST
+    char host[70];
+    host[69] = '\0';
+    gethostname(host,70);
+
+    hostname = QString::fromUtf8(host);
+#endif
     return hostname;
 }
 
 QString Home::macaddr() {
     QString macaddr = "";
-#ifndef TEST
+#ifndef TEST    
     QProcess process;
     process.start("cat /sys/class/net/eth0/address");
     process.waitForFinished();
@@ -40,10 +51,15 @@ QString Home::macaddr() {
 QString Home::ssid() {
     QString ssid = "Pi_";
 #ifndef TEST
+
     QProcess process;
-    process.start("cat /proc/cpuinfo |grep Serial|cut -d' ' -f2");
-    process.waitForFinished();
+    QStringList arguments;
+    arguments << "-c";
+    arguments << "cat /proc/cpuinfo|grep Serial|cut -d' ' -f2";
+    process.start("bash", arguments);
+    process.waitForFinished(-1);
     QString stdout = process.readAllStandardOutput();
+
 
     int i = 0;
 
@@ -63,8 +79,13 @@ QString Home::ssid() {
     process.waitForFinished();
 
     //restarting the services
+    /*
     process.start("sudo service hostapd restart");
+    process.waitForFinished(-1);
     process.start("sudo service isc-dhcp-server restart");
+    process.waitForFinished(-1);
+
+    */
 #endif
     return ssid;
 }

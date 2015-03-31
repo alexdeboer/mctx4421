@@ -26,4 +26,4 @@ HEADERS  += mainwindow.h\
 
 FORMS    += mainwindow.ui
 
-DEFINES +=
+#DEFINES += TEST

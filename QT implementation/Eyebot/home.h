@@ -4,11 +4,13 @@
 #include <QString>
 #include <QProcess>
 #include <unistd.h>
+#include <QDebug>
 
 class Home
 {
 public:
     Home();
+
     QString batt();
     QString ip();
     QString hostname();

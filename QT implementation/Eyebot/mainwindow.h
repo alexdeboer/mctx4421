@@ -6,6 +6,7 @@
 #include <QTimer>
 
 #include "home.h"
+#include "info.h"
 
 namespace Ui {
 class MainWindow;
@@ -23,6 +24,7 @@ private:
     Ui::MainWindow *ui;
     QSettings settings;
     Home home;
+    Info info;
 
 private slots:
     //initialising the settings
@@ -40,6 +42,9 @@ private slots:
     void show_hardware();
     void show_software();
     void show_demos();
+
+    //update functions
+    void update_Info();
 };
 
 #endif // MAINWINDOW_H

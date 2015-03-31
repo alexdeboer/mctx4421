@@ -9,7 +9,14 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    /*
+    qDebug() << "Setting WA_AcceptTouchEvents on MainWidget...";
+
+    setAttribute(Qt::WA_AcceptTouchEvents);
+    setAttribute(Qt::WA_StaticContents);
+*/
     init_home();
+    init_info();
 
     //initialise the main screen
     init_ui();
@@ -33,7 +40,15 @@ void MainWindow::init_home() {
 }
 
 void MainWindow::init_info() {
-    settings.setValue("info/processor", home.batt());
+    settings.setValue("info/processor", info.processor());
+    settings.setValue("info/speed", info.speed());
+    settings.setValue("info/arch", info.arch());
+    settings.setValue("info/bogo", info.bogo());
+    settings.setValue("info/totalRam", info.totalRam());
+    settings.setValue("info/freeRam", info.freeRam());
+    settings.setValue("info/uptime", info.upTime());
+    settings.setValue("info/processes", info.processes());
+    settings.setValue("info/battery", settings.value("home/battery"));
 }
 
 void MainWindow::init_hardware() {
@@ -81,9 +96,28 @@ void MainWindow::show_info() {
     ui->info->show(); ui->info->setEnabled(true);ui->menu_info->show(); ui->menu_info->setEnabled(true);
     ui->tempBlack->hide();
 
+    //set labels
+    ui->label_arch->setText(settings.value("info/arch").toString());
+    ui->label_processor->setText(settings.value("info/processor").toString());
+    ui->label_speed->setText(settings.value("info/speed").toString());
+    ui->label_bogo->setText(settings.value("info/bogo").toString());
+    ui->label_processes->setText(settings.value("info/processes").toString());
+    ui->label_totalRam->setText(settings.value("info/totalRam").toString());
+    ui->label_freeRam->setText(settings.value("info/freeRam").toString());
+    ui->label_uptime->setText(settings.value("info/uptime").toString());
+    ui->label_batt2->setText(settings.value("info/battery").toString());
 
+    QTimer *updateTimer;
+    updateTimer = new QTimer(this);
+    connect(updateTimer, SIGNAL(timeout()), this, SLOT(update_Info()));
+    updateTimer->start(2000);
+
+    //connect(ui->info_network, SIGNAL(clicked()), this, SLOT(show_network()));
     connect(ui->info_back, SIGNAL(clicked()), this, SLOT(show_home()));
+    //connect(ui->info_settings, SIGNAL(clicked()), this, SLOT(show_settings()));
 }
+
+
 
 void MainWindow::show_hardware() {
 
@@ -95,5 +129,16 @@ void MainWindow::show_software() {
 
 void MainWindow::show_demos() {
 
+}
+
+//Update functions
+void MainWindow::update_Info() {
+    settings.setValue("info/freeRam", info.freeRam());
+    settings.setValue("info/uptime", info.upTime());
+    settings.setValue("info/processes", info.processes());
+
+    ui->label_processes->setText(settings.value("info/processes").toString());
+    ui->label_uptime->setText(settings.value("info/uptime").toString());
+    ui->label_freeRam->setText(settings.value("info/freeRam").toString());
 }
 
