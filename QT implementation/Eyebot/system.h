@@ -5,10 +5,10 @@
 #include <QProcess>
 #include <QDebug>
 
-class Info
+class System
 {
 public:
-    Info();
+    System();
     QString processor();
     QString speed();
     QString arch();

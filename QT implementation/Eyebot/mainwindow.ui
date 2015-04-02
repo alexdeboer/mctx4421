@@ -13,7 +13,7 @@
   <property name="font">
    <font>
     <family>Lucida Console</family>
-    <pointsize>36</pointsize>
+    <pointsize>12</pointsize>
     <weight>50</weight>
     <italic>false</italic>
     <bold>false</bold>
@@ -29,7 +29,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">font: 36pt &quot;Lucida Console&quot;;</string>
+   <string notr="true">font: 12pt &quot;Lucida Console&quot;;</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="styleSheet">
@@ -56,7 +56,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -66,7 +66,7 @@
       <string notr="true">color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
-      <string>Welcome to Eyebot on Raspberry Pi B</string>
+      <string>Welcome to Eyebot M7</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_ROBIOS">
@@ -81,7 +81,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -106,7 +106,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -131,7 +131,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -156,7 +156,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -181,7 +181,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -206,7 +206,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -231,7 +231,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -253,7 +253,7 @@
        <height>45</height>
       </rect>
      </property>
-     <widget class="QPushButton" name="home_info">
+     <widget class="QPushButton" name="home_system">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -265,7 +265,7 @@
       <property name="font">
        <font>
         <family>Lucida Console</family>
-        <pointsize>36</pointsize>
+        <pointsize>12</pointsize>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
@@ -290,7 +290,7 @@
       <property name="font">
        <font>
         <family>Lucida Console</family>
-        <pointsize>36</pointsize>
+        <pointsize>12</pointsize>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
@@ -315,7 +315,7 @@
       <property name="font">
        <font>
         <family>Lucida Console</family>
-        <pointsize>36</pointsize>
+        <pointsize>12</pointsize>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
@@ -329,7 +329,7 @@
        <string>Software</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="home_demos">
+     <widget class="QPushButton" name="home_commands">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -341,7 +341,7 @@
       <property name="font">
        <font>
         <family>Lucida Console</family>
-        <pointsize>36</pointsize>
+        <pointsize>12</pointsize>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
@@ -351,7 +351,7 @@
        <string notr="true">background-color: rgb(0, 0, 255);</string>
       </property>
       <property name="text">
-       <string>Demos</string>
+       <string>Commands</string>
       </property>
      </widget>
     </widget>
@@ -367,7 +367,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -392,7 +392,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -417,7 +417,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -442,7 +442,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -467,7 +467,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -492,7 +492,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -517,7 +517,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -531,7 +531,7 @@
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="info" native="true">
+   <widget class="QWidget" name="system" native="true">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -540,10 +540,10 @@
       <height>240</height>
      </rect>
     </property>
-    <widget class="QLabel" name="label_info">
+    <widget class="QLabel" name="label_system">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>10</x>
        <y>5</y>
        <width>150</width>
        <height>15</height>
@@ -556,7 +556,7 @@
       <string>System Info</string>
      </property>
     </widget>
-    <widget class="QWidget" name="menu_info" native="true">
+    <widget class="QWidget" name="menu_system" native="true">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -565,7 +565,7 @@
        <height>45</height>
       </rect>
      </property>
-     <widget class="QPushButton" name="info_null">
+     <widget class="QPushButton" name="system_null">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -577,7 +577,7 @@
       <property name="font">
        <font>
         <family>Lucida Console</family>
-        <pointsize>36</pointsize>
+        <pointsize>12</pointsize>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
@@ -590,7 +590,7 @@
        <string/>
       </property>
      </widget>
-     <widget class="QPushButton" name="info_network">
+     <widget class="QPushButton" name="system_network">
       <property name="geometry">
        <rect>
         <x>85</x>
@@ -602,7 +602,7 @@
       <property name="font">
        <font>
         <family>Lucida Console</family>
-        <pointsize>36</pointsize>
+        <pointsize>12</pointsize>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
@@ -615,7 +615,7 @@
        <string>Network</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="info_settings">
+     <widget class="QPushButton" name="system_settings">
       <property name="geometry">
        <rect>
         <x>165</x>
@@ -627,7 +627,7 @@
       <property name="font">
        <font>
         <family>Lucida Console</family>
-        <pointsize>36</pointsize>
+        <pointsize>12</pointsize>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
@@ -641,7 +641,7 @@
        <string>Settings</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="info_back">
+     <widget class="QPushButton" name="system_back">
       <property name="geometry">
        <rect>
         <x>245</x>
@@ -653,7 +653,7 @@
       <property name="font">
        <font>
         <family>Lucida Console</family>
-        <pointsize>36</pointsize>
+        <pointsize>12</pointsize>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
@@ -679,7 +679,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -704,7 +704,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -729,7 +729,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -754,7 +754,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -779,7 +779,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -804,7 +804,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -829,7 +829,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -854,7 +854,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -879,7 +879,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -904,7 +904,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -929,7 +929,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -954,7 +954,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -979,7 +979,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -1004,7 +1004,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -1029,7 +1029,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -1054,7 +1054,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -1079,7 +1079,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -1104,7 +1104,7 @@
      <property name="font">
       <font>
        <family>Lucida Console</family>
-       <pointsize>36</pointsize>
+       <pointsize>12</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -1128,21 +1128,1021 @@
      </rect>
     </property>
    </widget>
+   <widget class="QWidget" name="network" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>320</width>
+      <height>240</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="label_network">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>5</y>
+       <width>150</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Network Page</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="menu_network" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>190</y>
+       <width>320</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <widget class="QPushButton" name="network_system">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>0</y>
+        <width>75</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Console</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>System</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="network_null">
+      <property name="geometry">
+       <rect>
+        <x>85</x>
+        <y>0</y>
+        <width>75</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Console</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="network_settings">
+      <property name="geometry">
+       <rect>
+        <x>165</x>
+        <y>0</y>
+        <width>75</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Console</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 0);
+</string>
+      </property>
+      <property name="text">
+       <string>Settings</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="network_back">
+      <property name="geometry">
+       <rect>
+        <x>245</x>
+        <y>0</y>
+        <width>75</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Console</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 255);</string>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="label_HOSTNAME2">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>25</y>
+       <width>100</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Console</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Hostname:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_ADDR">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>40</y>
+       <width>100</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Console</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Addr-Type:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_IP2">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>55</y>
+       <width>100</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Console</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>IP-Addr:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_MACADDR2">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>70</y>
+       <width>100</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Console</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>MAC-Addr:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_SSID2">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>90</y>
+       <width>100</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Console</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Wifi-SSID:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_WIFIIP2">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>105</y>
+       <width>100</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Console</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Wifi-IP:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_hostname2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>25</y>
+       <width>150</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Console</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_addr">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>40</y>
+       <width>150</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Console</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_ip2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>55</y>
+       <width>150</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Console</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_macaddr2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>70</y>
+       <width>150</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Console</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_ssid2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>90</y>
+       <width>150</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Console</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_wifiip2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>105</y>
+       <width>150</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Console</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 0);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="settings" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>320</width>
+      <height>240</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="label_settings">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>5</y>
+       <width>150</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Settings Page</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="menu_settings" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>190</y>
+       <width>320</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <widget class="QPushButton" name="settings_system">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>0</y>
+        <width>75</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Console</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>System</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="settings_network">
+      <property name="geometry">
+       <rect>
+        <x>85</x>
+        <y>0</y>
+        <width>75</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Console</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>Network</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="settings_null">
+      <property name="geometry">
+       <rect>
+        <x>165</x>
+        <y>0</y>
+        <width>75</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Console</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 0);
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="settings_back">
+      <property name="geometry">
+       <rect>
+        <x>245</x>
+        <y>0</y>
+        <width>75</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Console</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 255);</string>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="hardware" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>320</width>
+      <height>240</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="label_hardware">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>5</y>
+       <width>150</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Hardware:</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="menu_hardware" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>195</y>
+       <width>320</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <widget class="QPushButton" name="hardware_select">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>0</y>
+        <width>75</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Console</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Select</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hardware_reload">
+      <property name="geometry">
+       <rect>
+        <x>85</x>
+        <y>0</y>
+        <width>75</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Console</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>Reload</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hardware_io">
+      <property name="geometry">
+       <rect>
+        <x>165</x>
+        <y>0</y>
+        <width>75</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Console</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 0);
+</string>
+      </property>
+      <property name="text">
+       <string>Digital I/O</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hardware_back">
+      <property name="geometry">
+       <rect>
+        <x>245</x>
+        <y>0</y>
+        <width>75</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Console</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 255);</string>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>320</width>
+       <height>180</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="software" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>320</width>
+      <height>240</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="label_software">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>5</y>
+       <width>150</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Software:</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="menu_software" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>190</y>
+       <width>320</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <widget class="QPushButton" name="software_run">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>0</y>
+        <width>75</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Console</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Run</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="software_demos">
+      <property name="geometry">
+       <rect>
+        <x>85</x>
+        <y>0</y>
+        <width>75</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Console</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>Demos</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="software_null">
+      <property name="geometry">
+       <rect>
+        <x>165</x>
+        <y>0</y>
+        <width>75</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Console</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 0);
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="software_back">
+      <property name="geometry">
+       <rect>
+        <x>245</x>
+        <y>0</y>
+        <width>75</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Console</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 255);</string>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="commands" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>320</width>
+      <height>240</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="label_commands">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>5</y>
+       <width>150</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>System Commands:</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="menu_commands" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>190</y>
+       <width>320</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <widget class="QPushButton" name="commands_shutdown">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>0</y>
+        <width>75</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Console</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Shutdown</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="commands_restart">
+      <property name="geometry">
+       <rect>
+        <x>85</x>
+        <y>0</y>
+        <width>75</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Console</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>Restart</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="commands_exit">
+      <property name="geometry">
+       <rect>
+        <x>165</x>
+        <y>0</y>
+        <width>75</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Console</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 0);
+</string>
+      </property>
+      <property name="text">
+       <string>Exit</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="commands_back">
+      <property name="geometry">
+       <rect>
+        <x>245</x>
+        <y>0</y>
+        <width>75</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lucida Console</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 255);</string>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <zorder>system</zorder>
+   <zorder>network</zorder>
+   <zorder>settings</zorder>
+   <zorder>software</zorder>
+   <zorder>commands</zorder>
    <zorder>home</zorder>
    <zorder>tempBlack</zorder>
-   <zorder>info</zorder>
+   <zorder>hardware</zorder>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <tabstops>
-  <tabstop>home_info</tabstop>
+  <tabstop>home_system</tabstop>
   <tabstop>home_hardware</tabstop>
   <tabstop>home_software</tabstop>
-  <tabstop>home_demos</tabstop>
-  <tabstop>info_null</tabstop>
-  <tabstop>info_network</tabstop>
-  <tabstop>info_settings</tabstop>
-  <tabstop>info_back</tabstop>
+  <tabstop>home_commands</tabstop>
+  <tabstop>system_null</tabstop>
+  <tabstop>system_network</tabstop>
+  <tabstop>system_settings</tabstop>
+  <tabstop>system_back</tabstop>
  </tabstops>
  <resources/>
  <connections/>

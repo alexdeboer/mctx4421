@@ -21,7 +21,16 @@ QString Home::ip() {
     findip.start("bash", arguments);
     findip.waitForFinished(-1); // will wait forever until finished
     ip = findip.readAllStandardOutput();
-#endif
+
+    /*if(ip.at(68)=='i') {
+        return ip;
+    }
+
+    else {
+        return "10.0.0.1";
+    }
+*/
+    #endif
     return ip;
 }
 

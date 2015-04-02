@@ -18,12 +18,32 @@ INSTALLS += target
 SOURCES += main.cpp\
         mainwindow.cpp\
         home.cpp \
-        info.cpp
+        system.cpp \
+    network.cpp \
+    settings.cpp \
+    commands.cpp \
+    hardware.cpp \
+    software.cpp \
+    old_code/src/hdt.c \
+    old_code/src/mpsse.c \
 
 HEADERS  += mainwindow.h\
             home.h \
-            info.h
+            system.h \
+    network.h \
+    settings.h \
+    commands.h \
+    hardware.h \
+    software.h \
+    old_code/include/hdt.h \
+    old_code/include/Xlib.h \
+    old_code/include/ftdi.h \
+    old_code/include/mpsse.h \
+    old_code/include/Xlib.h \
+    old_code/include/usb.h \
+    old_code/include/types.h
 
 FORMS    += mainwindow.ui
 
 #DEFINES += TEST
+

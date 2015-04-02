@@ -1,11 +1,11 @@
-#include "info.h"
+#include "system.h"
 
-Info::Info()
+System::System()
 {
 
 }
 
-QString Info::processor() {
+QString System::processor() {
     QString processor = "";
 #ifndef TEST
     QProcess process;
@@ -15,12 +15,12 @@ QString Info::processor() {
     process.start("bash", arguments);
     process.waitForFinished(-1);
     processor = process.readAllStandardOutput();
-#endif
     processor.remove(0,1);
+#endif
     return processor;
 }
 
-QString Info::speed() {
+QString System::speed() {
     QString speed = "";
 #ifndef TEST
     QProcess process;
@@ -31,12 +31,12 @@ QString Info::speed() {
     process.waitForFinished(-1);
     speed = process.readAllStandardOutput();
     speed.append(" MHz");
-#endif
     speed.remove(0,1);
+#endif
     return speed;
 }
 
-QString Info::arch() {
+QString System::arch() {
     QString arch = "";
 #ifndef TEST
     QProcess process;
@@ -50,7 +50,7 @@ QString Info::arch() {
     return arch;
 }
 
-QString Info::bogo() {
+QString System::bogo() {
     QString bogo = "";
 #ifndef TEST
     QProcess process;
@@ -60,12 +60,12 @@ QString Info::bogo() {
     process.start("bash", arguments);
     process.waitForFinished(-1);
     bogo = process.readAllStandardOutput();
-#endif
     bogo.remove(0,1);
+#endif
     return bogo;
 }
 
-QString Info::processes() {
+QString System::processes() {
     QString processes = "";
 #ifndef TEST
     QProcess process;
@@ -79,7 +79,7 @@ QString Info::processes() {
     return processes;
 }
 
-QString Info::totalRam() {
+QString System::totalRam() {
     QString totalRam = "";
 #ifndef TEST
     QProcess process;
@@ -99,8 +99,8 @@ QString Info::totalRam() {
     return totalRam;
 }
 
-QString Info::freeRam() {
-    QString freeRam;
+QString System::freeRam() {
+    QString freeRam = "";
 #ifndef TEST
     QProcess process;
     QStringList arguments;
@@ -119,7 +119,7 @@ QString Info::freeRam() {
     return freeRam;
 }
 
-QString Info::upTime() {
+QString System::upTime() {
     QString uptime = "";
 #ifndef TEST
     QProcess process;
