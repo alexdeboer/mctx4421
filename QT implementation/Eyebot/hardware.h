@@ -21,15 +21,6 @@ struct encoder {
     int direction;
 };
 
-struct motor {
-    QString name;
-    int freq;
-    int speed;
-    int direction;
-    QString table;
-    int RegAddr;
-};
-
 struct psd {
     QString name;
     int rawValue;

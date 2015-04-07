@@ -4,7 +4,4 @@ Hardware::Hardware()
 {
 }
 
-void Hardware::list() {
-
-}
 

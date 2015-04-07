@@ -24,8 +24,6 @@ SOURCES += main.cpp\
     commands.cpp \
     hardware.cpp \
     software.cpp \
-    old_code/src/hdt.c \
-    old_code/src/mpsse.c \
 
 HEADERS  += mainwindow.h\
             home.h \
@@ -35,15 +33,8 @@ HEADERS  += mainwindow.h\
     commands.h \
     hardware.h \
     software.h \
-    old_code/include/hdt.h \
-    old_code/include/Xlib.h \
-    old_code/include/ftdi.h \
-    old_code/include/mpsse.h \
-    old_code/include/Xlib.h \
-    old_code/include/usb.h \
-    old_code/include/types.h
 
 FORMS    += mainwindow.ui
 
-#DEFINES += TEST
+DEFINES += TEST
 

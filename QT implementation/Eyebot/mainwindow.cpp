@@ -9,9 +9,9 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    init_home();
-    init_system();
-    init_network();
+    //init_home();
+    //init_system();
+    //init_network();
 
     //initialise the main screen
     init_ui();
@@ -221,7 +221,15 @@ void MainWindow::show_software() {
     ui->software->show(); ui->software->setEnabled(true); ui->menu_software->show(); ui->menu_software->setEnabled(true);
     ui->commands->hide(); ui->commands->setEnabled(false); ui->menu_commands->hide(); ui->menu_commands->setEnabled(false);
 
-    //connect(ui->software_run, SIGNAL(clicked()), this, SLOT(show_system()));
+    Software software;
+
+    QString temp;
+    temp = software.run_Test();
+
+    qDebug() << temp;
+    ui->textBrowser->setText(temp);
+
+    //connect(ui->software_run, SIGNAL(clicked()), &software, SLOT(run_test()));
     //connect(ui->software_demos, SIGNAL(clicked()), this, SLOT(show_home()));
     connect(ui->software_back, SIGNAL(clicked()), this, SLOT(show_home()));
 }

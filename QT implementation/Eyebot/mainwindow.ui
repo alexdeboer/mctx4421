@@ -1985,6 +1985,29 @@
       </property>
      </widget>
     </widget>
+    <widget class="QTextBrowser" name="textBrowser">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>300</width>
+       <height>160</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QGraphicsView" name="graphicsView">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>300</width>
+       <height>160</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="commands" native="true">
     <property name="geometry">
@@ -2126,11 +2149,11 @@
    <zorder>system</zorder>
    <zorder>network</zorder>
    <zorder>settings</zorder>
-   <zorder>software</zorder>
    <zorder>commands</zorder>
    <zorder>home</zorder>
    <zorder>tempBlack</zorder>
    <zorder>hardware</zorder>
+   <zorder>software</zorder>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

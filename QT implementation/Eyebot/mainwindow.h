@@ -4,10 +4,12 @@
 #include <QMainWindow>
 #include <QSettings>
 #include <QTimer>
+#include <QDebug>
 
 #include "home.h"
 #include "system.h"
 #include "commands.h"
+#include "software.h"
 
 namespace Ui {
 class MainWindow;
