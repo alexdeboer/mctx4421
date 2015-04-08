@@ -6,7 +6,7 @@ System::System()
 }
 
 QString System::processor() {
-    QString processor = "";
+    QString processor = " ";
 #ifndef TEST
     QProcess process;
     QStringList arguments;
@@ -21,7 +21,7 @@ QString System::processor() {
 }
 
 QString System::speed() {
-    QString speed = "";
+    QString speed = " ";
 #ifndef TEST
     QProcess process;
     QStringList arguments;
@@ -37,7 +37,7 @@ QString System::speed() {
 }
 
 QString System::arch() {
-    QString arch = "";
+    QString arch = " ";
 #ifndef TEST
     QProcess process;
     QStringList arguments;
@@ -51,7 +51,7 @@ QString System::arch() {
 }
 
 QString System::bogo() {
-    QString bogo = "";
+    QString bogo = " ";
 #ifndef TEST
     QProcess process;
     QStringList arguments;
@@ -66,7 +66,7 @@ QString System::bogo() {
 }
 
 QString System::processes() {
-    QString processes = "";
+    QString processes = " ";
 #ifndef TEST
     QProcess process;
     QStringList arguments;
@@ -80,7 +80,7 @@ QString System::processes() {
 }
 
 QString System::totalRam() {
-    QString totalRam = "";
+    QString totalRam = " ";
 #ifndef TEST
     QProcess process;
     QStringList arguments;
@@ -100,7 +100,7 @@ QString System::totalRam() {
 }
 
 QString System::freeRam() {
-    QString freeRam = "";
+    QString freeRam = " ";
 #ifndef TEST
     QProcess process;
     QStringList arguments;
@@ -120,7 +120,7 @@ QString System::freeRam() {
 }
 
 QString System::upTime() {
-    QString uptime = "";
+    QString uptime = " ";
 #ifndef TEST
     QProcess process;
     QStringList arguments;

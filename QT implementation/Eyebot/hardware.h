@@ -2,6 +2,10 @@
 #define HARDWARE_H
 
 #include <QString>
+#include <QList>
+#include <QFile>
+
+#define defaultFilePath "/home/pi/EyeBot_Pi/hardware.txt"
 
 struct motor {
     QString name;
@@ -39,7 +43,7 @@ struct irtv {
     int delay;
 };
 
-struct servos {
+struct servo {
     QString name;
     int freq;
     int minPWM;
@@ -54,18 +58,29 @@ struct camera {
     int resolution;
 };
 
+
 class Hardware
 {
 public:
     Hardware();
-    int find_motors();
-    int find_encoders();
-    int find_psds();
-    int find_irtvs();
-    int find_servos();
-    int find_adcs();
-    int find_camera();
+    QList<motor> motors;
+    QList<encoder> encoders;
+    QList<psd> psds;
+    QList<irtv> irtvs;
+    QList<servo> servos;
+   // QList<adc> adcs;
+    QList<camera> cameras;
 
+    void init();
+
+private:
+    void add_motors();
+    void add_encoders();
+    void add_psds();
+    void add_irtvs();
+    void add_servos();
+    void add_adcs();
+    void add_camera();
 
 };
 

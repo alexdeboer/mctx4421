@@ -4,21 +4,24 @@ Software::Software()
 {
 }
 
-QString Software::run_Test() {
+void Software::init() {
+    QString path = "/Users/Markcuz/Desktop/";
+    QDir directory = QDir(path);
+    QFileInfoList tempList =  directory.entryInfoList();
 
-    QString ret;
-    QProcess process;
-    /*QStringList arguments;
-    arguments << "-c";
-    arguments << "/home/pi/EyeBot_BB/demos/helloWorld/helloWorld";
-    process.execute("bash", arguments);
-    process.waitForFinished(-1); // will wait forever until finished
-*/
+    list.clear();
 
-    process.execute("/Users/Markcuz/Qt5.2.1/5.2.1/Src/qtmultimedia/examples/multimediawidgets/build-player-Desktop_Qt_5_2_1_clang_64bit-Debug/player");
-    process.startDetached("/Users/Markcuz/Qt5.2.1/5.2.1/Src/qtmultimedia/examples/multimediawidgets/build-player-Desktop_Qt_5_2_1_clang_64bit-Debug/player");
-    ret = process.readAllStandardError();
+    for(int i =0; i<tempList.size(); i++) {
+        if(tempList.at(i).isFile()) {
+            list.append(tempList.at(i));
+        }
+    }
+}
 
-    process.waitForFinished();
-    return ret;
+QFileInfoList Software::showList() {
+    return list;
+}
+
+void Software::run(int current) {
+    qDebug() << list.at(current).absoluteFilePath();
 }

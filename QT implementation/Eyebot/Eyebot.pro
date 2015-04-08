@@ -10,10 +10,10 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-target.path = /home/pi/
+#target.path = /home/pi/
 TARGET = Eyebot
 TEMPLATE = app
-INSTALLS += target
+#INSTALLS += target
 
 SOURCES += main.cpp\
         mainwindow.cpp\
@@ -24,6 +24,7 @@ SOURCES += main.cpp\
     commands.cpp \
     hardware.cpp \
     software.cpp \
+    demos.cpp
 
 HEADERS  += mainwindow.h\
             home.h \
@@ -33,6 +34,7 @@ HEADERS  += mainwindow.h\
     commands.h \
     hardware.h \
     software.h \
+    demos.h
 
 FORMS    += mainwindow.ui
 

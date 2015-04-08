@@ -29,6 +29,7 @@ private:
     Home home;
     System system;
     Commands commands;
+    Software software;
 
 private slots:
     //initialising the settings
@@ -48,6 +49,7 @@ private slots:
     //showing the info on the screen
     void show_home();
 
+    void show_info();
     void show_system();
     void show_network();
     void show_settings();
@@ -58,7 +60,11 @@ private slots:
 
     void show_commands();
 
+    //exectution functions
+    void run_software();
+
     //update functions
+    void refresh_software();
     void update_system();
 };
 

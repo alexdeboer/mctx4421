@@ -47,7 +47,7 @@ QString Home::hostname() {
 }
 
 QString Home::macaddr() {
-    QString macaddr = "";
+    QString macaddr = " ";
 #ifndef TEST    
     QProcess process;
     process.start("cat /sys/class/net/eth0/address");

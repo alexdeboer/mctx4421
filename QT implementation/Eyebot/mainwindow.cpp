@@ -9,9 +9,10 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    //init_home();
-    //init_system();
-    //init_network();
+    init_home();
+    init_system();
+    init_network();
+    init_software();
 
     //initialise the main screen
     init_ui();
@@ -49,16 +50,11 @@ void MainWindow::init_system() {
 }
 
 void MainWindow::init_network() {
-
-
     settings.setValue("network/ip", settings.value("home/ip"));
     settings.setValue("network/hostname", settings.value("home/hostname"));
     settings.setValue("network/macaddr", settings.value("home/macaddr"));
     settings.setValue("network/ssid",settings.value("home/ssid"));
     settings.setValue("network/wifiip", settings.value("home/wifiip"));
-    //settings.setValue("netork/addr", net.batt());
-
-
 }
 
 void MainWindow::init_settings() {
@@ -67,10 +63,17 @@ void MainWindow::init_settings() {
 
 void MainWindow::init_hardware() {
 
+    //connect(ui->hardware_select, SIGNAL(clicked()), this, SLOT(show_system()));
+    //connect(ui->hardware_reload, SIGNAL(clicked()), this, SLOT(show_home()));
+    //connect(ui->hardware_io, SIGNAL(clicked()), this, SLOT(show_network()));
+    connect(ui->hardware_back, SIGNAL(clicked()), this, SLOT(show_home()));
 }
 
 void MainWindow::init_software() {
-
+    software.init();
+    connect(ui->software_run, SIGNAL(clicked()), this, SLOT(run_software()));
+    connect(ui->software_refresh, SIGNAL(clicked()), this, SLOT(refresh_software()));
+    connect(ui->software_back, SIGNAL(clicked()), this, SLOT(show_home()));
 }
 
 /*-----------------Initialises the UI-----------------*/
@@ -87,14 +90,11 @@ void MainWindow::show_home() {
     //hiding all the widgets
     ui->home->show(); ui->home->setEnabled(true); ui->menu_home->show(); ui->menu_home->setEnabled(true);
 
-    ui->system->hide();ui->system->setEnabled(false); ui->menu_system->hide(); ui->menu_system->setEnabled(false);
-    ui->network->hide(); ui->network->setEnabled(false); ui->menu_network->hide(); ui->menu_network->setEnabled(false);
-    ui->settings->hide();ui->settings->setEnabled(false); ui->menu_settings->hide(); ui->menu_settings->setEnabled(false);
+    ui->info->hide(); ui->info->setEnabled(false); ui->menu_info->hide(); ui->menu_info->setEnabled(false);
 
     ui->hardware->hide(); ui->hardware->setEnabled(false); ui->menu_hardware->hide(); ui->menu_hardware->setEnabled(false);
     ui->software->hide(); ui->software->setEnabled(false); ui->menu_software->hide(); ui->menu_software->setEnabled(false);
     ui->commands->hide(); ui->commands->setEnabled(false); ui->menu_commands->hide(); ui->menu_commands->setEnabled(false);
-
 
     ui->tempBlack->hide(); 
 
@@ -108,23 +108,33 @@ void MainWindow::show_home() {
     ui->label_batt->setText(settings.value("home/battery").toString());
 
     //connects the buttons
-    connect(ui->home_system, SIGNAL(clicked()), this, SLOT(show_system()));
+    connect(ui->home_info, SIGNAL(clicked()), this, SLOT(show_info()));
     connect(ui->home_hardware, SIGNAL(clicked()), this, SLOT(show_hardware()));
     connect(ui->home_software, SIGNAL(clicked()), this, SLOT(show_software()));
     connect(ui->home_commands, SIGNAL(clicked()), this, SLOT(show_commands()));
 }
 
-void MainWindow::show_system() {
-
+void MainWindow::show_info() {
     ui->home->hide(); ui->home->setEnabled(false); ui->menu_home->hide(); ui->menu_home->setEnabled(false);
 
-    ui->system->show(); ui->system->setEnabled(true);ui->menu_system->show(); ui->menu_system->setEnabled(true);
-    ui->network->hide(); ui->network->setEnabled(false); ui->menu_network->hide(); ui->menu_network->setEnabled(false);
-    ui->settings->hide();ui->settings->setEnabled(false); ui->menu_settings->hide(); ui->menu_settings->setEnabled(false);
+    ui->info->show(); ui->info->setEnabled(true); ui->menu_info->show(); ui->menu_info->setEnabled(true);
+
+    ui->system->show();
 
     ui->hardware->hide(); ui->hardware->setEnabled(false); ui->menu_hardware->hide(); ui->menu_hardware->setEnabled(false);
     ui->software->hide(); ui->software->setEnabled(false); ui->menu_software->hide(); ui->menu_software->setEnabled(false);
     ui->commands->hide(); ui->commands->setEnabled(false); ui->menu_commands->hide(); ui->menu_commands->setEnabled(false);
+
+    connect(ui->info_network, SIGNAL(clicked()), this, SLOT(show_network()));
+    connect(ui->info_back, SIGNAL(clicked()), this, SLOT(show_home()));
+    connect(ui->info_settings, SIGNAL(clicked()), this, SLOT(show_settings()));
+    connect(ui->info_system, SIGNAL(clicked()), this, SLOT(show_system()));
+}
+
+void MainWindow::show_system() {
+    ui->system->show(); ui->system->setEnabled(true);
+    ui->network->hide(); ui->network->setEnabled(false);
+    ui->settings->hide();ui->settings->setEnabled(false);
 
     //set labels
 
@@ -138,28 +148,20 @@ void MainWindow::show_system() {
     ui->label_uptime->setText(settings.value("system/uptime").toString());
     ui->label_batt2->setText(settings.value("system/battery").toString());
 
-/*
+/*  The timer method, slows down the oprogram too much (due to calling external processes)
     QTimer *updateTimer;
     updateTimer = new QTimer(this);
     connect(updateTimer, SIGNAL(timeout()), this, SLOT(update_system()));
     updateTimer->start(2000);
 
     */
-    connect(ui->system_network, SIGNAL(clicked()), this, SLOT(show_network()));
-    connect(ui->system_back, SIGNAL(clicked()), this, SLOT(show_home()));
-    connect(ui->system_settings, SIGNAL(clicked()), this, SLOT(show_settings()));
 }
 
 void MainWindow::show_network() {
-    ui->home->hide(); ui->home->setEnabled(false); ui->menu_home->hide(); ui->menu_home->setEnabled(false);
 
-    ui->system->hide(); ui->system->setEnabled(false);ui->menu_system->hide(); ui->menu_system->setEnabled(false);
-    ui->network->show(); ui->network->setEnabled(true); ui->menu_network->show(); ui->menu_network->setEnabled(true);
-    ui->settings->hide();ui->settings->setEnabled(false); ui->menu_settings->hide(); ui->menu_settings->setEnabled(false);
-
-    ui->hardware->hide(); ui->hardware->setEnabled(false); ui->menu_hardware->hide(); ui->menu_hardware->setEnabled(false);
-    ui->software->hide(); ui->software->setEnabled(false); ui->menu_software->hide(); ui->menu_software->setEnabled(false);
-    ui->commands->hide(); ui->commands->setEnabled(false); ui->menu_commands->hide(); ui->menu_commands->setEnabled(false);
+    ui->system->hide(); ui->system->setEnabled(false);
+    ui->network->show(); ui->network->setEnabled(true);
+    ui->settings->hide(); ui->settings->setEnabled(false);
 
     //set labels
 
@@ -168,27 +170,13 @@ void MainWindow::show_network() {
     ui->label_macaddr2->setText(settings.value("home/macaddr").toString());
     ui->label_ssid2->setText(settings.value("home/ssid").toString());
     ui->label_wifiip2->setText(settings.value("home/wifiip").toString());
-
-
-    connect(ui->network_system, SIGNAL(clicked()), this, SLOT(show_system()));
-    connect(ui->network_back, SIGNAL(clicked()), this, SLOT(show_home()));
-    connect(ui->network_settings, SIGNAL(clicked()), this, SLOT(show_settings()));
 }
 
 void MainWindow::show_settings() {
-    ui->home->hide(); ui->home->setEnabled(false); ui->menu_home->hide(); ui->menu_home->setEnabled(false);
 
-    ui->system->hide();ui->system->setEnabled(false); ui->menu_system->hide(); ui->menu_system->setEnabled(false);
-    ui->network->hide(); ui->network->setEnabled(false); ui->menu_network->hide(); ui->menu_network->setEnabled(false);
-    ui->settings->show();ui->settings->setEnabled(true); ui->menu_settings->show(); ui->menu_settings->setEnabled(true);
-
-    ui->hardware->hide(); ui->hardware->setEnabled(false); ui->menu_hardware->hide(); ui->menu_hardware->setEnabled(false);
-    ui->software->hide(); ui->software->setEnabled(false); ui->menu_software->hide(); ui->menu_software->setEnabled(false);
-    ui->commands->hide(); ui->commands->setEnabled(false); ui->menu_commands->hide(); ui->menu_commands->setEnabled(false);
-
-    connect(ui->settings_system, SIGNAL(clicked()), this, SLOT(show_system()));
-    connect(ui->settings_back, SIGNAL(clicked()), this, SLOT(show_home()));
-    connect(ui->settings_network, SIGNAL(clicked()), this, SLOT(show_network()));
+    ui->system->hide();ui->system->setEnabled(false);
+    ui->network->hide(); ui->network->setEnabled(false);
+    ui->settings->show();ui->settings->setEnabled(true);
 }
 
 
@@ -196,51 +184,58 @@ void MainWindow::show_hardware() {
 
     ui->home->hide(); ui->home->setEnabled(false); ui->menu_home->hide(); ui->menu_home->setEnabled(false);
 
-    ui->system->hide();ui->system->setEnabled(false); ui->menu_system->hide(); ui->menu_system->setEnabled(false);
-    ui->network->hide(); ui->network->setEnabled(false); ui->menu_network->hide(); ui->menu_network->setEnabled(false);
-    ui->settings->hide();ui->settings->setEnabled(false); ui->menu_settings->hide(); ui->menu_settings->setEnabled(false);
+    ui->info->hide(); ui->info->setEnabled(false); ui->menu_info->hide(); ui->menu_info->setEnabled(false);
 
     ui->hardware->show(); ui->hardware->setEnabled(true); ui->menu_hardware->show(); ui->menu_hardware->setEnabled(true);
     ui->software->hide(); ui->software->setEnabled(false); ui->menu_software->hide(); ui->menu_software->setEnabled(false);
     ui->commands->hide(); ui->commands->setEnabled(false); ui->menu_commands->hide(); ui->menu_commands->setEnabled(false);
-
-    //connect(ui->hardware_select, SIGNAL(clicked()), this, SLOT(show_system()));
-    //connect(ui->hardware_reload, SIGNAL(clicked()), this, SLOT(show_home()));
-    //connect(ui->hardware_io, SIGNAL(clicked()), this, SLOT(show_network()));
-    connect(ui->hardware_back, SIGNAL(clicked()), this, SLOT(show_home()));
 }
 
 void MainWindow::show_software() {
     ui->home->hide(); ui->home->setEnabled(false); ui->menu_home->hide(); ui->menu_home->setEnabled(false);
 
-    ui->system->hide();ui->system->setEnabled(false); ui->menu_system->hide(); ui->menu_system->setEnabled(false);
-    ui->network->hide(); ui->network->setEnabled(false); ui->menu_network->hide(); ui->menu_network->setEnabled(false);
-    ui->settings->hide();ui->settings->setEnabled(false); ui->menu_settings->hide(); ui->menu_settings->setEnabled(false);
+    ui->info->hide(); ui->info->setEnabled(false); ui->menu_info->hide(); ui->menu_info->setEnabled(false);
 
     ui->hardware->hide(); ui->hardware->setEnabled(false); ui->menu_hardware->hide(); ui->menu_hardware->setEnabled(false);
     ui->software->show(); ui->software->setEnabled(true); ui->menu_software->show(); ui->menu_software->setEnabled(true);
     ui->commands->hide(); ui->commands->setEnabled(false); ui->menu_commands->hide(); ui->menu_commands->setEnabled(false);
 
-    Software software;
+    //adding elements to the table
+    int listSize = software.showList().size();
 
-    QString temp;
-    temp = software.run_Test();
+    for(int i = 0; i<listSize; i++) {
+        ui->table_software->insertRow(i);
+        QTableWidgetItem *newItem = new QTableWidgetItem(software.showList().at(i).fileName());
+        ui->table_software->setItem(i,0,newItem);
+    }
 
-    qDebug() << temp;
-    ui->textBrowser->setText(temp);
+    if(listSize!=0) {
+        ui->table_software->setCurrentCell(0,0);
+    }
+}
 
-    //connect(ui->software_run, SIGNAL(clicked()), &software, SLOT(run_test()));
-    //connect(ui->software_demos, SIGNAL(clicked()), this, SLOT(show_home()));
-    connect(ui->software_back, SIGNAL(clicked()), this, SLOT(show_home()));
+void MainWindow::refresh_software() {
+    software.init();
+
+    int rows = ui->table_software->rowCount();
+
+    for(int i = 0; i<rows; i++) {
+        ui->table_software->removeRow(0);
+    }
+
+    show_software();
+}
+
+void MainWindow::run_software() {
+    if(software.showList().size()!=0) {
+        int current = ui->table_software->currentRow();
+        software.run(current);
+    }
 }
 
 void MainWindow::show_commands() {
 
     ui->home->hide(); ui->home->setEnabled(false); ui->menu_home->hide(); ui->menu_home->setEnabled(false);
-
-    ui->system->hide();ui->system->setEnabled(false); ui->menu_system->hide(); ui->menu_system->setEnabled(false);
-    ui->network->hide(); ui->network->setEnabled(false); ui->menu_network->hide(); ui->menu_network->setEnabled(false);
-    ui->settings->hide();ui->settings->setEnabled(false); ui->menu_settings->hide(); ui->menu_settings->setEnabled(false);
 
     ui->hardware->hide(); ui->hardware->setEnabled(false); ui->menu_hardware->hide(); ui->menu_hardware->setEnabled(false);
     ui->software->hide(); ui->software->setEnabled(false); ui->menu_software->hide(); ui->menu_software->setEnabled(false);
